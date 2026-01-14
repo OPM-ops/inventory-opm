@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Play More - Tienda TCG & Coleccionables</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="OPM.png" alt="OPM" class="logo-image">
+                <div class="logo-text">
+                    <h1>One Play More</h1>
+                    <p>Tienda de TCG & Coleccionables</p>
+                </div>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Filtros -->
+        <aside class="filters">
+            <h3><i class="fas fa-filter"></i> Filtrar por:</h3>
+            
+            <div class="filter-group">
+                <label>Categoría:</label>
+                <select id="categoryFilter">
+                    <option value="all">Todas</option>
+                    <option value="pokemon">Pokémon TCG</option>
+                    <option value="funko">Funko Pop</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Idioma:</label>
+                <select id="languageFilter">
+                    <option value="all">Todos</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="en">🇺🇸 Inglés</option>
+                    <option value="jp">🇯🇵 Japonés</option>
+                    <option value="fr">🇫🇷 Francés</option>
+                    <option value="de">🇩🇪 Alemán</option>
+                    <option value="none">Sin idioma</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Precio máximo:</label>
+                <input type="number" id="priceFilter" placeholder="Ej: 300000" min="0" step="1000">
+            </div>
+
+            <div class="filter-group">
+                <label>Disponibilidad:</label>
+                <select id="stockFilter">
+                    <option value="all">Todas</option>
+                    <option value="available">En stock</option>
+		    <option value="encargo">Encargo</option>
+                    <option value="soon">Próximamente</option>
+                </select>
+            </div>
+
+            <button onclick="filterProducts()">
+                <i class="fas fa-search"></i> Aplicar filtros
+            </button>
+            <button onclick="resetFilters()" class="reset-btn">
+                <i class="fas fa-undo"></i> Limpiar
+            </button>
+        </aside>
+
+        <!-- Grid de productos -->
+        <main class="products-grid" id="productsGrid">
+            <!-- Los productos se cargarán aquí dinámicamente -->
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -57,7 +57,7 @@ const products = [
             "https://dracostore.co/wp-content/uploads/2024/11/Photoroom-20240902-102404.webp",
             "https://evolvecardshop.com/cdn/shop/files/SurgingBoosterBoxSide.png?v=1750954333&width=1946", "https://card-binder.com/cdn/shop/files/PokemonScarlet_VioletSurgingSparkssetchasecards.webp?v=1739564357&width=1500"
         ],
-        stock: "available"
+        stock: "agotado"
     },
     {
         id: 6,
@@ -437,4 +437,5 @@ const countryNames = {
     'jp': 'Japonés',
     'fr': 'Francés',
     'de': 'Alemán'
+
 };

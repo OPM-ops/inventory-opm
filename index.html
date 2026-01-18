@@ -27,7 +27,13 @@
         <!-- Filtros -->
         <aside class="filters">
             <h3><i class="fas fa-filter"></i> Filtrar por:</h3>
-            
+
+            <div class="filter-group">
+    <label>Buscar producto:</label>
+    <input type="text" id="searchFilter" placeholder="Ej: Elite Trainer Box" 
+           style="width: 100%; padding: 0.8rem; border: 2px solid var(--border-light); 
+                  border-radius: 8px; font-size: 1rem;">
+</div>
             <div class="filter-group">
                 <label>Categoría:</label>
                 <select id="categoryFilter">
@@ -45,8 +51,8 @@
                     <option value="es">🇪🇸 Español</option>
                     <option value="en">🇺🇸 Inglés</option>
                     <option value="jp">🇯🇵 Japonés</option>
-                    <option value="fr">🇫🇷 Francés</option>
-                    <option value="de">🇩🇪 Alemán</option>
+                    //<option value="fr">🇫🇷 Francés</option>
+                    //<option value="de">🇩🇪 Alemán</option>
                     <option value="none">Sin idioma</option>
                 </select>
             </div>
@@ -57,14 +63,15 @@
             </div>
 
             <div class="filter-group">
-                <label>Disponibilidad:</label>
-                <select id="stockFilter">
-                    <option value="all">Todas</option>
-                    <option value="available">En stock</option>
-		    <option value="encargo">Encargo</option>
-                    <option value="soon">Próximamente</option>
-                </select>
-            </div>
+    <label>Disponibilidad:</label>
+    <select id="stockFilter">
+        <option value="all">Todas</option>
+        <option value="available">En stock</option>
+        <option value="encargo">Encargo</option>
+        <option value="soon">Próximamente</option>
+        <option value="agotado">Agotado</option>
+    </select>
+</div>
 
             <button onclick="filterProducts()">
                 <i class="fas fa-search"></i> Aplicar filtros

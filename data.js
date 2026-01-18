@@ -10,7 +10,7 @@ const products = [
             "https://www.pokemoncenter.com/images/DAMRoot/High/10015/P10346_10-10047-120_02.jpg",
             "https://www.pokemoncenter.com/images/DAMRoot/High/10015/P10346_10-10047-120_03.jpg"
         ],
-        stock: "available"
+        stock: "encargo"
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ const products = [
             "https://cdnx.jumpseller.com/santogames/image/62365237/IMG_0841.png?1744299767",
             "https://i5.walmartimages.com/asr/600b4c2a-c166-40c1-844b-f2c46346dd6a.0be587ef9666f885c3608a694e77d914.jpeg"
         ],
-        stock: "available"
+        stock: "encargo"
     },
     {
         id: 3,
@@ -81,7 +81,7 @@ const products = [
             "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/308108/413275/PKU10167-1__55894.1750813140.png",
             "https://kantocards.com/cdn/shop/files/100-10438-3D_PIGS_Team_Rockets_Mewtwo_ex_Box_Booster_Wraps_EN_INT-2150x1473-a0dce50.png?v=1750168894&width=2150", "https://i5.walmartimages.com/asr/f312a2b2-0b45-41d0-842c-ca1230857d7e.4a22971ace45209e71f57bba7deac9f1.jpeg"
         ],
-        stock: "available"
+        stock: "agotado"
     },
     {
         id: 8,
@@ -97,9 +97,9 @@ const products = [
     },
     {
         id: 9,
-        name: "Mega Battle Deck -  Mega Gengar EX",
+        name: "Mega Battle Deck -  Mega Gengar EX (Daño en caja)",
         category: "pokemon",
-        price: 80000, 
+        price: 70000, 
         language: ["en"],
         images: [
             "https://cdnx.jumpseller.com/rtgamer-store/image/69132027/resize/306/407?1761666898",
@@ -109,9 +109,9 @@ const products = [
     },
     {
         id: 10,
-        name: "Combo Mega Battle Deck - Mega Gengar EX y Mega Diance EX",
+        name: "Combo Mega Battle Deck - Mega Gengar EX (Daño en caja) y Mega Diance EX",
         category: "pokemon",
-        price: 145000, 
+        price: 135000, 
         language: ["en"],
         images: [
             "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/329427/458104/Copy_of_Website_Image_Template9999-8511__37093.1759523139.png",
@@ -152,7 +152,7 @@ const products = [
             "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/329077/457207/Copy_of_Website_Image_Template9999-7860__44031.1759343927.png",
             "https://zingaentertainment.com/cdn/shop/files/Pokemon_TCG_Mega_Evolution_Phantasmal_Flames_Booster_Wrap_Mega_Charizard_4_pack_800x.png?v=1764337750", "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "soon"
+        stock: "available"
     },
     {
         id: 14,
@@ -163,7 +163,7 @@ const products = [
         images: [
             "https://www.despelvogel.com/wp-content/uploads/2024/06/trick-or-trade-2024.png", "https://cardzone.es/cdn/shop/files/siguemeeninstagram_1920x1920px_-2024-10-25T105103.875.png?v=1729846282&width=4800"
         ],
-        stock: "soon"
+        stock: "available"
     },
     {
         id: 15,
@@ -187,7 +187,7 @@ const products = [
             "https://lacasadekartus.com/wp-content/uploads/2025/11/blister-3-fuegos-fantasmales.webp",
             "https://cdn.chaoscards.co.uk/uploads/prod_img/2_308966_e.png?v=-62169983925",  "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "soon"
+        stock: "available"
     },
     {
         id: 17,
@@ -199,7 +199,7 @@ const products = [
             "https://media.gamestop.com/i/gamestop/20027388_ALT04/Pokemon-Trading-Card-Game-Phantasmal-Flames-Sleeved-Booster-Pack?$pdp$?w=1256&h=664&fmt=auto",
             "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "soon"
+        stock: "available"
     },
     {
         id: 18,
@@ -210,7 +210,7 @@ const products = [
         images: [
             "https://www.pokemillon.com/cdn/shop/files/Pokemon-TCG_Scarlet_Violet_Shrouded_Fable_Three-Booster_Pack_Blister.png?v=1754155188", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"
         ],
-        stock: "soon"
+        stock: "encargo"
     },
     {
         id: 19,
@@ -221,14 +221,14 @@ const products = [
         images: [
             "https://www.pokemon.com/static-assets/content-assets/cms2-es-es/img/trading-card-game/series/sv_series/sv6pt5/inline/sv6pt5-booster-bundle-es.png", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"
         ],
-        stock: "soon"
+        stock: "encargo"
     },
     {
         id: 20,
         name: "Pokeball Tin",
         category: "pokemon",
-        price: 71000, 
-        language: ["en"],
+        price: 65000, 
+        language: ["es"],
         images: [
             "https://avalongaming.com.co/wp-content/uploads/Pokemon-TCG-Poke-Ball-Tin-2024-1.png",
             
@@ -244,7 +244,7 @@ const products = [
         images: [
             "https://montevideogaminghouse.com/wp-content/uploads/2025/09/Pokemon-Mega-Evolutions-sobre-cartas.png", "https://kotaku.com/app/uploads/2025/10/main-2.jpg", "https://kotaku.com/app/uploads/2025/09/mega-evolution-1.jpg"
         ],
-        stock: "soon"
+        stock: "available"
     },
     {
         id: 22,
@@ -369,6 +369,51 @@ const products = [
         ],
         stock: "encargo"
     },
+    {
+        id: 33,
+        name: "Mega Latias EX Box",
+        category: "pokemon",
+        price: 100000, 
+        language: ["en"],
+        images: [
+            "https://topdeck.com.co/cdn/shop/files/Mega-Latias-EX-Box.png?v=1766876190", "https://dragonslair.se/image/14470/Pok-mon-TCG---Mega-Latias-ex-Box3.png", "https://beamcardshop.com/cdn/shop/files/pokemon-mega-evolution-mega-latias-ex-box-mentastore-7265306.webp?v=1760545507"
+        ],
+        stock: "soon"
+    },
+    {
+        id: 34,
+        name: "Lata Destinos de Paldea",
+        category: "pokemon",
+        price: 100000, 
+        language: ["es"],
+        images: [
+            "https://gamer4ever.com.co/cdn/shop/files/820650504723_a505ee07-f4f8-4dc0-be6f-7c5ab458a752.jpg?v=1708104442", "https://www.pokemillon.com/cdn/shop/files/Sobres-destinos-de-paldea-en-espanol.png?v=1754154605", "https://card-binder.com/cdn/shop/files/Pokemon_Scarlet_Violet_Paldean_Fates_set_chase_cards.png?v=1739562220&width=1500"
+        ],
+        stock: "soon"
+    },
+    {
+        id: 35,
+        name: "Mimikyu EX Box",
+        category: "pokemon",
+        price: 80000, 
+        language: ["es"],
+        images: [
+            "https://magicomens.com/cdn/shop/products/ptcg-mimikyu-ex-box_1200x.webp?v=1678787317", "https://www.despelvogel.com/wp-content/uploads/2020/02/Mimikyu-Box.png", "https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10001/P8792_290-85218_03.jpg"
+        ],
+        stock: "encargo"
+    },
+    {
+        id: 36,
+        name: "Booster Bundle Rivales Predestinados",
+        category: "pokemon",
+        price: 105000, 
+        language: ["es"],
+        images: [
+            "https://dojiw2m9tvv09.cloudfront.net/68889/product/booster-bundle-pok-mon-tcg-rivales-predestinados-espaniol0912.png", "https://pokemonalpha.es/wp-content/uploads/2025/03/Escarlata_y_Purpura-Rivales_Predestinados_Booster_Wraps_Cynthia_Garchomp_ES.webp", "https://cdn.shopify.com/s/files/1/0572/9671/5939/files/Blog_Products_1.png?v=1749269280"
+        ],
+        stock: "encargo"
+    },
+
 
 
 

@@ -18,7 +18,6 @@ function toggleTheme() {
     }
 }
 
-// Cargar tema guardado
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -26,6 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('themeIcon').classList.remove('fa-moon');
         document.getElementById('themeIcon').classList.add('fa-sun');
     }
+    
+// Ordenar productos por prioridad: En stock → Próximamente → Encargo → Agotado
+products.sort((a, b) => {
+    const priority = {
+        'available': 1,    // En stock (primero)
+        'soon': 2,         // Próximamente (segundo)
+        'encargo': 3,      // Encargo (tercero)
+        'agotado': 4       // Agotado (último)
+    };
+    
+    return priority[a.stock] - priority[b.stock];
+});
+
+    
     renderProducts(products);
 });
 
@@ -252,8 +265,9 @@ function renderProducts(productsToRender) {
         
         const languageHtml = renderLanguages(product.language);
 
-        let stockClass = '';
+let stockClass = '';
 let stockText = '';
+let stockDescription = '';
 
 if (product.stock === 'available') {
     stockClass = 'in-stock';
@@ -261,23 +275,27 @@ if (product.stock === 'available') {
 } else if (product.stock === 'encargo') {
     stockClass = 'on-order';
     stockText = 'Encargo';
+    stockDescription = '<span class="encargo-description">Llega en 3-5 días hábiles</span>';
+} else if (product.stock === 'agotado') {
+    stockClass = 'agotado';
+    stockText = 'Agotado';
 } else {
     stockClass = 'coming-soon';
     stockText = 'Próximamente';
 }
-
-        card.innerHTML = `
-            <div style="position: relative;">
-                ${createCarousel(product.images, product.id)}
-                <span class="category-tag">${product.category.toUpperCase()}</span>
-            </div>
-            <div class="product-info">
-                <div class="product-name">${product.name}</div>
-                <div class="product-price">${formatCOP(product.price)}</div>
-                ${languageHtml}
-                <span class="product-stock ${stockClass}">${stockText}</span>
-            </div>
-        `;
+card.innerHTML = `
+    <div style="position: relative;">
+        ${createCarousel(product.images, product.id)}
+        <span class="category-tag">${product.category.toUpperCase()}</span>
+    </div>
+    <div class="product-info">
+        <div class="product-name">${product.name}</div>
+        <div class="product-price">${formatCOP(product.price)}</div>
+        ${languageHtml}
+        <span class="product-stock ${stockClass}">${stockText}</span>
+        ${stockDescription}
+    </div>
+`;
         
         grid.appendChild(card);
     });
@@ -288,9 +306,18 @@ function filterProducts() {
     const maxPrice = document.getElementById('priceFilter').value;
     const stock = document.getElementById('stockFilter').value;
     const language = document.getElementById('languageFilter').value;
+    const searchTerm = document.getElementById('searchFilter').value.toLowerCase().trim();
 
     filteredProducts = products.filter(product => {
         let matches = true;
+
+        // Filtro de búsqueda por palabras
+        if (searchTerm) {
+            const productName = product.name.toLowerCase();
+            if (!productName.includes(searchTerm)) {
+                matches = false;
+            }
+        }
 
         if (category !== 'all' && product.category !== category) {
             matches = false;
@@ -304,17 +331,28 @@ function filterProducts() {
             matches = false;
         }
 
-        // Nuevo filtro de idioma (soporta arrays)
-if (language !== 'all') {
-    if (language === 'none' && (!product.language || product.language.length === 0)) {
-        matches = false;
-    } else if (language !== 'none' && (!product.language || !product.language.includes(language))) {
-        matches = false;
-    }
-}
+        if (language !== 'all') {
+            if (language === 'none' && (!product.language || product.language.length === 0)) {
+                matches = false;
+            } else if (language !== 'none' && (!product.language || !product.language.includes(language))) {
+                matches = false;
+            }
+        }
 
         return matches;
     });
+
+// Ordenar productos por prioridad: En stock → Próximamente → Encargo → Agotado
+filteredProducts.sort((a, b) => {
+    const priority = {
+        'available': 1,    // En stock (primero)
+        'soon': 2,         // Próximamente (segundo)
+        'encargo': 3,      // Encargo (tercero)
+        'agotado': 4       // Agotado (último)
+    };
+    
+    return priority[a.stock] - priority[b.stock];
+});
 
     renderProducts(filteredProducts);
 }
@@ -323,7 +361,22 @@ function resetFilters() {
     document.getElementById('categoryFilter').value = 'all';
     document.getElementById('priceFilter').value = '';
     document.getElementById('stockFilter').value = 'all';
-    document.getElementById('languageFilter').value = 'all'; // Agregar esta línea
+    document.getElementById('languageFilter').value = 'all';
+    document.getElementById('searchFilter').value = ''; // Agregar esta línea
     filteredProducts = [...products];
+    
+// Ordenar productos por prioridad: En stock → Próximamente → Encargo → Agotado
+filteredProducts.sort((a, b) => {
+    const priority = {
+        'available': 1,    // En stock (primero)
+        'soon': 2,         // Próximamente (segundo)
+        'encargo': 3,      // Encargo (tercero)
+        'agotado': 4       // Agotado (último)
+    };
+    
+    return priority[a.stock] - priority[b.stock];
+});    
     renderProducts(filteredProducts);
 }
+
+document.getElementById('searchFilter').addEventListener('input', filterProducts);

@@ -152,7 +152,7 @@ const products = [
             "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/329077/457207/Copy_of_Website_Image_Template9999-7860__44031.1759343927.png",
             "https://zingaentertainment.com/cdn/shop/files/Pokemon_TCG_Mega_Evolution_Phantasmal_Flames_Booster_Wrap_Mega_Charizard_4_pack_800x.png?v=1764337750", "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "available"
+        stock: "agotado"
     },
     {
         id: 14,
@@ -182,7 +182,7 @@ const products = [
         name: "3 Pack Blister Phantasmal Flames",
         category: "pokemon",
         price: 63000, 
-        language: ["en"],
+        language: ["es"],
         images: [
             "https://lacasadekartus.com/wp-content/uploads/2025/11/blister-3-fuegos-fantasmales.webp",
             "https://cdn.chaoscards.co.uk/uploads/prod_img/2_308966_e.png?v=-62169983925",  "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
@@ -205,12 +205,12 @@ const products = [
         id: 18,
         name: "3 Pack Blister Fabula Sombria",
         category: "pokemon",
-        price: 60000, 
+        price: 56000, 
         language: ["es"],
         images: [
             "https://www.pokemillon.com/cdn/shop/files/Pokemon-TCG_Scarlet_Violet_Shrouded_Fable_Three-Booster_Pack_Blister.png?v=1754155188", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"
         ],
-        stock: "encargo"
+        stock: "soon"
     },
     {
         id: 19,
@@ -225,7 +225,7 @@ const products = [
     },
     {
         id: 20,
-        name: "Pokeball Tin",
+        name: "Pokeball Tin Q4 2025",
         category: "pokemon",
         price: 65000, 
         language: ["es"],
@@ -278,7 +278,7 @@ const products = [
         images: [
             "https://tcglevel.com/cdn/shop/files/caja-coleccion-pokemon-llama-blanca-fulgor-negro-es.png?v=1753095343", "https://cardsrfun.de/cdn/shop/files/Black_Bolt_White_Flare_Unova_Poster_Collection.webp?v=1752854514&width=1214", "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2025/unova-poster-collection/inline/01-en.png"
         ],
-        stock: "encargo"
+        stock: "soon"
     },
     {
         id: 25,
@@ -300,7 +300,7 @@ const products = [
         images: [
             "https://d1i787aglh9bmb.cloudfront.net/assets/img/me-expansions/me02/collections/es-mx/me02-booster-bundle-la.png", "https://montevideogaminghouse.com/wp-content/uploads/2025/10/Pokemon-Megaevolucion-Llamaradas-Fantasmales-Sobre-de-Cartas-420x420.png", "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "encargo"
+        stock: "soon"
     },
     {
         id: 27,
@@ -311,11 +311,11 @@ const products = [
         images: [
             "https://d1i787aglh9bmb.cloudfront.net/assets/img/me-expansions/me02/collections/es-mx/me02-etb-la.png", "https://grancards.com/cdn/shop/files/ETB_LLAMAS_FANTASMALES_2.png?v=1763060420&width=1445", "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "encargo"
+        stock: "soon"
     },
     {
         id: 28,
-        name: "Elite Trainer Box Megaevolución",
+        name: "Elite Trainer Box Megaevolución (Lucario)",
         category: "pokemon",
         price: 225000, 
         language: ["es"],
@@ -362,7 +362,7 @@ const products = [
         id: 32,
         name: "League Battle Deck Team Rocket's Mewtwo EX",
         category: "pokemon",
-        price: 65000, 
+        price: 135000, 
         language: ["en"],
         images: [
             "https://evolvecardshop.com/cdn/shop/files/MewtwoexLeagueBattleDeck.png?v=1765489371&width=1946", "https://media.gamestop.com/i/gamestop/20026509_ALT03?$pdp$?w=1256&h=664&fmt=auto", "https://media.gamestop.com/i/gamestop/20026509_ALT02?$pdp$?w=1256&h=664&fmt=auto"
@@ -373,7 +373,7 @@ const products = [
         id: 33,
         name: "Mega Latias EX Box",
         category: "pokemon",
-        price: 100000, 
+        price: 105000, 
         language: ["en"],
         images: [
             "https://topdeck.com.co/cdn/shop/files/Mega-Latias-EX-Box.png?v=1766876190", "https://dragonslair.se/image/14470/Pok-mon-TCG---Mega-Latias-ex-Box3.png", "https://beamcardshop.com/cdn/shop/files/pokemon-mega-evolution-mega-latias-ex-box-mentastore-7265306.webp?v=1760545507"
@@ -413,6 +413,28 @@ const products = [
         ],
         stock: "encargo"
     },
+    {
+        id: 37,
+        name: "Slashing Legends Tin",
+        category: "pokemon",
+        price: 105000, 
+        language: ["en"],
+        images: [
+            "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/304106/401087/PKU10374-2PK-1__97689.1747075284.png", "https://i5.walmartimages.com/asr/928cd24c-e9dc-4ad5-a9a2-f1a1587d3149.d598abc9d7e891095bf094c3d7b2312a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF", "https://holograil.nl/cdn/shop/files/SlashingLegends_Tin_Contents.webp?v=1753385118&width=1000"
+        ],
+        stock: "soon"
+    },
+    {
+        id: 38,
+        name: "Mini Tin Fábula Sombria",
+        category: "pokemon",
+        price: 48000, 
+        language: ["es"],
+        images: [
+            "https://luffytoys.cl/cdn/shop/files/2-257461-e9839_1200x.png?v=1717104973", "https://unboxunbored.com/cdn/shop/files/pokemon-tcg-shrouded-fable-kingambit-illustration-collection-210660.png?v=1748179440&width=1214", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"
+        ],
+        stock: "soon"
+    },
 
 
 
@@ -437,5 +459,4 @@ const countryNames = {
     'jp': 'Japonés',
     'fr': 'Francés',
     'de': 'Alemán'
-
 };

@@ -10,7 +10,7 @@ const products = [
             "https://www.pokemoncenter.com/images/DAMRoot/High/10015/P10346_10-10047-120_02.jpg",
             "https://www.pokemoncenter.com/images/DAMRoot/High/10015/P10346_10-10047-120_03.jpg"
         ],
-        stock: "encargo"
+        stock: "agotado",  
     },
     {
         id: 2,
@@ -33,7 +33,9 @@ const products = [
         images: [
             "https://www.thecardsharkemporium.com.au/cdn/shop/files/background-editor_output_6b437846-dcf5-4e1e-aa51-cabafca560c3.png?v=1733451261&width=533", "https://unboxunbored.com/cdn/shop/files/pokemon-tcg-shrouded-fable-kingambit-illustration-collection-470289.png?v=1741543903&width=1214"
         ],
-        stock: "available"
+        stock: "available",
+        promo: false, 
+        cantidad: 1
     },
     {
         id: 4,
@@ -45,7 +47,9 @@ const products = [
             "https://shop.orbsportscards.com/cdn/shop/files/image-20-1.png?v=1762270115",
             "https://card-binder.com/cdn/shop/files/PokemonJapanHeatwaveArenaChaseCardimages.webp?v=1741505684&width=1500"
         ],
-        stock: "available"
+        stock: "available",
+        promo: false, 
+        cantidad: 23
     },
     {
         id: 5,
@@ -69,7 +73,9 @@ const products = [
             "https://www.despelvogel.com/wp-content/uploads/2020/08/Surging-Sparks-Boosters-1024x1024.png",
             "https://card-binder.com/cdn/shop/files/PokemonScarlet_VioletSurgingSparkssetchasecards.webp?v=1739564357&width=1500"
         ],
-        stock: "available"
+        stock: "available",
+        promo: false, 
+        cantidad: 5
     },
     {
         id: 7,
@@ -93,7 +99,7 @@ const products = [
             "https://montevideogaminghouse.com/wp-content/uploads/2025/10/Pokemon-Mega-Battle-Deck-Mega-Diancie-ex-420x420.png",
             "https://cdnx.jumpseller.com/play-tcg1/image/68968748/resize/540/600?1766368530"
         ],
-        stock: "available"
+        stock: "agotado"
     },
     {
         id: 9,
@@ -105,7 +111,9 @@ const products = [
             "https://cdnx.jumpseller.com/rtgamer-store/image/69132027/resize/306/407?1761666898",
             "https://www.stompinggroundstcg.com/cdn/shop/files/Mega_Gengar_ex_Deck_Promos_600x.webp?v=1762472166"
         ],
-        stock: "available"
+        stock: "available",
+        promo: false, 
+        cantidad: 1
     },
     {
         id: 10,
@@ -117,7 +125,7 @@ const products = [
             "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/329427/458104/Copy_of_Website_Image_Template9999-8511__37093.1759523139.png",
             "https://cdnx.jumpseller.com/play-tcg1/image/68968748/resize/540/600?1766368530", "https://www.stompinggroundstcg.com/cdn/shop/files/Mega_Gengar_ex_Deck_Promos_600x.webp?v=1762472166"
         ],
-        stock: "available"
+        stock: "agotado"
     },
     {
         id: 11,
@@ -129,7 +137,9 @@ const products = [
             "https://www.stompinggroundstcg.com/cdn/shop/files/Deluxe_Battle_Deck_Miraidon_ex.webp?v=1735079323",
             "https://www.stompinggroundstcg.com/cdn/shop/files/Deluxe_Battle_Deck_Miraidon_ex_Cards_600x.webp?v=1735079323", "https://www.stompinggroundstcg.com/cdn/shop/files/Deluxe_Battle_Deck_Miraidon_ex_Contents_600x.webp?v=1735079323"
         ],
-        stock: "available"
+        stock: "available",
+        promo: false, 
+        cantidad: 1
     },
     {
         id: 12,
@@ -140,7 +150,9 @@ const products = [
         images: [
             "https://sc04.alicdn.com/kf/H2dbb84b4f9fc4237ab5c0e99d4ea3ad7b.jpg"
         ],
-        stock: "available"
+        stock: "available",
+        promo: false, 
+        cantidad: 2
     },
     {
         id: 13,
@@ -163,7 +175,9 @@ const products = [
         images: [
             "https://www.despelvogel.com/wp-content/uploads/2024/06/trick-or-trade-2024.png", "https://cardzone.es/cdn/shop/files/siguemeeninstagram_1920x1920px_-2024-10-25T105103.875.png?v=1729846282&width=4800"
         ],
-        stock: "available"
+        stock: "available",
+        promo: false, 
+        cantidad: 138
     },
     {
         id: 15,
@@ -175,11 +189,13 @@ const products = [
             "https://cardzone.es/cdn/shop/files/mini-lata-pokemon-evoluciones-prismaticas-sobres-y-cartas-pokemon-tcg.png?v=1750152740&width=1920",
             "https://vyruztoystore.com.mx/cdn/shop/files/PokemonTCGScarlet_VioletPrismaticEvolutionsMiniTinSylveonBooster.webp?v=1747298170&width=1946"
         ],
-        stock: "soon"
+        stock: "available",
+        promo: false, 
+        cantidad: 10
     },
     {
         id: 16,
-        name: "3 Pack Blister Phantasmal Flames",
+        name: "3 Pack Blister Llamaradas Fantasmales",
         category: "pokemon",
         price: 63000, 
         language: ["es"],
@@ -187,7 +203,9 @@ const products = [
             "https://lacasadekartus.com/wp-content/uploads/2025/11/blister-3-fuegos-fantasmales.webp",
             "https://cdn.chaoscards.co.uk/uploads/prod_img/2_308966_e.png?v=-62169983925",  "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "available"
+        stock: "available",
+        promo: false, 
+        cantidad: 2
     },
     {
         id: 17,
@@ -199,7 +217,9 @@ const products = [
             "https://media.gamestop.com/i/gamestop/20027388_ALT04/Pokemon-Trading-Card-Game-Phantasmal-Flames-Sleeved-Booster-Pack?$pdp$?w=1256&h=664&fmt=auto",
             "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "available"
+        stock: "available",
+        promo: false, 
+        cantidad: 32
     },
     {
         id: 18,
@@ -210,7 +230,9 @@ const products = [
         images: [
             "https://www.pokemillon.com/cdn/shop/files/Pokemon-TCG_Scarlet_Violet_Shrouded_Fable_Three-Booster_Pack_Blister.png?v=1754155188", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"
         ],
-        stock: "soon"
+        stock: "available",
+        promo: false, 
+        cantidad: 2
     },
     {
         id: 19,
@@ -230,10 +252,12 @@ const products = [
         price: 65000, 
         language: ["es"],
         images: [
-            "https://avalongaming.com.co/wp-content/uploads/Pokemon-TCG-Poke-Ball-Tin-2024-1.png",
+            "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/335177/476105/Gamenerdzimage7463__69770.1764691893.png",
             
         ],
-        stock: "soon"
+        stock: "available",
+        promo: false, 
+        cantidad: 3
     },
     {
         id: 21,
@@ -244,7 +268,10 @@ const products = [
         images: [
             "https://montevideogaminghouse.com/wp-content/uploads/2025/09/Pokemon-Mega-Evolutions-sobre-cartas.png", "https://kotaku.com/app/uploads/2025/10/main-2.jpg", "https://kotaku.com/app/uploads/2025/09/mega-evolution-1.jpg"
         ],
-        stock: "available"
+        stock: "available",
+        promo: false, 
+        cantidad: 3
+
     },
     {
         id: 22,
@@ -256,7 +283,10 @@ const products = [
             "https://ryu.land/cdn/shop/files/rn-image_picker_lib_temp_96ba250b-a2aa-4199-8877-bf3481b151f9.png?v=1736467969&width=1445",
             "https://preview.redd.it/hot-take-journey-together-is-an-awesome-set-with-amazing-v0-a8tz8dlzn14f1.jpeg?width=1080&crop=smart&auto=webp&s=0987bb0afbd5b52bed50197881a30602fc96759a"
         ],
-        stock: "soon"
+        stock: "available",
+        promo: false, 
+        cantidad: 12
+
     },
     {
         id: 23,
@@ -278,7 +308,10 @@ const products = [
         images: [
             "https://tcglevel.com/cdn/shop/files/caja-coleccion-pokemon-llama-blanca-fulgor-negro-es.png?v=1753095343", "https://cardsrfun.de/cdn/shop/files/Black_Bolt_White_Flare_Unova_Poster_Collection.webp?v=1752854514&width=1214", "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2025/unova-poster-collection/inline/01-en.png"
         ],
-        stock: "soon"
+        stock: "available",
+        promo: false, 
+        cantidad: 1
+
     },
     {
         id: 25,
@@ -300,7 +333,10 @@ const products = [
         images: [
             "https://d1i787aglh9bmb.cloudfront.net/assets/img/me-expansions/me02/collections/es-mx/me02-booster-bundle-la.png", "https://montevideogaminghouse.com/wp-content/uploads/2025/10/Pokemon-Megaevolucion-Llamaradas-Fantasmales-Sobre-de-Cartas-420x420.png", "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "soon"
+        stock: "available",
+        promo: false, 
+        cantidad: 2
+
     },
     {
         id: 27,
@@ -311,7 +347,10 @@ const products = [
         images: [
             "https://d1i787aglh9bmb.cloudfront.net/assets/img/me-expansions/me02/collections/es-mx/me02-etb-la.png", "https://grancards.com/cdn/shop/files/ETB_LLAMAS_FANTASMALES_2.png?v=1763060420&width=1445", "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "soon"
+        stock: "available",
+        promo: false, 
+        cantidad: 1
+
     },
     {
         id: 28,
@@ -322,7 +361,7 @@ const products = [
         images: [
             "https://cardcrack.com/wp-content/uploads/2025/10/etblucario.webp", "https://www.pokemillon.com/cdn/shop/files/ETB_Gardevoir_Mega_Evolucion_Sin_Fondo_Pokemillon.png?v=1759413816", "https://tcglevel.com/cdn/shop/files/caja-contenido-etb-pokemon-mega-lucario-es.png?v=1759241080&width=1946", "https://magicomens.com/cdn/shop/files/ptcg-meg-etb-gardevoir-contents_600x.webp?v=1759327017","https://preview.redd.it/mega-evolutions-etb-which-promo-card-are-you-choosing-v0-tleqlehbv5tf1.jpeg?width=640&crop=smart&auto=webp&s=413702ba5e39efff9691a4b99d5dfd6bc941f0f7"
         ],
-        stock: "encargo"
+        stock: "agotado"
     },
     {
         id: 29,
@@ -378,18 +417,24 @@ const products = [
         images: [
             "https://topdeck.com.co/cdn/shop/files/Mega-Latias-EX-Box.png?v=1766876190", "https://dragonslair.se/image/14470/Pok-mon-TCG---Mega-Latias-ex-Box3.png", "https://beamcardshop.com/cdn/shop/files/pokemon-mega-evolution-mega-latias-ex-box-mentastore-7265306.webp?v=1760545507"
         ],
-        stock: "soon"
+        stock: "available",
+        promo: false, 
+        cantidad: 3
+
     },
     {
         id: 34,
         name: "Lata Destinos de Paldea",
         category: "pokemon",
-        price: 100000, 
+        price: 110000, 
         language: ["es"],
         images: [
             "https://gamer4ever.com.co/cdn/shop/files/820650504723_a505ee07-f4f8-4dc0-be6f-7c5ab458a752.jpg?v=1708104442", "https://www.pokemillon.com/cdn/shop/files/Sobres-destinos-de-paldea-en-espanol.png?v=1754154605", "https://card-binder.com/cdn/shop/files/Pokemon_Scarlet_Violet_Paldean_Fates_set_chase_cards.png?v=1739562220&width=1500"
         ],
-        stock: "soon"
+        stock: "available",
+        promo: true, 
+        cantidad: 2
+
     },
     {
         id: 35,
@@ -422,7 +467,10 @@ const products = [
         images: [
             "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/304106/401087/PKU10374-2PK-1__97689.1747075284.png", "https://i5.walmartimages.com/asr/928cd24c-e9dc-4ad5-a9a2-f1a1587d3149.d598abc9d7e891095bf094c3d7b2312a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF", "https://holograil.nl/cdn/shop/files/SlashingLegends_Tin_Contents.webp?v=1753385118&width=1000"
         ],
-        stock: "soon"
+        stock: "available",
+        promo: false, 
+        cantidad: 2
+
     },
     {
         id: 38,
@@ -433,7 +481,10 @@ const products = [
         images: [
             "https://luffytoys.cl/cdn/shop/files/2-257461-e9839_1200x.png?v=1717104973", "https://unboxunbored.com/cdn/shop/files/pokemon-tcg-shrouded-fable-kingambit-illustration-collection-210660.png?v=1748179440&width=1214", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"
         ],
-        stock: "soon"
+        stock: "available",
+        promo: false, 
+        cantidad: 2
+
     },
 
 

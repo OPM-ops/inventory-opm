@@ -88,6 +88,11 @@ function renderProducts(productsToRender) {
         
         const languageHtml = renderLanguages(product.language);
 
+let promoBadge = '';
+if (product.promo) {
+    promoBadge = '<span class="promo-badge">🔥 PROMO</span>';
+}
+
 let stockClass = '';
 let stockText = '';
 
@@ -105,6 +110,7 @@ if (product.stock === 'available') {
             <div style="position: relative;">
                 ${createCarousel(product.images, product.id)}
                 <span class="category-tag">${product.category.toUpperCase()}</span>
+                ${promoBadge}
             </div>
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
@@ -265,8 +271,17 @@ function renderProducts(productsToRender) {
         
         const languageHtml = renderLanguages(product.language);
 
+let promoBadge = '';
+if (product.promo) {
+    promoBadge = '<span class="promo-badge">🔥 PROMO</span>';
+}
+
 let stockClass = '';
 let stockText = '';
+let stockInfo = '';
+if (product.stock === 'available' && product.cantidad !== undefined) {
+    stockInfo = `<br><span style="font-size: 0.8rem; color: #2e7d32;">📦 ${product.cantidad} disponibles</span>`;
+}
 let stockDescription = '';
 
 if (product.stock === 'available') {
@@ -285,14 +300,17 @@ if (product.stock === 'available') {
 }
 card.innerHTML = `
     <div style="position: relative;">
-        ${createCarousel(product.images, product.id)}
-        <span class="category-tag">${product.category.toUpperCase()}</span>
-    </div>
+    ${createCarousel(product.images, product.id)}
+    <span class="category-tag">${product.category.toUpperCase()}</span>
+    ${promoBadge}
+</div>
+
     <div class="product-info">
         <div class="product-name">${product.name}</div>
         <div class="product-price">${formatCOP(product.price)}</div>
         ${languageHtml}
         <span class="product-stock ${stockClass}">${stockText}</span>
+        ${stockInfo}
         ${stockDescription}
     </div>
 `;

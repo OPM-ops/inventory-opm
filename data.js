@@ -49,7 +49,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 23
+        cantidad: 21
     },
     {
         id: 5,
@@ -75,7 +75,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 5
+        cantidad: 2
     },
     {
         id: 7,
@@ -219,7 +219,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 32
+        cantidad: 31
     },
     {
         id: 18,
@@ -486,6 +486,35 @@ const products = [
         cantidad: 2
 
     },
+    {
+        id: 39,
+        name: "Sleeved Booster Destined Rivals",
+        category: "pokemon",
+        price: 23000, 
+        language: ["en"],
+        images: [
+            "https://card-binder.com/cdn/shop/files/Pokemon-scarlet-violet-destined-rivals-english-team-rocket-sleeved-booster-pack.webp?v=1743581350", "https://static0.srcdn.com/wordpress/wp-content/uploads/2025/05/three-cards-from-pokemon-tcg-destined-rivals-set-over-a-red-background.jpg?q=70&fit=crop&w=1200&h=628&dpr=1", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/06/pokemon-tcg-destined-rivals-cards-to-grade.jpg"
+        ],
+        stock: "soon",
+        promo: false, 
+        cantidad: 15
+
+    },
+    {
+        id: 40,
+        name: "Poke Ball Tin Q4 2025",
+        category: "pokemon",
+        price: 73000, 
+        language: ["en"],
+        images: [
+            "https://www.princedist.com/cdn/shop/files/ball_800x.png?v=1761665276",
+            
+        ],
+        stock: "available",
+        promo: false, 
+        cantidad: 4
+    },
+
 
 
 

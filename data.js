@@ -49,7 +49,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 21
+        cantidad: 19
     },
     {
         id: 5,
@@ -75,7 +75,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 7,
@@ -219,7 +219,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 31
+        cantidad: 25
     },
     {
         id: 18,
@@ -431,9 +431,8 @@ const products = [
         images: [
             "https://gamer4ever.com.co/cdn/shop/files/820650504723_a505ee07-f4f8-4dc0-be6f-7c5ab458a752.jpg?v=1708104442", "https://www.pokemillon.com/cdn/shop/files/Sobres-destinos-de-paldea-en-espanol.png?v=1754154605", "https://card-binder.com/cdn/shop/files/Pokemon_Scarlet_Violet_Paldean_Fates_set_chase_cards.png?v=1739562220&width=1500"
         ],
-        stock: "available",
-        promo: true, 
-        cantidad: 2
+        stock: "soon",
+
 
     },
     {
@@ -445,7 +444,7 @@ const products = [
         images: [
             "https://magicomens.com/cdn/shop/products/ptcg-mimikyu-ex-box_1200x.webp?v=1678787317", "https://www.despelvogel.com/wp-content/uploads/2020/02/Mimikyu-Box.png", "https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10001/P8792_290-85218_03.jpg"
         ],
-        stock: "encargo"
+        stock: "soon"
     },
     {
         id: 36,

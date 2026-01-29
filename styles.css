@@ -176,7 +176,7 @@ body.dark-theme .filter-group label {
 }
 
 .checkbox-label {
-    display: flex;
+    display: flex-start;
     align-items: center; /* Centra todo verticalmente */
     gap: 0.6rem; /* Reducido ligeramente para mejor proporción */
     cursor: pointer;
@@ -212,14 +212,12 @@ body.dark-theme .filter-group label {
 .checkbox-label input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    margin: 0;
+    margin: 2px 0 0 0;  /* Margen arriba para bajarlo */
     padding: 0;
     cursor: pointer;
     accent-color: #ff4757;
-    vertical-align: middle; /* Alineación vertical crucial */
-    transform: translateY(0); /* Elimina cualquier desplazamiento previo */
+    flex-shrink: 0;
 }
-
 
 .checkbox-text {
     font-weight: normal;

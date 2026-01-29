@@ -131,8 +131,11 @@ body.dark-theme .filters {
     box-shadow: 0 4px 15px rgba(255,255,255,0.1);
 }
 
+
+
+/* ESTILOS UNIFICADOS PARA TODOS LOS FILTROS */
 .filter-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .filter-group label {
@@ -140,14 +143,18 @@ body.dark-theme .filters {
     margin-bottom: 0.5rem;
     font-weight: bold;
     color: var(--text-light);
+    font-size: 0.95rem;
 }
 
 body.dark-theme .filter-group label {
     color: var(--text-dark);
 }
 
+/* Todos los inputs y selects con el MISMO estilo exacto */
+.filter-group input[type="text"],
+.filter-group input[type="number"],
 .filter-group select,
-.filter-group input {
+.checkbox-label {
     width: 100%;
     padding: 0.8rem;
     border: 2px solid var(--border-light);
@@ -155,62 +162,98 @@ body.dark-theme .filter-group label {
     font-size: 1rem;
     background: var(--surface-light);
     color: var(--text-light);
-}
-/* Estilo mejorado para el select de idioma */
-#languageFilter {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234a148c' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.7rem center;
-    background-size: 12px;
-    padding-right: 2rem;
+    box-sizing: border-box;
+    height: 48px;
+    display: flex;
+    align-items: center;
 }
 
-/* Opciones del select con banderas */
-#languageFilter option {
-    padding: 0.5rem;
-    font-size: 1rem;
-}
-
-#languageFilter option[value="es"] {
-    background-image: url('https://flagcdn.com/16x12/es.png');
-}
-
-#languageFilter option[value="en"] {
-    background-image: url('https://flagcdn.com/16x12/us.png');
-}
-
-#languageFilter option[value="jp"] {
-    background-image: url('https://flagcdn.com/16x12/jp.png');
-}
-
-#languageFilter option[value="fr"] {
-    background-image: url('https://flagcdn.com/16x12/fr.png');
-}
-
-#languageFilter option[value="de"] {
-    background-image: url('https://flagcdn.com/16x12/de.png');
-}
-
-/* Hacer el filtro de idioma más prominente */
+/* Quitar el fondo morado especial del segundo hijo */
 .filter-group:nth-child(2) {
-    background: linear-gradient(135deg, rgba(74, 20, 140, 0.05), rgba(123, 31, 162, 0.05));
-    padding: 1rem;
-    border-radius: 10px;
-    border: 1px solid rgba(74, 20, 140, 0.1);
+    background: transparent;
+    padding: 0;
+    border: none;
 }
 
-body.dark-theme .filter-group:nth-child(2) {
-    background: linear-gradient(135deg, rgba(123, 31, 162, 0.1), rgba(74, 20, 140, 0.1));
-    border-color: rgba(123, 31, 162, 0.2);
+.checkbox-label {
+    display: flex;
+    align-items: center; /* Centra todo verticalmente */
+    gap: 0.6rem; /* Reducido ligeramente para mejor proporción */
+    cursor: pointer;
+    padding: 0 0.8rem;
+    background: linear-gradient(135deg, rgba(255, 71, 87, 0.05), rgba(255, 99, 72, 0.05));
+    border: 2px solid rgba(255, 71, 87, 0.2);
+    border-radius: 8px;
+    height: 48px;
+    box-sizing: border-box;
+    line-height: 1; /* Evita saltos de línea que des-centren */
 }
 
+.checkbox-text {
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+
+/* Separar el emoji del texto para mejor control */
+.checkbox-text .emoji {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.checkbox-label:hover {
+    border-color: rgba(255, 71, 87, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    accent-color: #ff4757;
+    vertical-align: middle; /* Alineación vertical crucial */
+    transform: translateY(0); /* Elimina cualquier desplazamiento previo */
+}
+
+
+.checkbox-text {
+    font-weight: normal;
+}
+
+/* Modo oscuro consistente */
+body.dark-theme .filter-group input[type="text"],
+body.dark-theme .filter-group input[type="number"],
 body.dark-theme .filter-group select,
-body.dark-theme .filter-group input {
+body.dark-theme .checkbox-label {
     background: var(--surface-dark);
     border-color: var(--border-dark);
     color: var(--text-dark);
 }
+
+body.dark-theme .checkbox-label {
+    background: linear-gradient(135deg, rgba(255, 71, 87, 0.1), rgba(255, 99, 72, 0.1));
+    border-color: rgba(255, 71, 87, 0.3);
+}
+
+/* Responsive: evitar que toquen los bordes en móvil */
+@media (max-width: 768px) {
+    .filters {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+    
+    .filter-group {
+        margin-bottom: 1rem;
+    }
+}
+
+
+
 
 button {
     width: 100%;
@@ -852,3 +895,9 @@ body.dark-theme .product-card.promo-card {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.05); }
 }
+
+
+
+
+
+

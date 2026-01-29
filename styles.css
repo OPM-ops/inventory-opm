@@ -718,3 +718,137 @@ body.dark-theme .product-stock.agotado {
 body.dark-theme .stock-quantity {
     color: #81c784;
 }
+
+/* Botón flotante WhatsApp */
+.floating-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Animación sutil */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .floating-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 1.8rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Eliminar efectos de marco */
+.product-card.promo-card {
+    border: none;
+    animation: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Badge más elegante */
+.promo-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(135deg, #ff4757, #ff6348);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+    border: 2px solid rgba(255,255,255,0.2);
+    z-index: 5;
+}
+
+/* Línea sutil arriba (opcional complemento) */
+.product-card.promo-card .carousel-container {
+    border-top: 4px solid #ffd700;
+    border-radius: 15px 15px 0 0;
+}
+
+
+/* Efecto brillo dorado */
+.product-card.promo-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 215, 0, 0.1) 50%,
+        transparent 70%
+    );
+    animation: shine 3s infinite;
+    pointer-events: none;
+}
+
+@keyframes promo-glow {
+    0%, 100% { 
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 0 4px 15px rgba(0,0,0,0.1);
+        border-color: #ffd700;
+    }
+    50% { 
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.7), 0 4px 20px rgba(0,0,0,0.2);
+        border-color: #ffed4e;
+    }
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Modo oscuro - ajuste para promos */
+body.dark-theme .product-card.promo-card {
+    border-color: #ffd700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 4px 15px rgba(255,255,255,0.1);
+}
+
+/* Mejorar el badge de promo existente */
+.promo-badge {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    animation: pulse-badge 2s infinite;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    top: 10px;
+    left: 10px;
+    right: auto; /* Mover a la izquierda para no tapar categoría */
+}
+
+@keyframes pulse-badge {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}

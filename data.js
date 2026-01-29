@@ -75,7 +75,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 1
+        cantidad: 3
     },
     {
         id: 7,
@@ -205,7 +205,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 17,
@@ -219,7 +219,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 25
+        cantidad: 15
     },
     {
         id: 18,
@@ -292,7 +292,7 @@ const products = [
         id: 23,
         name: "Unova Victini Illustration Collection",
         category: "pokemon",
-        price: 65000, 
+        price: 80000, 
         language: ["es"],
         images: [
             "https://avalongaming.com.co/wp-content/uploads/Victini-Illustration-Collection-2.png.webp", "https://static.wixstatic.com/media/40e109_4d3d0551e5354ef89d9f3ca910f4b279~mv2.png/v1/fit/w_500,h_500,q_90/file.png", "https://static.wixstatic.com/media/40e109_d8b038187d814737a50d9373e9019f74~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
@@ -303,13 +303,13 @@ const products = [
         id: 24,
         name: "Unova Poster Collection",
         category: "pokemon",
-        price: 85000, 
+        price: 90000, 
         language: ["en"],
         images: [
             "https://tcglevel.com/cdn/shop/files/caja-coleccion-pokemon-llama-blanca-fulgor-negro-es.png?v=1753095343", "https://cardsrfun.de/cdn/shop/files/Black_Bolt_White_Flare_Unova_Poster_Collection.webp?v=1752854514&width=1214", "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2025/unova-poster-collection/inline/01-en.png"
         ],
         stock: "available",
-        promo: false, 
+        promo: true, 
         cantidad: 1
 
     },
@@ -317,7 +317,7 @@ const products = [
         id: 25,
         name: "Cynthia’s Garchomp EX Premium Collection",
         category: "pokemon",
-        price: 165000, 
+        price: 185000, 
         language: ["es", "en"],
         images: [
             "https://avalongaming.com.co/wp-content/uploads/Cynthia-Garchomp-EX-Premiaum-COllection-2.png.webp", "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2025/cynthias-garchomp-ex-premium-collection/inline/01-latam.png", "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2025/cynthias-garchomp-ex-premium-collection/inline/02.png", "https://pokefaust.com/cdn/shop/files/Garchomp_EX03.webp?v=1757090329&width=1946"
@@ -328,7 +328,7 @@ const products = [
         id: 26,
         name: "Booster Bundle Llamaradas Fantasmales",
         category: "pokemon",
-        price: 120000, 
+        price: 115000, 
         language: ["es"],
         images: [
             "https://d1i787aglh9bmb.cloudfront.net/assets/img/me-expansions/me02/collections/es-mx/me02-booster-bundle-la.png", "https://montevideogaminghouse.com/wp-content/uploads/2025/10/Pokemon-Megaevolucion-Llamaradas-Fantasmales-Sobre-de-Cartas-420x420.png", "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
@@ -367,7 +367,7 @@ const products = [
         id: 29,
         name: "Mega Lucario EX Figure Collection",
         category: "pokemon",
-        price: 115000, 
+        price: 126000, 
         language: ["en"],
         images: [
             "https://versusgamecenter.pt/cdn/shop/files/Pokemon-TCG-Mega-Lucario-Figure-Box_900x.png?v=1763557347", "https://www.igabiba.si/cdn/shop/files/pokemon-tcg-mega-lucario-ex-figure-collection-196214116986-1206248071_1024x.png?v=1763484541", "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Lucario-ex-figure-collection-box-contents.webp?v=1757577594&width=1500"
@@ -378,7 +378,7 @@ const products = [
         id: 30,
         name: "Mega Lucario EX Figure Collection",
         category: "pokemon",
-        price: 105000, 
+        price: 115000, 
         language: ["es"],
         images: [
             "https://versusgamecenter.pt/cdn/shop/files/Pokemon-TCG-Mega-Lucario-Figure-Box_900x.png?v=1763557347", "https://www.igabiba.si/cdn/shop/files/pokemon-tcg-mega-lucario-ex-figure-collection-196214116986-1206248071_1024x.png?v=1763484541", "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Lucario-ex-figure-collection-box-contents.webp?v=1757577594&width=1500"
@@ -387,7 +387,7 @@ const products = [
     },
     {
         id: 31,
-        name: "Battle Deck Gengar",
+        name: "Battle Deck Gengar o Battle Deck Diance",
         category: "pokemon",
         price: 65000, 
         language: ["es"],
@@ -401,7 +401,7 @@ const products = [
         id: 32,
         name: "League Battle Deck Team Rocket's Mewtwo EX",
         category: "pokemon",
-        price: 135000, 
+        price: 128000, 
         language: ["en"],
         images: [
             "https://evolvecardshop.com/cdn/shop/files/MewtwoexLeagueBattleDeck.png?v=1765489371&width=1946", "https://media.gamestop.com/i/gamestop/20026509_ALT03?$pdp$?w=1256&h=664&fmt=auto", "https://media.gamestop.com/i/gamestop/20026509_ALT02?$pdp$?w=1256&h=664&fmt=auto"
@@ -419,7 +419,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 3
+        cantidad: 2
 
     },
     {
@@ -431,7 +431,9 @@ const products = [
         images: [
             "https://gamer4ever.com.co/cdn/shop/files/820650504723_a505ee07-f4f8-4dc0-be6f-7c5ab458a752.jpg?v=1708104442", "https://www.pokemillon.com/cdn/shop/files/Sobres-destinos-de-paldea-en-espanol.png?v=1754154605", "https://card-binder.com/cdn/shop/files/Pokemon_Scarlet_Violet_Paldean_Fates_set_chase_cards.png?v=1739562220&width=1500"
         ],
-        stock: "soon",
+        stock: "available",
+        promo: true, 
+        cantidad: 3
 
 
     },
@@ -439,18 +441,20 @@ const products = [
         id: 35,
         name: "Mimikyu EX Box",
         category: "pokemon",
-        price: 80000, 
+        price: 90000, 
         language: ["es"],
         images: [
             "https://magicomens.com/cdn/shop/products/ptcg-mimikyu-ex-box_1200x.webp?v=1678787317", "https://www.despelvogel.com/wp-content/uploads/2020/02/Mimikyu-Box.png", "https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10001/P8792_290-85218_03.jpg"
         ],
-        stock: "soon"
+        stock: "available",
+        promo: false, 
+        cantidad: 1
     },
     {
         id: 36,
         name: "Booster Bundle Rivales Predestinados",
         category: "pokemon",
-        price: 105000, 
+        price: 120000, 
         language: ["es"],
         images: [
             "https://dojiw2m9tvv09.cloudfront.net/68889/product/booster-bundle-pok-mon-tcg-rivales-predestinados-espaniol0912.png", "https://pokemonalpha.es/wp-content/uploads/2025/03/Escarlata_y_Purpura-Rivales_Predestinados_Booster_Wraps_Cynthia_Garchomp_ES.webp", "https://cdn.shopify.com/s/files/1/0572/9671/5939/files/Blog_Products_1.png?v=1749269280"
@@ -467,7 +471,7 @@ const products = [
             "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/304106/401087/PKU10374-2PK-1__97689.1747075284.png", "https://i5.walmartimages.com/asr/928cd24c-e9dc-4ad5-a9a2-f1a1587d3149.d598abc9d7e891095bf094c3d7b2312a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF", "https://holograil.nl/cdn/shop/files/SlashingLegends_Tin_Contents.webp?v=1753385118&width=1000"
         ],
         stock: "available",
-        promo: false, 
+        promo: true, 
         cantidad: 2
 
     },
@@ -481,7 +485,7 @@ const products = [
             "https://luffytoys.cl/cdn/shop/files/2-257461-e9839_1200x.png?v=1717104973", "https://unboxunbored.com/cdn/shop/files/pokemon-tcg-shrouded-fable-kingambit-illustration-collection-210660.png?v=1748179440&width=1214", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"
         ],
         stock: "available",
-        promo: false, 
+        promo: true, 
         cantidad: 2
 
     },
@@ -494,7 +498,7 @@ const products = [
         images: [
             "https://card-binder.com/cdn/shop/files/Pokemon-scarlet-violet-destined-rivals-english-team-rocket-sleeved-booster-pack.webp?v=1743581350", "https://static0.srcdn.com/wordpress/wp-content/uploads/2025/05/three-cards-from-pokemon-tcg-destined-rivals-set-over-a-red-background.jpg?q=70&fit=crop&w=1200&h=628&dpr=1", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/06/pokemon-tcg-destined-rivals-cards-to-grade.jpg"
         ],
-        stock: "soon",
+        stock: "available",
         promo: false, 
         cantidad: 15
 
@@ -513,7 +517,48 @@ const products = [
         promo: false, 
         cantidad: 4
     },
-
+    {
+        id: 41,
+        name: "Funko Pop! Hantengu #1854",
+        category: "funko",
+        price: 45000, 
+        language: [""],
+        images: [
+            "https://realpopmania.com/cdn/shop/files/25_365c3c5f-e3a1-421f-af63-ec155e1c47d5.png?v=1734691504", "https://cdnx.jumpseller.com/ruma-store/image/61926375/resize/1200/630?1743376233",
+            
+        ],
+        stock: "available",
+        promo: true, 
+        cantidad: 1
+    },
+    {
+        id: 42,
+        name: "Funko Pop! Charmander Soft #455",
+        category: "funko",
+        price: 50000, 
+        language: [""],
+        images: [
+            "https://www.supportivepc.com/assets/alt_2/FUNK0010172.png?20250401214445", "https://www.mypops.ca/cdn/shop/files/char_002.png?v=1743620128",
+            
+        ],
+        stock: "available",
+        promo: false, 
+        cantidad: 2
+    },
+    {
+        id: 43,
+        name: "Funko Pop! Nobara (Painting) #1647",
+        category: "funko",
+        price: 35000, 
+        language: [""],
+        images: [
+            "https://garajedelmedio.com/wp-content/uploads/2025/08/nobara-funko-exclusivo-amazon.png",
+            "https://www.thepopplug.com/cdn/shop/files/Nobara_Kugisaki_Art_Toys_70776f55-0b68-46a7-989f-dd81943e5caa_2.png?v=1757798261&width=480",
+        ],
+        stock: "available",
+        promo: true, 
+        cantidad: 1
+    },
 
 
 

@@ -34,6 +34,9 @@
            style="width: 100%; padding: 0.8rem; border: 2px solid var(--border-light); 
                   border-radius: 8px; font-size: 1rem;">
 </div>
+
+
+
             <div class="filter-group">
                 <label>Categoría:</label>
                 <select id="categoryFilter">
@@ -43,6 +46,13 @@
                     <option value="otros">Otros</option>
                 </select>
             </div>
+
+<div class="filter-group">
+    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+        <input type="checkbox" id="promoFilter" style="width: auto;" onchange="filterProducts()">
+        <span>🔥 Solo promociones</span>
+    </label>
+</div>
 
             <div class="filter-group">
                 <label>Idioma:</label>
@@ -89,5 +99,14 @@
 
     <script src="data.js"></script>
     <script src="script.js"></script>
+
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/3115416469?text=Hola!%20Vi%20tu%20catálogo%20y%20quiero%20consultar%20por%20un%20producto" 
+   class="floating-btn whatsapp-btn" 
+   target="_blank" 
+   title="Contáctanos por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
 </body>
 </html>

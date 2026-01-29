@@ -176,7 +176,7 @@ body.dark-theme .filter-group label {
 }
 
 .checkbox-label {
-    display: flex-start;
+    display: flex;
     align-items: center; /* Centra todo verticalmente */
     gap: 0.6rem; /* Reducido ligeramente para mejor proporción */
     cursor: pointer;
@@ -400,6 +400,7 @@ body.dark-theme .product-name {
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
     .header-content {
@@ -412,14 +413,52 @@ body.dark-theme .product-name {
         flex-direction: column;
     }
     
+    /* Cambiar orden: Filtros arriba (1), Productos abajo (2) */
     .filters {
-        order: 2;
+        order: 1;
+        padding: 1rem; /* Menos padding para que sea menos invasivo */
+        margin: 0 0.5rem;
     }
     
     .products-grid {
-        order: 1;
+        order: 2;
+    }
+    
+    /* Hacer los filtros más compactos en móvil */
+    .filter-group {
+        margin-bottom: 0.8rem;
+    }
+    
+    .filter-group label {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .filter-group input,
+    .filter-group select,
+    .checkbox-label {
+        height: 42px; /* Un poco más bajos */
+        padding: 0.6rem;
+        font-size: 0.95rem;
+    }
+    
+    /* El título "Filtrar por" más pequeño */
+    .filters h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    /* Botones más compactos */
+    .filters button {
+        padding: 0.7rem;
+        font-size: 0.95rem;
     }
 }
+
+
 
 .product-image {
     width: 100%;

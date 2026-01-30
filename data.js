@@ -73,9 +73,8 @@ const products = [
             "https://www.despelvogel.com/wp-content/uploads/2020/08/Surging-Sparks-Boosters-1024x1024.png",
             "https://card-binder.com/cdn/shop/files/PokemonScarlet_VioletSurgingSparkssetchasecards.webp?v=1739564357&width=1500"
         ],
-        stock: "available",
-        promo: false, 
-        cantidad: 3
+        stock: "agotado",
+
     },
     {
         id: 7,
@@ -111,9 +110,8 @@ const products = [
             "https://cdnx.jumpseller.com/rtgamer-store/image/69132027/resize/306/407?1761666898",
             "https://www.stompinggroundstcg.com/cdn/shop/files/Mega_Gengar_ex_Deck_Promos_600x.webp?v=1762472166"
         ],
-        stock: "available",
-        promo: false, 
-        cantidad: 1
+        stock: "agotado",
+
     },
     {
         id: 10,
@@ -152,7 +150,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 13,
@@ -433,7 +431,7 @@ const products = [
         ],
         stock: "available",
         promo: true, 
-        cantidad: 3
+        cantidad: 5
 
 
     },
@@ -441,13 +439,13 @@ const products = [
         id: 35,
         name: "Mimikyu EX Box",
         category: "pokemon",
-        price: 90000, 
+        price: 80000, 
         language: ["es"],
         images: [
             "https://magicomens.com/cdn/shop/products/ptcg-mimikyu-ex-box_1200x.webp?v=1678787317", "https://www.despelvogel.com/wp-content/uploads/2020/02/Mimikyu-Box.png", "https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10001/P8792_290-85218_03.jpg"
         ],
         stock: "available",
-        promo: false, 
+        promo: true, 
         cantidad: 1
     },
     {
@@ -479,7 +477,7 @@ const products = [
         id: 38,
         name: "Mini Tin Fábula Sombria",
         category: "pokemon",
-        price: 48000, 
+        price: 38000, 
         language: ["es"],
         images: [
             "https://luffytoys.cl/cdn/shop/files/2-257461-e9839_1200x.png?v=1717104973", "https://unboxunbored.com/cdn/shop/files/pokemon-tcg-shrouded-fable-kingambit-illustration-collection-210660.png?v=1748179440&width=1214", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"

@@ -92,13 +92,13 @@ const products = [
         id: 8,
         name: "Mega Battle Deck -  Mega Diance EX",
         category: "pokemon",
-        price: 80000, 
-        language: ["en"],
+        price: 65000, 
+        language: ["es"],
         images: [
             "https://montevideogaminghouse.com/wp-content/uploads/2025/10/Pokemon-Mega-Battle-Deck-Mega-Diancie-ex-420x420.png",
             "https://cdnx.jumpseller.com/play-tcg1/image/68968748/resize/540/600?1766368530"
         ],
-        stock: "agotado"
+        stock: "encargo"
     },
     {
         id: 9,
@@ -217,7 +217,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 15
+        cantidad: 12
     },
     {
         id: 18,
@@ -295,7 +295,7 @@ const products = [
         images: [
             "https://avalongaming.com.co/wp-content/uploads/Victini-Illustration-Collection-2.png.webp", "https://static.wixstatic.com/media/40e109_4d3d0551e5354ef89d9f3ca910f4b279~mv2.png/v1/fit/w_500,h_500,q_90/file.png", "https://static.wixstatic.com/media/40e109_d8b038187d814737a50d9373e9019f74~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
         ],
-        stock: "encargo"
+        stock: "agotado"
     },
     {
         id: 24,
@@ -365,7 +365,7 @@ const products = [
         id: 29,
         name: "Mega Lucario EX Figure Collection",
         category: "pokemon",
-        price: 126000, 
+        price: 129000, 
         language: ["en"],
         images: [
             "https://versusgamecenter.pt/cdn/shop/files/Pokemon-TCG-Mega-Lucario-Figure-Box_900x.png?v=1763557347", "https://www.igabiba.si/cdn/shop/files/pokemon-tcg-mega-lucario-ex-figure-collection-196214116986-1206248071_1024x.png?v=1763484541", "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Lucario-ex-figure-collection-box-contents.webp?v=1757577594&width=1500"
@@ -393,7 +393,7 @@ const products = [
             "https://cdnx.jumpseller.com/rtgamer-store/image/69132027/resize/306/407?1761666898",
             "https://www.stompinggroundstcg.com/cdn/shop/files/Mega_Gengar_ex_Deck_Promos_600x.webp?v=1762472166"
         ],
-        stock: "encargo"
+        stock: "soon"
     },
     {
         id: 32,
@@ -417,7 +417,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 2
+        cantidad: 3
 
     },
     {
@@ -470,7 +470,7 @@ const products = [
         ],
         stock: "available",
         promo: true, 
-        cantidad: 2
+        cantidad: 1
 
     },
     {
@@ -498,7 +498,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 15
+        cantidad: 9
 
     },
     {
@@ -557,9 +557,18 @@ const products = [
         promo: true, 
         cantidad: 1
     },
-
-
-
+    {
+        id: 44,
+        name: "Toploaders & Penny Sleeves Pikachu (25 unidades)",
+        category: "pokemon",
+        price: 31000, 
+        language: [""],
+        images: [
+            "https://cdn11.bigcommerce.com/s-vz3etek0gv/images/stencil/1200w/products/78559/108684/ULP16663_web_Box_3D_R__20845.1769636487.jpg", "https://primary.jwwb.nl/public/h/t/i/temp-zjpebgcobmaxydcmrfwb/pkm_pikachu_toploader_b2b_landscapedistributorcatalog_11x17-high.jpg?enable-io=true&enable=upscale&fit=bounds&width=1200",
+            
+        ],
+        stock: "soon",
+    },
 
 
 

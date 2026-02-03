@@ -338,7 +338,7 @@ const products = [
     },
     {
         id: 27,
-        name: "Elite Trainer Box Llamaradas Fantasmales",
+        name: "ETB Llamaradas Fantasmales",
         category: "pokemon",
         price: 225000, 
         language: ["es"],
@@ -568,6 +568,20 @@ const products = [
             
         ],
         stock: "soon",
+    },
+    {
+        id: 45,
+        name: "ETB Phantasmal Flames",
+        category: "pokemon",
+        price: 240000, 
+        language: ["en"],
+        images: [
+            "https://stock-checker.com/images/products/pokemon-tcg-meg-phantasmal-flames-etb.png", "https://grancards.com/cdn/shop/files/ETB_LLAMAS_FANTASMALES_2.png?v=1763060420&width=1445", "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
+        ],
+        stock: "soon",
+        promo: false, 
+        cantidad: 10
+
     },
 
 

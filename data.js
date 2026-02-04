@@ -49,7 +49,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 19
+        cantidad: 17
     },
     {
         id: 5,
@@ -583,7 +583,18 @@ const products = [
         cantidad: 10
 
     },
+    {
+        id: 46,
+        name: "Zapdos EX Collection 151",
+        category: "pokemon",
+        price: 235000, 
+        language: ["en"],
+        images: [
+            "https://www.goodgames.com.au/cdn/shop/products/Pokemon_TCG_Scarlet_Violet-151_ex_Box-Zapdos_ex-min.png?v=1687315692", "https://cardceus.com/wp-content/uploads/2024/01/English-Special-Collection-151-Zapados-EXEnglish-Special-Collection-151-Zapados-EX-4.png", "https://assets-prd.ignimgs.com/2025/06/26/pokemon-tcg-sv-151-most-expensive-cards-cover-1750955691114.jpg", "https://www.supercollectors.es/wp-content/uploads/2023/11/151a-1024x287.png",
+        ],
+        stock: "soon",
 
+    },
 
 
 ];

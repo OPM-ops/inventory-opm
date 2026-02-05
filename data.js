@@ -393,7 +393,7 @@ const products = [
             "https://cdnx.jumpseller.com/rtgamer-store/image/69132027/resize/306/407?1761666898",
             "https://www.stompinggroundstcg.com/cdn/shop/files/Mega_Gengar_ex_Deck_Promos_600x.webp?v=1762472166"
         ],
-        stock: "soon"
+        stock: "encargo"
     },
     {
         id: 32,
@@ -573,12 +573,12 @@ const products = [
         id: 45,
         name: "ETB Phantasmal Flames",
         category: "pokemon",
-        price: 240000, 
+        price: 235000, 
         language: ["en"],
         images: [
             "https://stock-checker.com/images/products/pokemon-tcg-meg-phantasmal-flames-etb.png", "https://grancards.com/cdn/shop/files/ETB_LLAMAS_FANTASMALES_2.png?v=1763060420&width=1445", "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "soon",
+        stock: "available",
         promo: false, 
         cantidad: 10
 
@@ -587,12 +587,14 @@ const products = [
         id: 46,
         name: "Zapdos EX Collection 151",
         category: "pokemon",
-        price: 235000, 
+        price: 220000, 
         language: ["en"],
         images: [
             "https://www.goodgames.com.au/cdn/shop/products/Pokemon_TCG_Scarlet_Violet-151_ex_Box-Zapdos_ex-min.png?v=1687315692", "https://cardceus.com/wp-content/uploads/2024/01/English-Special-Collection-151-Zapados-EXEnglish-Special-Collection-151-Zapados-EX-4.png", "https://assets-prd.ignimgs.com/2025/06/26/pokemon-tcg-sv-151-most-expensive-cards-cover-1750955691114.jpg", "https://www.supercollectors.es/wp-content/uploads/2023/11/151a-1024x287.png",
         ],
-        stock: "soon",
+        stock: "available",
+        promo: true, 
+        cantidad: 5
 
     },
 

@@ -648,7 +648,7 @@ const products = [
         name: "Collection Erika/Larry Ascended Heroes",
         category: "pokemon",
         expansion: "ascended-heroes",
-        price: "47000", 
+        price: "50000", 
         language: ["en"],
         images: [
             "https://kantocards.com/cdn/shop/files/rn-image_picker_lib_temp_ebd49b90-cd39-477e-82f2-ef9016eb6361.png?v=1766092149", "https://geeknasio.com/wp-content/uploads/2026/01/Ascended-Heroes-Erika-y-Larry-Collection-600x600.png", "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30",

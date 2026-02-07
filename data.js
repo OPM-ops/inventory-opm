@@ -3,7 +3,8 @@ const products = [
         id: 1,
         name: "Elite Trainer Box Megaevolución (Gardevoir)",
         category: "pokemon",
-        price: 225000, // ← Entero limpio
+        expansion: "mega-evolution",
+        price: 225000,
         language: ["es"],
         images: [
             "https://cdn.snkrdunk.com/upload_bg_removed/20250922115711-6.webp?size=l",
@@ -16,6 +17,7 @@ const products = [
         id: 2,
         name: "Iono's Bellibolt EX Premium Collection",
         category: "pokemon",
+        expansion: "otros",
         price: 185000, 
         language: ["en"],
         images: [
@@ -28,6 +30,7 @@ const products = [
         id: 3,
         name: "Shrouded Fable Kingambit Collection",
         category: "pokemon",
+        expansion: "shrouded-fable",
         price: 100000, 
         language: ["en"],
         images: [
@@ -41,6 +44,7 @@ const products = [
         id: 4,
         name: "Booster Heat Wave Arena",
         category: "pokemon",
+        expansion: "heat-wave-arena",
         price: 21000, 
         language: ["jp"],
         images: [
@@ -55,6 +59,7 @@ const products = [
         id: 5,
         name: "Booster Box Surging Sparks",
         category: "pokemon",
+        expansion: "surging-sparks",
         price: 770000, 
         language: ["en"],
         images: [
@@ -67,6 +72,7 @@ const products = [
         id: 6,
         name: "Booster Surging Sparks",
         category: "pokemon",
+        expansion: "surging-sparks",
         price: 22000, 
         language: ["en"],
         images: [
@@ -80,6 +86,7 @@ const products = [
         id: 7,
         name: "Team Rocket's Mewtwo EX Box",
         category: "pokemon",
+        expansion: "destined-rivals",
         price: 120000, 
         language: ["en"],
         images: [
@@ -92,6 +99,7 @@ const products = [
         id: 8,
         name: "Mega Battle Deck -  Mega Diance EX",
         category: "pokemon",
+        expansion: "otros",
         price: 65000, 
         language: ["es"],
         images: [
@@ -104,6 +112,7 @@ const products = [
         id: 9,
         name: "Mega Battle Deck -  Mega Gengar EX (Daño en caja)",
         category: "pokemon",
+        expansion: "otros",
         price: 70000, 
         language: ["en"],
         images: [
@@ -117,6 +126,7 @@ const products = [
         id: 10,
         name: "Combo Mega Battle Deck - Mega Gengar EX (Daño en caja) y Mega Diance EX",
         category: "pokemon",
+        expansion: "otros",
         price: 135000, 
         language: ["en"],
         images: [
@@ -129,6 +139,7 @@ const products = [
         id: 11,
         name: "Deluxe Battle Deck - Miraidon EX",
         category: "pokemon",
+        expansion: "otros",
         price: 90000, 
         language: ["en"],
         images: [
@@ -143,19 +154,21 @@ const products = [
         id: 12,
         name: "Protectores de cartas - 100 Unidades",
         category: "pokemon",
+        expansion: "otros",
         price: 10000, 
         language: ["en"],
         images: [
             "https://sc04.alicdn.com/kf/H2dbb84b4f9fc4237ab5c0e99d4ea3ad7b.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false, 
-        cantidad: 1
+        cantidad: 0
     },
     {
         id: 13,
         name: "Booster Bundle Phantasmal Flames",
         category: "pokemon",
+        expansion: "phantasmal-flames",
         price: 125000, 
         language: ["en"],
         images: [
@@ -168,6 +181,7 @@ const products = [
         id: 14,
         name: "Booster Trick or Trade (2024)",
         category: "pokemon",
+        expansion: "otros",
         price: 5000, 
         language: ["en"],
         images: [
@@ -181,6 +195,7 @@ const products = [
         id: 15,
         name: "Mini Tin Evoluciones Prismaticas",
         category: "pokemon",
+        expansion: "prismatic-evolution",
         price: 52000, 
         language: ["es"],
         images: [
@@ -195,6 +210,7 @@ const products = [
         id: 16,
         name: "3 Pack Blister Llamaradas Fantasmales",
         category: "pokemon",
+        expansion: "phantasmal-flames",
         price: 63000, 
         language: ["es"],
         images: [
@@ -209,6 +225,7 @@ const products = [
         id: 17,
         name: "Sleeved Booster Phantasmal Flames",
         category: "pokemon",
+        expansion: "phantasmal-flames",
         price: 23000, 
         language: ["en"],
         images: [
@@ -223,6 +240,7 @@ const products = [
         id: 18,
         name: "3 Pack Blister Fabula Sombria",
         category: "pokemon",
+        expansion: "shrouded-fable",
         price: 56000, 
         language: ["es"],
         images: [
@@ -236,6 +254,7 @@ const products = [
         id: 19,
         name: "Booster Bundle Fabula Sombria",
         category: "pokemon",
+        expansion: "shrouded-fable",
         price: 112000, 
         language: ["es"],
         images: [
@@ -247,6 +266,7 @@ const products = [
         id: 20,
         name: "Pokeball Tin Q4 2025",
         category: "pokemon",
+        expansion: "otros",
         price: 65000, 
         language: ["es"],
         images: [
@@ -261,6 +281,7 @@ const products = [
         id: 21,
         name: "Booster Megaevolución",
         category: "pokemon",
+        expansion: "mega-evolution",
         price: 18000, 
         language: ["es"],
         images: [
@@ -275,6 +296,7 @@ const products = [
         id: 22,
         name: "Sleveed Booster Journey Together",
         category: "pokemon",
+        expansion: "journey-together",
         price: 23000, 
         language: ["en"],
         images: [
@@ -290,6 +312,7 @@ const products = [
         id: 23,
         name: "Unova Victini Illustration Collection",
         category: "pokemon",
+        expansion: "black-white",
         price: 80000, 
         language: ["es"],
         images: [
@@ -301,13 +324,14 @@ const products = [
         id: 24,
         name: "Unova Poster Collection",
         category: "pokemon",
+        expansion: "black-white",
         price: 90000, 
         language: ["en"],
         images: [
             "https://tcglevel.com/cdn/shop/files/caja-coleccion-pokemon-llama-blanca-fulgor-negro-es.png?v=1753095343", "https://cardsrfun.de/cdn/shop/files/Black_Bolt_White_Flare_Unova_Poster_Collection.webp?v=1752854514&width=1214", "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2025/unova-poster-collection/inline/01-en.png"
         ],
-        stock: "available",
-        promo: true, 
+        stock: "agotado",
+        promo: false, 
         cantidad: 1
 
     },
@@ -315,6 +339,7 @@ const products = [
         id: 25,
         name: "Cynthia’s Garchomp EX Premium Collection",
         category: "pokemon",
+        expansion: "otros",
         price: 185000, 
         language: ["es", "en"],
         images: [
@@ -326,6 +351,7 @@ const products = [
         id: 26,
         name: "Booster Bundle Llamaradas Fantasmales",
         category: "pokemon",
+        expansion: "phantasmal-flames",
         price: 115000, 
         language: ["es"],
         images: [
@@ -340,6 +366,7 @@ const products = [
         id: 27,
         name: "ETB Llamaradas Fantasmales",
         category: "pokemon",
+        expansion: "phantasmal-flames",
         price: 225000, 
         language: ["es"],
         images: [
@@ -354,6 +381,7 @@ const products = [
         id: 28,
         name: "Elite Trainer Box Megaevolución (Lucario)",
         category: "pokemon",
+        expansion: "mega-evolution",
         price: 225000, 
         language: ["es"],
         images: [
@@ -365,6 +393,7 @@ const products = [
         id: 29,
         name: "Mega Lucario EX Figure Collection",
         category: "pokemon",
+        expansion: "mega-evolution",
         price: 129000, 
         language: ["en"],
         images: [
@@ -376,6 +405,7 @@ const products = [
         id: 30,
         name: "Mega Lucario EX Figure Collection",
         category: "pokemon",
+        expansion: "mega-evolution",
         price: 115000, 
         language: ["es"],
         images: [
@@ -386,6 +416,7 @@ const products = [
     {
         id: 31,
         name: "Battle Deck Gengar o Battle Deck Diance",
+        expansion: "otros",
         category: "pokemon",
         price: 65000, 
         language: ["es"],
@@ -399,6 +430,7 @@ const products = [
         id: 32,
         name: "League Battle Deck Team Rocket's Mewtwo EX",
         category: "pokemon",
+        expansion: "otros",
         price: 128000, 
         language: ["en"],
         images: [
@@ -410,6 +442,7 @@ const products = [
         id: 33,
         name: "Mega Latias EX Box",
         category: "pokemon",
+        expansion: "otros",
         price: 105000, 
         language: ["en"],
         images: [
@@ -424,6 +457,7 @@ const products = [
         id: 34,
         name: "Lata Destinos de Paldea",
         category: "pokemon",
+        expansion: "paldean-fates",
         price: 110000, 
         language: ["es"],
         images: [
@@ -431,7 +465,7 @@ const products = [
         ],
         stock: "available",
         promo: true, 
-        cantidad: 5
+        cantidad: 4
 
 
     },
@@ -439,29 +473,32 @@ const products = [
         id: 35,
         name: "Mimikyu EX Box",
         category: "pokemon",
-        price: 80000, 
+        expansion: "otros",
+        price: 95000, 
         language: ["es"],
         images: [
             "https://magicomens.com/cdn/shop/products/ptcg-mimikyu-ex-box_1200x.webp?v=1678787317", "https://www.despelvogel.com/wp-content/uploads/2020/02/Mimikyu-Box.png", "https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10001/P8792_290-85218_03.jpg"
         ],
-        stock: "available",
-        promo: true, 
-        cantidad: 1
+        stock: "encargo",
+        promo: false, 
+        cantidad: ""
     },
     {
         id: 36,
         name: "Booster Bundle Rivales Predestinados",
+        expansion: "destined-rivals",
         category: "pokemon",
         price: 120000, 
         language: ["es"],
         images: [
             "https://dojiw2m9tvv09.cloudfront.net/68889/product/booster-bundle-pok-mon-tcg-rivales-predestinados-espaniol0912.png", "https://pokemonalpha.es/wp-content/uploads/2025/03/Escarlata_y_Purpura-Rivales_Predestinados_Booster_Wraps_Cynthia_Garchomp_ES.webp", "https://cdn.shopify.com/s/files/1/0572/9671/5939/files/Blog_Products_1.png?v=1749269280"
         ],
-        stock: "encargo"
+        stock: "agotado"
     },
     {
         id: 37,
         name: "Slashing Legends Tin",
+        expansion: "otros",
         category: "pokemon",
         price: 105000, 
         language: ["en"],
@@ -477,6 +514,7 @@ const products = [
         id: 38,
         name: "Mini Tin Fábula Sombria",
         category: "pokemon",
+        expansion: "shrouded-fable",
         price: 38000, 
         language: ["es"],
         images: [
@@ -491,6 +529,7 @@ const products = [
         id: 39,
         name: "Sleeved Booster Destined Rivals",
         category: "pokemon",
+        expansion: "destined-rivals",
         price: 23000, 
         language: ["en"],
         images: [
@@ -505,6 +544,7 @@ const products = [
         id: 40,
         name: "Poke Ball Tin Q4 2025",
         category: "pokemon",
+        expansion: "otros",
         price: 73000, 
         language: ["en"],
         images: [
@@ -519,6 +559,7 @@ const products = [
         id: 41,
         name: "Funko Pop! Hantengu #1854",
         category: "funko",
+        expansion: "",
         price: 45000, 
         language: [""],
         images: [
@@ -533,6 +574,7 @@ const products = [
         id: 42,
         name: "Funko Pop! Charmander Soft #455",
         category: "funko",
+        expansion: "",
         price: 50000, 
         language: [""],
         images: [
@@ -547,6 +589,7 @@ const products = [
         id: 43,
         name: "Funko Pop! Nobara (Painting) #1647",
         category: "funko",
+        expansion: "",
         price: 35000, 
         language: [""],
         images: [
@@ -561,6 +604,7 @@ const products = [
         id: 44,
         name: "Toploaders & Penny Sleeves Pikachu (25 unidades)",
         category: "pokemon",
+        expansion: "otros",
         price: 31000, 
         language: [""],
         images: [
@@ -573,6 +617,7 @@ const products = [
         id: 45,
         name: "ETB Phantasmal Flames",
         category: "pokemon",
+        expansion: "phantasmal-flames",
         price: 235000, 
         language: ["en"],
         images: [
@@ -587,6 +632,7 @@ const products = [
         id: 46,
         name: "Zapdos EX Collection 151",
         category: "pokemon",
+        expansion: "151",
         price: 220000, 
         language: ["en"],
         images: [
@@ -597,6 +643,50 @@ const products = [
         cantidad: 5
 
     },
+    {
+        id: 47,
+        name: "Collection Erika/Larry Ascended Heroes",
+        category: "pokemon",
+        expansion: "ascended-heroes",
+        price: "47000", 
+        language: ["en"],
+        images: [
+            "https://kantocards.com/cdn/shop/files/rn-image_picker_lib_temp_ebd49b90-cd39-477e-82f2-ef9016eb6361.png?v=1766092149", "https://geeknasio.com/wp-content/uploads/2026/01/Ascended-Heroes-Erika-y-Larry-Collection-600x600.png", "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30",
+        ],
+        stock: "soon",
+        promo: false, 
+
+    },
+    {
+        id: 48,
+        name: "Tech Sticker Collection Ascended Heroes",
+        category: "pokemon",
+        expansion: "ascended-heroes",
+        price: "75000", 
+        language: ["en"],
+        images: [
+            "https://avalongaming.com.co/wp-content/uploads/Ascended-Heroes-Tech-Sticker-Collection.png.webp", "https://media.gamestop.com/i/gamestop/20030567_ALT03?$pdp$?w=1256&h=664&fmt=auto", "https://cdn.chaoscards.co.uk/uploads/prod_img/2_319146_e.png?v=-62169983925", "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30",
+        ],
+        stock: "soon",
+        promo: false, 
+
+
+    },
+    {
+        id: 49,
+        name: "Pokémon Day 2026 Collection",
+        category: "pokemon",
+        expansion: "otros",
+        price: "80000", 
+        language: ["en"],
+        images: [
+            "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/341956/493637/PKU101039-1__96448.1769739454.png", "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2026/pokemon-day-2026-collection/inline/full/SV05_LA_51.png", "https://metamorphcenter.com/cdn/shop/files/Caja_Pokemon_Day_2026_-_30_Aniversario_-_Espanol-1.png?v=1769706495&width=1232",
+        ],
+        stock: "soon",
+        promo: false,
+        promoEvento: "pokemon-day", 
+
+    }
 
 
 ];
@@ -618,3 +708,64 @@ const countryNames = {
     'fr': 'Francés',
     'de': 'Alemán'
 };
+
+// Nombres de expansiones para mostrar
+const expansionNames = {
+    'ascended-heroes': 'Ascended Heroes',
+    'mega-evolution': 'Mega Evolution',
+    'phantasmal-flames': 'Phantasmal Flames',
+    'journey-together': 'Journey Together',
+    'shrouded-fable': 'Shrouded Fable',
+    'surging-sparks': 'Surging Sparks',
+    'destined-rivals': 'Destined Rivals',
+    'prismatic-evolution': 'Prismatic Evolution',
+    'paldean-fates': 'Palden Fates',
+    '151': 'Colección 151',
+    'heat-wave-arena': 'Heat Wave Arena',
+    'black-white': 'Black Bolt & White Flare',
+    'otros': 'Otros productos'
+};
+
+// Banners de preventa configurables
+const preorderBanners = [
+    {
+        id: "ascended-heroes",
+        title: "🔥 ASCENDED HEROES",
+        subtitle: "¡Preventa disponible!",
+        description: "Nueva colección con Erika, Larry y los héroes ascendentes",
+        image: "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30",
+        bgColor: "linear-gradient(135deg, #ff6b6b, #ee5a24, #f9ca24)",
+        textColor: "#ffffff",
+        action: "filter",
+        expansionFilter: "ascended-heroes",
+        active: true,
+        priority: 1
+    },
+    {
+        id: "instagram-promo",
+        title: "📸 SÍGUENOS EN INSTAGRAM",
+        subtitle: "¡Dinámicas y promociones especiales!",
+        description: "Participa en giveaways, sorteos y sé el primero en enterarte de nuevas llegadas",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png",
+        bgColor: "linear-gradient(135deg, #833ab4, #fd1d1d, #f77737)",
+        textColor: "#ffffff",
+        action: "link",
+        link: "https://instagram.com/tu_cuenta", // ← REEMPLAZA con tu usuario de Instagram
+        showQR: true,
+        qrImage: "qr-instagram.png", // ← Aquí pondrás tu imagen del QR
+        active: true,
+        priority: 2
+    },
+    {
+        id: "pokemon-day",
+        title: "⚡ POKÉMON DAY 2026",
+        subtitle: "27 de Febrero - ¡Celebremos juntos!",
+        description: "Promociones especiales, descuentos exclusivos y sorpresas para el día de Pokémon",
+        image: "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2026/pokemon-day-2026-collection/inline/full/SV05_LA_51.png",
+        bgColor: "linear-gradient(135deg, #FFD700, #FFA500, #FF8C00)",
+        textColor: "#1a1a1a",
+        action: "filter-promo",
+        promoFilter: "pokemon-day", 
+        active: true,
+        priority: 3
+    }];

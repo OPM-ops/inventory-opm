@@ -737,7 +737,7 @@ const products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 5
+        cantidad: 10
 
 
     },    {

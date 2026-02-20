@@ -189,7 +189,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 138
+        cantidad: 137
     },
     {
         id: 15,
@@ -248,7 +248,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 2
+        cantidad: 3
     },
     {
         id: 19,
@@ -260,7 +260,7 @@ const products = [
         images: [
             "https://www.pokemon.com/static-assets/content-assets/cms2-es-es/img/trading-card-game/series/sv_series/sv6pt5/inline/sv6pt5-booster-bundle-es.png", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"
         ],
-        stock: "encargo"
+        stock: "agotado"
     },
     {
         id: 20,
@@ -289,7 +289,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 3
+        cantidad: 2
 
     },
     {
@@ -332,7 +332,7 @@ const products = [
         ],
         stock: "agotado",
         promo: false, 
-        cantidad: 1
+        cantidad: 0
 
     },
     {
@@ -359,7 +359,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 2
+        cantidad: 1
 
     },
     {
@@ -450,7 +450,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 3
+        cantidad: 2
 
     },
     {
@@ -465,7 +465,7 @@ const products = [
         ],
         stock: "available",
         promo: true, 
-        cantidad: 4
+        cantidad: 2
 
 
     },
@@ -479,9 +479,9 @@ const products = [
         images: [
             "https://magicomens.com/cdn/shop/products/ptcg-mimikyu-ex-box_1200x.webp?v=1678787317", "https://www.despelvogel.com/wp-content/uploads/2020/02/Mimikyu-Box.png", "https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10001/P8792_290-85218_03.jpg"
         ],
-        stock: "encargo",
+        stock: "available",
         promo: false, 
-        cantidad: ""
+        cantidad: "5"
     },
     {
         id: 36,
@@ -515,14 +515,14 @@ const products = [
         name: "Mini Tin Fábula Sombria",
         category: "pokemon",
         expansion: "shrouded-fable",
-        price: 38000, 
+        price: 45000, 
         language: ["es"],
         images: [
             "https://luffytoys.cl/cdn/shop/files/2-257461-e9839_1200x.png?v=1717104973", "https://unboxunbored.com/cdn/shop/files/pokemon-tcg-shrouded-fable-kingambit-illustration-collection-210660.png?v=1748179440&width=1214", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"
         ],
         stock: "available",
-        promo: true, 
-        cantidad: 2
+        promo: false, 
+        cantidad: 1
 
     },
     {
@@ -537,7 +537,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 9
+        cantidad: 3
 
     },
     {
@@ -625,7 +625,7 @@ const products = [
         ],
         stock: "available",
         promo: false, 
-        cantidad: 10
+        cantidad: 5
 
     },
     {
@@ -640,7 +640,7 @@ const products = [
         ],
         stock: "available",
         promo: true, 
-        cantidad: 5
+        cantidad: 3
 
     },
     {
@@ -649,12 +649,14 @@ const products = [
         category: "pokemon",
         expansion: "ascended-heroes",
         price: "52000", 
-        language: ["en, es"],
+        language: ["es"],
         images: [
             "https://kantocards.com/cdn/shop/files/rn-image_picker_lib_temp_ebd49b90-cd39-477e-82f2-ef9016eb6361.png?v=1766092149", "https://geeknasio.com/wp-content/uploads/2026/01/Ascended-Heroes-Erika-y-Larry-Collection-600x600.png", "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30",
         ],
-        stock: "soon",
+        stock: "available",
         promo: false, 
+        cantidad: 2
+
 
     },
     {
@@ -667,8 +669,10 @@ const products = [
         images: [
             "https://avalongaming.com.co/wp-content/uploads/Ascended-Heroes-Tech-Sticker-Collection.png.webp", "https://media.gamestop.com/i/gamestop/20030567_ALT03?$pdp$?w=1256&h=664&fmt=auto", "https://cdn.chaoscards.co.uk/uploads/prod_img/2_319146_e.png?v=-62169983925", "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30",
         ],
-        stock: "soon",
+        stock: "available",
         promo: false, 
+        cantidad: 4
+
 
 
     },
@@ -682,11 +686,30 @@ const products = [
         images: [
             "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/341956/493637/PKU101039-1__96448.1769739454.png", "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2026/pokemon-day-2026-collection/inline/full/SV05_LA_51.png", "https://metamorphcenter.com/cdn/shop/files/Caja_Pokemon_Day_2026_-_30_Aniversario_-_Espanol-1.png?v=1769706495&width=1232",
         ],
-        stock: "soon",
+        stock: "available",
         promo: false,
         promoEvento: "pokemon-day", 
+        cantidad: 2
+
+
+    },  // ← AGREGAR ESTA COMA
+    {
+        id: 50,
+        name: "Ultra Premium Collection Mega Charizard X",
+        category: "pokemon",
+        expansion: "phantasmal-flames",
+        price: "530000", 
+        language: ["en"],
+        images: [
+            "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Charizard-Ultra-Premium-Collection-Box-Contents.webp?v=1757582351&width=1500", "https://cdnx.jumpseller.com/tcg-chile/image/68810996/resize/540/540?1760738085", "https://kantocards.com/cdn/shop/files/rn-image_picker_lib_temp_9ebd7f72-90ca-4708-910c-75e679730c4a.png?v=1771097615&width=1354",
+        ],
+        stock: "available",
+        promo: false,
+        cantidad: 2
+
 
     }
+
 
 
 ];
@@ -730,10 +753,10 @@ const expansionNames = {
 const preorderBanners = [
     {
         id: "ascended-heroes",
-        title: "🔥 ASCENDED HEROES",
-        subtitle: "¡Preventa disponible!",
+        title: "ASCENDED HEROES 🔥 ",
+        subtitle: "¡Disponible!",
         description: "Nueva colección con Erika, Larry y los héroes ascendentes",
-        image: "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30",
+        image: "https://avalongaming.com.co/wp-content/uploads/Logo-Ascended-Heroes.png.webp",
         bgColor: "linear-gradient(135deg, #ff6b6b, #ee5a24, #f9ca24)",
         textColor: "#ffffff",
         action: "filter",
@@ -750,11 +773,11 @@ const preorderBanners = [
         bgColor: "linear-gradient(135deg, #833ab4, #fd1d1d, #f77737)",
         textColor: "#ffffff",
         action: "link",
-        link: "https://instagram.com/tu_cuenta", // ← REEMPLAZA con tu usuario de Instagram
+        link: "https://tr.ee/I2M2MB", // ← REEMPLAZA con tu usuario de Instagram
         showQR: true,
         qrImage: "qr-instagram.png", // ← Aquí pondrás tu imagen del QR
         active: true,
-        priority: 2
+        priority: 3
     },
     {
         id: "pokemon-day",
@@ -767,6 +790,5 @@ const preorderBanners = [
         action: "filter-promo",
         promoFilter: "pokemon-day", 
         active: true,
-        priority: 3
+        priority: 2
     }];
-

@@ -23,6 +23,11 @@
         </div>
     </header>
 
+    <!-- BANNER DE PREVENTA DINÁMICO -->
+    <div class="preorder-banner-container" id="preorderBannerContainer">
+        <!-- Los banners se cargarán dinámicamente desde data.js -->
+    </div>
+
     <div class="container">
         <!-- Filtros -->
         <aside class="filters">
@@ -36,13 +41,35 @@
 
             <div class="filter-group">
                 <label>Categoría:</label>
-                <select id="categoryFilter">
+                <select id="categoryFilter" onchange="filterProducts()">
                     <option value="all">Todas</option>
                     <option value="pokemon">Pokémon TCG</option>
                     <option value="funko">Funko Pop</option>
                     <option value="otros">Otros</option>
                 </select>
             </div>
+
+            <!-- NUEVO: Filtro por Expansión -->
+            <div class="filter-group">
+                <label>Expansión:</label>
+                <select id="expansionFilter" onchange="filterProducts()">
+                    <option value="all">Todas las expansiones</option>
+                    <option value="ascended-heroes">🔥 Ascended Heroes</option>
+                    <option value="mega-evolucion">Mega Evolución</option>
+                    <option value="phantasmal-flames">Phantasmal Flames</option>
+                    <option value="llamaradas-fantasmales">Llamaradas Fantasmales</option>
+                    <option value="journey-together">Journey Together</option>
+                    <option value="shrouded-fable">Shrouded Fable / Fábula Sombría</option>
+                    <option value="surging-sparks">Surging Sparks</option>
+                    <option value="destined-rivals">Destined Rivals / Rivales Predestinados</option>
+                    <option value="evoluciones-prismaticas">Evoluciones Prismáticas</option>
+                    <option value="destinos-paldea">Destinos de Paldea</option>
+                    <option value="151">Colección 151</option>
+                    <option value="prismatic-evolutions">Prismatic Evolutions</option>
+                    <option value="heat-wave-arena">Heat Wave Arena</option>
+                </select>
+            </div>
+
 
 <div class="filter-group">
     <label>Promociones:</label>

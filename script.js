@@ -1,4 +1,6 @@
 let filteredProducts = [...products];
+let currentExpansionFilter = 'all';
+
 
 // Función para cambiar tema
 function toggleTheme() {
@@ -26,6 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('themeIcon').classList.add('fa-sun');
     }
     
+    // Renderizar banners de preventa
+    renderPreorderBanners();
+
+
+
     // Ordenar productos por prioridad
     products.sort((a, b) => {
         const priority = {
@@ -39,6 +46,292 @@ document.addEventListener('DOMContentLoaded', () => {
     
     renderProducts(products);
 });
+
+
+let currentBannerIndex = 0;
+let bannerInterval;
+
+// Renderizar banners de preventa con carrusel
+function renderPreorderBanners() {
+    const container = document.getElementById('preorderBannerContainer');
+    if (!container) return;
+    
+    // Filtrar solo banners activos y ordenar por prioridad
+    const activeBanners = preorderBanners
+        .filter(banner => banner.active)
+        .sort((a, b) => a.priority - b.priority);
+    
+    if (activeBanners.length === 0) {
+        container.style.display = 'none';
+        return;
+    }
+    
+    // Si solo hay un banner, mostrarlo sin carrusel
+    if (activeBanners.length === 1) {
+        container.innerHTML = createBannerHTML(activeBanners[0], 0, 1);
+        return;
+    }
+    
+    // Crear carrusel de banners
+    let bannersHTML = `
+        <div class="banners-carousel">
+            <div class="banners-track" id="bannersTrack">
+                ${activeBanners.map((banner, index) => createBannerHTML(banner, index, activeBanners.length)).join('')}
+            </div>
+            
+            <!-- Controles del carrusel -->
+            <button class="banner-nav prev" onclick="moveBanner(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="banner-nav next" onclick="moveBanner(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Indicadores -->
+            <div class="banners-indicators">
+                ${activeBanners.map((_, index) => `
+                    <span class="banner-indicator ${index === 0 ? 'active' : ''}" 
+                          onclick="goToBanner(${index})"></span>
+                `).join('')}
+            </div>
+            
+            <!-- Contador automático -->
+            <div class="banner-autoplay-status">
+                <i class="fas fa-play-circle" id="autoplayIcon"></i>
+            </div>
+        </div>
+    `;
+    
+    container.innerHTML = bannersHTML;
+    
+    // Iniciar carrusel automático
+    startBannerAutoplay(activeBanners.length);
+}
+
+// Crear HTML de un banner individual
+
+function createBannerHTML(banner, index, total) {
+    const onclickAttr = banner.action === 'link' 
+        ? `onclick="handleBannerClick('${banner.id}')"` 
+        : `onclick="handleBannerClick('${banner.id}')"`;
+
+    let extraContent = '';
+    if (banner.showQR && banner.qrImage) {
+        extraContent = `
+            <div class="banner-qr">
+                <img src="${banner.qrImage}" alt="QR Instagram" onerror="this.style.display='none'">
+                <span>¡Escanea y síguenos!</span>
+            </div>
+        `;
+    }
+
+    return `
+        <div class="preorder-banner banner-slide" data-banner-id="${banner.id}"
+             style="background: ${banner.bgColor}; color: ${banner.textColor}; min-width: 100%;"
+             ${onclickAttr}>
+            <div class="preorder-content">
+                <div class="preorder-text">
+                    <h2>${banner.title}</h2>
+                    <p class="preorder-subtitle">${banner.subtitle}</p>
+                    <p class="preorder-description">${banner.description}</p>
+                    <span class="preorder-cta">
+                        <i class="fas ${banner.action === 'link' ? 'fa-external-link-alt' : 'fa-eye'}"></i> 
+                        ${banner.action === 'link' ? 'Visitar ahora' : 'Ver productos disponibles'}
+                    </span>
+                </div>
+                <div class="preorder-image">
+                    <img src="${banner.image}" alt="${banner.title}" onerror="this.style.display='none'">
+                    ${extraContent}
+                </div>
+            </div>
+            <div class="preorder-badge">
+                <i class="fas ${getBadgeIcon(banner.id)}"></i> 
+                ${getBadgeText(banner.id)}
+            </div>
+        </div>
+    `;
+}
+
+
+// Obtener icono según tipo de banner
+function getBadgeIcon(bannerId) {
+    if (bannerId.includes('instagram')) return 'fa-camera';
+    if (bannerId.includes('pokemon-day')) return 'fa-bolt';
+    return 'fa-fire';
+}
+
+// Obtener texto de badge según tipo de banner
+function getBadgeText(bannerId) {
+    if (bannerId.includes('instagram')) return 'SÍGUENOS';
+    if (bannerId.includes('pokemon-day')) return 'EVENTO';
+    return 'PREVENTA';
+}
+
+function handleBannerClick(bannerId) {
+    const banner = preorderBanners.find(b => b.id === bannerId);
+    if (!banner) return;
+    
+    if (banner.action === 'link' && banner.link) {
+        window.open(banner.link, '_blank');
+    } else if (banner.action === 'filter' && banner.expansionFilter) {
+        filterByExpansion(banner.expansionFilter);
+    } else if (banner.action === 'filter-promo' && banner.promoFilter) {
+        // NUEVO: Filtrar por promoción de evento
+        filterByPromoEvent(banner.promoFilter);
+    }
+}
+
+
+
+// Mover carrusel de banners
+function moveBanner(direction) {
+    const activeBanners = preorderBanners.filter(b => b.active);
+    const total = activeBanners.length;
+    
+    currentBannerIndex += direction;
+    
+    if (currentBannerIndex < 0) {
+        currentBannerIndex = total - 1;
+    } else if (currentBannerIndex >= total) {
+        currentBannerIndex = 0;
+    }
+    
+    updateBannerDisplay();
+    resetBannerAutoplay(total);
+}
+
+// Ir a banner específico
+function goToBanner(index) {
+    currentBannerIndex = index;
+    updateBannerDisplay();
+    const activeBanners = preorderBanners.filter(b => b.active);
+    resetBannerAutoplay(activeBanners.length);
+}
+
+// Actualizar visualización del carrusel
+function updateBannerDisplay() {
+    const track = document.getElementById('bannersTrack');
+    const indicators = document.querySelectorAll('.banner-indicator');
+    
+    if (track) {
+        track.style.transform = `translateX(-${currentBannerIndex * 100}%)`;
+    }
+    
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentBannerIndex);
+    });
+}
+
+// Iniciar reproducción automática
+function startBannerAutoplay(total) {
+    stopBannerAutoplay();
+    bannerInterval = setInterval(() => {
+        moveBanner(1);
+    }, 5000); // Cambiar cada 5 segundos
+}
+
+// Detener reproducción automática
+function stopBannerAutoplay() {
+    if (bannerInterval) {
+        clearInterval(bannerInterval);
+    }
+}
+
+// Reiniciar reproducción automática
+function resetBannerAutoplay(total) {
+    stopBannerAutoplay();
+    bannerInterval = setInterval(() => {
+        moveBanner(1);
+    }, 5000);
+}
+
+// Pausar al interactuar
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('preorderBannerContainer');
+    if (container) {
+        container.addEventListener('mouseenter', stopBannerAutoplay);
+        container.addEventListener('mouseleave', () => {
+            const activeBanners = preorderBanners.filter(b => b.active);
+            startBannerAutoplay(activeBanners.length);
+        });
+    }
+});
+
+
+
+// Filtrar por expansión (llamado desde el banner)
+function filterByExpansion(expansionId) {
+    const expansionSelect = document.getElementById('expansionFilter');
+    if (expansionSelect) {
+        expansionSelect.value = expansionId;
+        filterProducts();
+        
+        // Scroll suave hacia los productos
+        document.getElementById('productsGrid').scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+    }
+}
+
+function filterByProductIds(productIds) {
+    // Resetear filtros
+    resetFilters();
+    
+    // Filtrar solo los productos con esos IDs
+    filteredProducts = products.filter(product => {
+        return productIds.includes(product.id);
+    });
+    
+    // Mantener el orden que definiste en el array
+    const orderMap = {};
+    productIds.forEach((id, index) => {
+        orderMap[id] = index;
+    });
+    
+    filteredProducts.sort((a, b) => {
+        return orderMap[a.id] - orderMap[b.id];
+    });
+    
+    renderProducts(filteredProducts);
+    
+    // Scroll
+    const productsGrid = document.getElementById('productsGrid');
+    if (productsGrid) {
+        productsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+// Filtrar por promoción de evento (Pokémon Day, etc.)
+function filterByPromoEvent(promoEventId) {
+    // Resetear todos los filtros primero
+    resetFilters();
+    
+    // Filtrar solo productos que tengan este promoEvento
+    filteredProducts = products.filter(product => {
+        return product.promoEvento === promoEventId;
+    });
+    
+    // Ordenar por disponibilidad
+    filteredProducts.sort((a, b) => {
+        const priority = {
+            'available': 1,
+            'soon': 2,
+            'encargo': 3,
+            'agotado': 4
+        };
+        return priority[a.stock] - priority[b.stock];
+    });
+    
+    renderProducts(filteredProducts);
+    
+    // Scroll a productos
+    const productsGrid = document.getElementById('productsGrid');
+    if (productsGrid) {
+        productsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
 
 // Función para formatear precios en COP
 function formatCOP(price) {
@@ -77,6 +370,14 @@ function renderLanguages(languages) {
     return html;
 }
 
+// Obtener badge de expansión
+function getExpansionBadge(expansion) {
+    if (!expansion || expansion === 'otros') return '';
+    const name = expansionNames[expansion] || expansion;
+    return `<span class="expansion-badge ${expansion}">${name}</span>`;
+}
+
+
 function renderProducts(productsToRender) {
     const grid = document.getElementById('productsGrid');
     grid.innerHTML = '';
@@ -92,6 +393,7 @@ function renderProducts(productsToRender) {
         card.className = product.promo ? 'product-card surface promo-card' : 'product-card surface';
         
         const languageHtml = renderLanguages(product.language);
+        const expansionBadge = getExpansionBadge(product.expansion);
 
         let promoBadge = '';
         if (product.promo) {
@@ -130,6 +432,7 @@ function renderProducts(productsToRender) {
                 ${promoBadge}
             </div>
             <div class="product-info">
+                ${expansionBadge}
                 <div class="product-name">${product.name}</div>
                 <div class="product-price">${formatCOP(product.price)}</div>
                 ${languageHtml}
@@ -146,10 +449,13 @@ function renderProducts(productsToRender) {
 function filterProducts() {
     const showOnlyPromo = document.getElementById('promoFilter').checked;
     const category = document.getElementById('categoryFilter').value;
+    const expansion = document.getElementById('expansionFilter').value;
     const maxPrice = document.getElementById('priceFilter').value;
     const stock = document.getElementById('stockFilter').value;
     const language = document.getElementById('languageFilter').value;
     const searchTerm = document.getElementById('searchFilter').value.toLowerCase().trim();
+    // Actualizar filtro actual
+    currentExpansionFilter = expansion;
 
     filteredProducts = products.filter(product => {
         let matches = true;
@@ -168,6 +474,10 @@ function filterProducts() {
         }
 
         if (category !== 'all' && product.category !== category) {
+            matches = false;
+        }
+        // Filtro por expansión
+        if (expansion !== 'all' && product.expansion !== expansion) {
             matches = false;
         }
 
@@ -209,11 +519,13 @@ function filterProducts() {
 function resetFilters() {
     document.getElementById('promoFilter').checked = false;
     document.getElementById('categoryFilter').value = 'all';
+    document.getElementById('expansionFilter').value = 'all';
     document.getElementById('priceFilter').value = '';
     document.getElementById('stockFilter').value = 'all';
     document.getElementById('languageFilter').value = 'all';
     document.getElementById('searchFilter').value = '';
     filteredProducts = [...products];
+    currentExpansionFilter = 'all';
     
     // Re-ordenar
     filteredProducts.sort((a, b) => {

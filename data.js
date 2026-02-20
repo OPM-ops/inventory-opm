@@ -692,7 +692,7 @@ const products = [
         cantidad: 2
 
 
-    },  // ← AGREGAR ESTA COMA
+    }, 
     {
         id: 50,
         name: "Ultra Premium Collection Mega Charizard X",
@@ -706,6 +706,53 @@ const products = [
         stock: "available",
         promo: false,
         cantidad: 2
+
+
+    },
+    {
+        id: 51,
+        name: "Booster Golpe Fusión",
+        category: "pokemon",
+        expansion: "golpe fusion",
+        price: "22000", 
+        language: ["es"],
+        images: [
+            "https://pokeperkcards.com/cdn/shop/files/fusion-pack.png?v=1724965994&width=1445", "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/11/EitJnbZXkAAvp2T-1-copy-92-7.jpg", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/06/Gengar-VMAX-FS.jpg?q=49&fit=crop&w=825&dpr=2",
+        ],
+        stock: "available",
+        promo: false,
+        cantidad: 5
+
+
+    },
+    {
+        id: 52,
+        name: "Sobre Tempestad Plateada",
+        category: "pokemon",
+        expansion: "tempestad plateada",
+        price: "22000", 
+        language: ["es"],
+        images: [
+            "https://www.latorremagica.com/3126-large_default/sobre-cartas-pokemon-tempestad-plateada.jpg", "https://card-binder.com/cdn/shop/files/Pokemon_Sword_Shield_Silver_Tempest_Chase_cards.webp?v=1739714637&width=1500", "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/06/pokemon-tcg-most-valuable-silver-tempest.jpg",
+        ],
+        stock: "available",
+        promo: false,
+        cantidad: 5
+
+
+    },    {
+        id: 53,
+        name: "cielos evolutivos",
+        category: "pokemon",
+        expansion: "cielos evolutivos",
+        price: "25000", 
+        language: ["es"],
+        images: [
+            "https://www.pokemillon.com/cdn/shop/files/Sobre_Cielos_Evolutivos_Sin_Fondo_Pokemillon_a1384360-b745-41c7-a72c-1644826321b3.png?v=1768861462", "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/07/EitJnbZXkAAvp2T-1-copy-90-21.jpg", "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/07/EitJnbZXkAAvp2T-1-copy-95-23.jpg",
+        ],
+        stock: "available",
+        promo: false,
+        cantidad: 5
 
 
     }

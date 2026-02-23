@@ -746,19 +746,19 @@ const products = [
     },
     {
         id: 51,
-        name: "Booster Golpe Fusión",
+        name: "Booster Astros Brillantes",
         category: "pokemon",
-        expansion: "golpe-fusion",
-        price: 22000,
+        expansion: "astros brillantes",
+        price: 23000,
         language: ["es"],
         images: [
-            "https://pokeperkcards.com/cdn/shop/files/fusion-pack.png?v=1724965994&width=1445",
-            "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/11/EitJnbZXkAAvp2T-1-copy-92-7.jpg",
-            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2022/06/Gengar-VMAX-FS.jpg?q=49&fit=crop&w=825&dpr=2"
+            "https://saccum.com/wp-content/uploads/2022/09/SobresAstrosBrillantes.png",
+            "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2022/01/EitJnbZXkAAvp2T-1-copy-90-15.jpg",
+            "https://www.pokemon.com/static-assets/content-assets/cms2-es-es/img/trading-card-game/_tiles/strategy/swsh09/top-cards/swsh09-top-cards-169-es.jpg"
         ],
         stock: "available",
         promo: false,
-        cantidad: 5
+        cantidad: 10
     },
     {
         id: 52,
@@ -774,7 +774,7 @@ const products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 10
+        cantidad: 20
     },
     {
         id: 53,
@@ -788,9 +788,9 @@ const products = [
             "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/07/EitJnbZXkAAvp2T-1-copy-90-21.jpg",
             "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/07/EitJnbZXkAAvp2T-1-copy-95-23.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
-        cantidad: 5
+        cantidad: 
     },
     {
         id: 54,

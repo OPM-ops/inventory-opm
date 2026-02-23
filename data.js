@@ -790,7 +790,7 @@ const products = [
         ],
         stock: "agotado",
         promo: false,
-        cantidad: 
+        cantidad: "",
     },
     {
         id: 54,

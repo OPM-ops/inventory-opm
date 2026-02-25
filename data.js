@@ -615,7 +615,7 @@ const products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 43,
@@ -674,7 +674,7 @@ const products = [
             "https://assets-prd.ignimgs.com/2025/06/26/pokemon-tcg-sv-151-most-expensive-cards-cover-1750955691114.jpg",
             "https://www.supercollectors.es/wp-content/uploads/2023/11/151a-1024x287.png"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: true,
         cantidad: 3
     },
@@ -690,7 +690,7 @@ const products = [
             "https://geeknasio.com/wp-content/uploads/2026/01/Ascended-Heroes-Erika-y-Larry-Collection-600x600.png",
             "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 2
     },
@@ -707,7 +707,7 @@ const products = [
             "https://cdn.chaoscards.co.uk/uploads/prod_img/2_319146_e.png?v=-62169983925",
             "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 4
     },
@@ -723,7 +723,7 @@ const products = [
             "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2026/pokemon-day-2026-collection/inline/full/SV05_LA_51.png",
             "https://metamorphcenter.com/cdn/shop/files/Caja_Pokemon_Day_2026_-_30_Aniversario_-_Espanol-1.png?v=1769706495&width=1232"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         promoEvento: "pokemon-day",
         cantidad: 2
@@ -758,7 +758,7 @@ const products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 10
+        cantidad: 8
     },
     {
         id: 52,
@@ -774,7 +774,7 @@ const products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 20
+        cantidad: 15
     },
     {
         id: 53,
@@ -804,7 +804,7 @@ const products = [
             "https://cardzone.es/cdn/shop/files/contenido-caja-de-entrenador-elite-trainer-box-etb-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone_fe31d546-5f40-4eed-ad26-7da31d3fa915.png?v=1771327450&width=3840",
             "https://cdn.shopify.com/s/files/1/0865/2816/4189/files/Pokemon-TCG-Mega-Evolutions-Ascended-Heroes-New-Mega-Evolution-illustration-Cards.webp?v=1763715714"
         ],
-        stock: "available",
+        stock: "true",
         promo: false,
         cantidad: 9
     },
@@ -813,7 +813,7 @@ const products = [
         name: "Tin Mega Charizard",
         category: "pokemon",
         expansion: "ascended-heroes",
-        price: 25000,
+        price: 115000,
         language: ["es"],
         images: [
             "https://pokesouq.com/cdn/shop/files/mega_charizard_4_tin_1_2048x.png?v=1771478020",

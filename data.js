@@ -507,7 +507,7 @@ const products = [
             "https://www.despelvogel.com/wp-content/uploads/2020/02/Mimikyu-Box.png",
             "https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10001/P8792_290-85218_03.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 5
     },
@@ -569,7 +569,7 @@ const products = [
             "https://static0.srcdn.com/wordpress/wp-content/uploads/2025/05/three-cards-from-pokemon-tcg-destined-rivals-set-over-a-red-background.jpg?q=70&fit=crop&w=1200&h=628&dpr=1",
             "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/06/pokemon-tcg-destined-rivals-cards-to-grade.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 3
     },
@@ -585,7 +585,7 @@ const products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 4
+        cantidad: 3
     },
     {
         id: 41,
@@ -804,7 +804,7 @@ const products = [
             "https://cardzone.es/cdn/shop/files/contenido-caja-de-entrenador-elite-trainer-box-etb-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone_fe31d546-5f40-4eed-ad26-7da31d3fa915.png?v=1771327450&width=3840",
             "https://cdn.shopify.com/s/files/1/0865/2816/4189/files/Pokemon-TCG-Mega-Evolutions-Ascended-Heroes-New-Mega-Evolution-illustration-Cards.webp?v=1763715714"
         ],
-        stock: "true",
+        stock: "agotado",
         promo: false,
         cantidad: 9
     },
@@ -836,7 +836,7 @@ const products = [
             "https://cardzone.es/cdn/shop/files/contenido-caja-de-entrenador-elite-trainer-box-etb-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone_fe31d546-5f40-4eed-ad26-7da31d3fa915.png?v=1771327450&width=3840",
             "https://cdn.shopify.com/s/files/1/0865/2816/4189/files/Pokemon-TCG-Mega-Evolutions-Ascended-Heroes-New-Mega-Evolution-illustration-Cards.webp?v=1763715714"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     }

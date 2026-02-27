@@ -507,7 +507,7 @@ const products = [
             "https://www.despelvogel.com/wp-content/uploads/2020/02/Mimikyu-Box.png",
             "https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10001/P8792_290-85218_03.jpg"
         ],
-        stock: "agotado",
+        stock: "soon",
         promo: false,
         cantidad: 5
     },
@@ -822,7 +822,7 @@ const products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 6
+        cantidad: 4
     },
     {
         id: 56,

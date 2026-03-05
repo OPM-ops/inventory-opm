@@ -209,7 +209,7 @@ const products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 10
+        cantidad: 2
     },
     {
         id: 16,
@@ -388,9 +388,9 @@ const products = [
             "https://grancards.com/cdn/shop/files/ETB_LLAMAS_FANTASMALES_2.png?v=1763060420&width=1445",
             "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
-        cantidad: 1
+        cantidad: 0
     },
     {
         id: 28,
@@ -420,7 +420,7 @@ const products = [
             "https://www.igabiba.si/cdn/shop/files/pokemon-tcg-mega-lucario-ex-figure-collection-196214116986-1206248071_1024x.png?v=1763484541",
             "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Lucario-ex-figure-collection-box-contents.webp?v=1757577594&width=1500"
         ],
-        stock: "encargo"
+        stock: "agotado"
     },
     {
         id: 30,
@@ -507,9 +507,9 @@ const products = [
             "https://www.despelvogel.com/wp-content/uploads/2020/02/Mimikyu-Box.png",
             "https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10001/P8792_290-85218_03.jpg"
         ],
-        stock: "soon",
+        stock: "available",
         promo: false,
-        cantidad: 5
+        cantidad: 2
     },
     {
         id: 36,
@@ -742,7 +742,7 @@ const products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 51,
@@ -839,8 +839,56 @@ const products = [
         stock: "agotado",
         promo: false,
         cantidad: 1
+    },
+    {
+        id: 57,
+        name: "Sleeved Booster Mascarada Crepuscular",
+        category: "pokemon",
+        expansion: "twilight-masquerade",
+        price: 18000,
+        language: ["es"],
+        images: [
+            "https://acdn-us.mitiendanube.com/stores/005/946/657/products/pokemon-scarlet-violet-twilight-masquerade-sleeved-booster-pack-2-9824791f6a706bfde617706468339196-640-0.webp",
+            "https://frikidenacimiento.es/wp-content/uploads/CS_Producto-28-2.png",
+            "https://card-binder.com/cdn/shop/files/PokemonScarlet_VioletTwilightMasquedesetadditionchasecards.webp?v=1739563434&width=1500"
+        ],
+        stock: "encargo",
+        promo: true,
+        cantidad: 5  // Ajusta la cantidad real
+    },
+    {
+        id: 58,
+        name: "Blister Mascarada Crepuscular",
+        category: "pokemon",
+        expansion: "twilight-masquerade",
+        price: 56000,
+        language: ["es"],
+        images: [
+            "https://cardzone.es/cdn/shop/files/blister-de-3-sobres-de-cartas-pokemon-tcg-mascarada-crepuscular-cardzone.png?v=1771949001&width=3840",
+            "https://frikidenacimiento.es/wp-content/uploads/CS_Producto-28-2.png",
+            "https://card-binder.com/cdn/shop/files/PokemonScarlet_VioletTwilightMasquedesetadditionchasecards.webp?v=1739563434&width=1500"
+        ],
+        stock: "encargo",
+        promo: false,
+        cantidad: 3
+    },
+    {
+        id: 59,
+        name: "Stacking Tin 2024",
+        category: "pokemon",
+        expansion: "otros",
+        price: 65000,
+        language: ["es"],
+        images: [
+            "https://pokemonplug.com/cdn/shop/files/jcc475sz36b9f65xc4prw-2.png?v=1705560342",
+            "https://http2.mlstatic.com/D_NQ_NP_717931-MPE81988524574_022025-O.webp"
+        ],
+        stock: "encargo",
+        promo: false,
+        cantidad: 2
     }
 ];
+
 
 // Banderas reales de internet
 const languageFlags = {
@@ -882,7 +930,7 @@ const expansionNames = {
 
 // Banners de preventa configurables
 const preorderBanners = [
-    {
+/*    {
         id: "ascended-heroes",
         title: "ASCENDED HEROES 🔥 ",
         subtitle: "¡Disponible!",
@@ -894,7 +942,7 @@ const preorderBanners = [
         expansionFilter: "ascended-heroes",
         active: true,
         priority: 1
-    },
+    },*/
     {
         id: "instagram-promo",
         title: "📸 SÍGUENOS EN INSTAGRAM",
@@ -908,19 +956,18 @@ const preorderBanners = [
         showQR: true,
         qrImage: "qr-instagram.png", // ← Aquí pondrás tu imagen del QR
         active: true,
-        priority: 3
+        priority: 1
     },
-    {
-        id: "pokemon-day",
-        title: "⚡ POKÉMON DAY 2026",
-        subtitle: "27 de Febrero - ¡Celebremos juntos!",
-        description: "Promociones especiales, descuentos exclusivos y sorpresas para el día de Pokémon",
-        image: "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2026/pokemon-day-2026-collection/inline/full/SV05_LA_51.png",
-        bgColor: "linear-gradient(135deg, #FFD700, #FFA500, #FF8C00)",
-        textColor: "#1a1a1a",
-        action: "filter-promo",
-        promoFilter: "pokemon-day",
-        active: true,
-        priority: 2
-    }
+{
+    id: "perfect-order",
+    title: "PERFECT ORDER",
+    subtitle: "MEGA EVOLUTION",
+    description: "Prepárate para la evolución definitiva. Muy pronto podrás armar tu pedido perfecto.",
+    image: "https://pokevikie.com/cdn/shop/files/pokemon_perfect_order.png?v=1771096887&width=600",
+    bgColor: "linear-gradient(135deg, #000000, #00aa00)", // Negro a verde
+    textColor: "#ffffff", // Texto blanco para contraste
+    action: "coming-soon", // Puede ser "link" si tienes una página
+    active: true,
+    priority: 2 
+}
 ];

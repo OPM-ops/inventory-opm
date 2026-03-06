@@ -1,4 +1,4 @@
-const products = [
+let products = [
     {
         id: 1,
         name: "Elite Trainer Box Megaevolución (Gardevoir)",
@@ -723,10 +723,10 @@ const products = [
             "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2026/pokemon-day-2026-collection/inline/full/SV05_LA_51.png",
             "https://metamorphcenter.com/cdn/shop/files/Caja_Pokemon_Day_2026_-_30_Aniversario_-_Espanol-1.png?v=1769706495&width=1232"
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
         promoEvento: "pokemon-day",
-        cantidad: 2
+        cantidad: 10
     },
     {
         id: 50,
@@ -963,11 +963,12 @@ const preorderBanners = [
     title: "PERFECT ORDER",
     subtitle: "MEGA EVOLUTION",
     description: "Prepárate para la evolución definitiva. Muy pronto podrás armar tu pedido perfecto.",
-    image: "https://pokevikie.com/cdn/shop/files/pokemon_perfect_order.png?v=1771096887&width=600",
-    bgColor: "linear-gradient(135deg, #000000, #00aa00)", // Negro a verde
-    textColor: "#ffffff", // Texto blanco para contraste
-    action: "coming-soon", // Puede ser "link" si tienes una página
+    image: "https://pokevikie.com/cdn/shop/files/pokemon_perfect_order.png?v=1771096887&width=600", 
+    backgroundImage: "https://www.pokebeach.com/news/2025/12/Mega-Zygarde.png", // ejemplo
+    overlayGradient: "linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,170,0,0.6))",
+    textColor: "#ffffff",
+    action: "coming-soon",
     active: true,
-    priority: 2 
+    priority: 2
 }
 ];

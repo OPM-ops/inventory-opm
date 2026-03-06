@@ -20,6 +20,10 @@
             <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
                 <i class="fas fa-moon" id="themeIcon"></i>
             </button>
+            <button class="cart-toggle" id="cartToggle" title="Ver carrito">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
         </div>
     </header>
 
@@ -123,6 +127,29 @@
             <!-- Los productos se cargarán aquí dinámicamente -->
         </main>
     </div>
+
+
+<!-- Panel lateral del carrito -->
+<div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+        <h3>Tu Carrito</h3>
+        <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <!-- Los productos del carrito se cargarán aquí -->
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">$0</span>
+        </div>
+        <button class="btn btn-whatsapp" id="checkoutWhatsApp">
+            <i class="fab fa-whatsapp"></i> Finalizar compra por WhatsApp
+        </button>
+    </div>
+</div>
+<div class="cart-overlay" id="cartOverlay"></div>
+
 
     <script src="data.js"></script>
     <script src="script.js"></script>

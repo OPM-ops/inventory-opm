@@ -964,7 +964,7 @@ const preorderBanners = [
     subtitle: "MEGA EVOLUTION",
     description: "Prepárate para la evolución definitiva. Muy pronto podrás armar tu pedido perfecto.",
     image: "https://pokevikie.com/cdn/shop/files/pokemon_perfect_order.png?v=1771096887&width=600", 
-    backgroundImage: "https://www.pokebeach.com/news/2025/12/Mega-Zygarde.png", // ejemplo
+    backgroundImage: "Mega-Zygarde.png", // ejemplo
     overlayGradient: "linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,170,0,0.6))",
     textColor: "#ffffff",
     action: "coming-soon",

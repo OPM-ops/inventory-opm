@@ -369,7 +369,7 @@ let products = [
         language: ["es"],
         images: [
             "https://d1i787aglh9bmb.cloudfront.net/assets/img/me-expansions/me02/collections/es-mx/me02-booster-bundle-la.png",
-            "https://montevideogaminghouse.com/wp-content/uploads/2025/10/Pokemon-Megaevolucion-Llamaradas-Fantasmales-Sobre-de-Cartas-420x420.png",
+            "https://www.stompinggroundstcg.com/cdn/shop/files/Mega_Evolution_Phantasmal_Flames_Booster_Packs_6_600x.webp?v=1760135927",
             "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
         stock: "available",
@@ -723,10 +723,10 @@ let products = [
             "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2026/pokemon-day-2026-collection/inline/full/SV05_LA_51.png",
             "https://metamorphcenter.com/cdn/shop/files/Caja_Pokemon_Day_2026_-_30_Aniversario_-_Espanol-1.png?v=1769706495&width=1232"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         promoEvento: "pokemon-day",
-        cantidad: 10
+        cantidad: 2
     },
     {
         id: 50,
@@ -964,7 +964,7 @@ const preorderBanners = [
     subtitle: "MEGA EVOLUTION",
     description: "Prepárate para la evolución definitiva. Muy pronto podrás armar tu pedido perfecto.",
     image: "https://pokevikie.com/cdn/shop/files/pokemon_perfect_order.png?v=1771096887&width=600", 
-    backgroundImage: "Mega-Zygarde.png", // ejemplo
+    backgroundImage: "https://www.pokebeach.com/news/2025/12/Mega-Zygarde.png", // ejemplo
     overlayGradient: "linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,170,0,0.6))",
     textColor: "#ffffff",
     action: "coming-soon",

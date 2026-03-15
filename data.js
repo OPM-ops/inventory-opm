@@ -209,7 +209,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 16,

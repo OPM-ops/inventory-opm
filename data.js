@@ -530,14 +530,14 @@ let products = [
         name: "Slashing Legends Tin",
         category: "pokemon",
         expansion: "otros",
-        price: 105000,
+        price: 115000,
         language: ["en"],
         images: [
             "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/304106/401087/PKU10374-2PK-1__97689.1747075284.png",
             "https://i5.walmartimages.com/asr/928cd24c-e9dc-4ad5-a9a2-f1a1587d3149.d598abc9d7e891095bf094c3d7b2312a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
             "https://holograil.nl/cdn/shop/files/SlashingLegends_Tin_Contents.webp?v=1753385118&width=1000"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: true,
         cantidad: 1
     },

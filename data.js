@@ -207,9 +207,9 @@ let products = [
             "https://cardzone.es/cdn/shop/files/mini-lata-pokemon-evoluciones-prismaticas-sobres-y-cartas-pokemon-tcg.png?v=1750152740&width=1920",
             "https://vyruztoystore.com.mx/cdn/shop/files/PokemonTCGScarlet_VioletPrismaticEvolutionsMiniTinSylveonBooster.webp?v=1747298170&width=1946"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
-        cantidad: 1
+        cantidad: 0
     },
     {
         id: 16,
@@ -814,7 +814,7 @@ let products = [
         category: "pokemon",
         expansion: "ascended-heroes",
         price: 115000,
-        language: ["es"],
+        language: ["en"],
         images: [
             "https://pokesouq.com/cdn/shop/files/mega_charizard_4_tin_1_2048x.png?v=1771478020",
             "https://www.pokemon.com/static-assets/content-assets/cms2/img/cards/full/MEP/MEP_EN_30.png",
@@ -822,7 +822,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 4
+        cantidad: 6
     },
     {
         id: 56,

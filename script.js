@@ -665,7 +665,7 @@ function createCarousel(images, productId) {
     
     if (images.length === 1) {
         return `<img src="${images[0]}" alt="Producto" class="product-image" 
-                     onerror="this.src='https://via.placeholder.com/300x250/cccccc/666666?text=Imagen+no+disponible'">`;
+                     onerror="this.src='https://img.freepik.com/free-vector/torn-style-coming-soon-promo-template-social-media-post_1017-55783.jpg?semt=ais_hybrid&w=740&q=80'">`;
     }
     
     const carouselId = `carousel-${productId}`;
@@ -678,7 +678,7 @@ function createCarousel(images, productId) {
         carouselHTML += `
             <div class="carousel-slide">
                 <img src="${image}" alt="Producto ${index + 1}" 
-                     onerror="this.src='https://via.placeholder.com/300x250/cccccc/666666?text=Imagen+no+disponible'">
+                     onerror="https://img.freepik.com/free-vector/torn-style-coming-soon-promo-template-social-media-post_1017-55783.jpg?semt=ais_hybrid&w=740&q=80'">
             </div>
         `;
     });

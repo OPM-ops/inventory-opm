@@ -609,7 +609,7 @@ let products = [
         price: 50000,
         language: [""],
         images: [
-            "https://www.supportivepc.com/assets/alt_2/FUNK0010172.png?20250401214445",
+            "https://http2.mlstatic.com/D_NQ_NP_664188-MLA91837978449_092025-O.webp",
             "https://www.mypops.ca/cdn/shop/files/char_002.png?v=1743620128"
         ],
         stock: "available",

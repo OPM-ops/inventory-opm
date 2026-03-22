@@ -1,17 +1,17 @@
 let products = [
     {
         id: 1,
-        name: "Elite Trainer Box Megaevolución (Gardevoir)",
+        name: "Collector Chest Q4 2025",
         category: "pokemon",
-        expansion: "mega-evolution",
-        price: 225000,
-        language: ["es"],
+        expansion: "otros",
+        price: 100000,
+        language: ["en"],
         images: [
-            "https://cdn.snkrdunk.com/upload_bg_removed/20250922115711-6.webp?size=l",
-            "https://www.pokemoncenter.com/images/DAMRoot/High/10015/P10346_10-10047-120_02.jpg",
-            "https://www.pokemoncenter.com/images/DAMRoot/High/10015/P10346_10-10047-120_03.jpg"
+            "https://www.goodgamesbern.ch/images/detailed/18/2111895_XL_1.webp",
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2025/collector-chest/inline/01-en.png",
+            
         ],
-        stock: "agotado"
+        stock: "soon"
     },
     {
         id: 2,
@@ -54,7 +54,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 17
+        cantidad: 15
     },
     {
         id: 5,
@@ -72,30 +72,32 @@ let products = [
     },
     {
         id: 6,
-        name: "Booster Surging Sparks",
+        name: "First Partner Illustration Collection",
         category: "pokemon",
-        expansion: "surging-sparks",
-        price: 22000,
+        expansion: "otros",
+        price: 80000,
         language: ["en"],
         images: [
-            "https://www.despelvogel.com/wp-content/uploads/2020/08/Surging-Sparks-Boosters-1024x1024.png",
-            "https://card-binder.com/cdn/shop/files/PokemonScarlet_VioletSurgingSparkssetchasecards.webp?v=1739564357&width=1500"
+            "https://www.huntercardtcg.com/wp-content/uploads/2026/03/firstpartnerilluscoll.webp",
+            "https://cardzone.es/cdn/shop/files/sobres-caja-first-partner-primer-companero-coleccion-illustration-collection-cartas-pokemon-tcg-cardzone_2e777ee9-4982-4e43-a356-1fc6946157c9.png?v=1773828172&width=4320",
+            "https://www.breakthecase.de/cdn/shop/files/Inhalt_100perfektpassendeKartenschutzhuellen63x88mm_0bbbdead-d718-469c-93fb-517751473581.png?v=1773855540&width=1000"
         ],
-        stock: "agotado"
+        stock: "soon"
     },
     {
         id: 7,
-        name: "Team Rocket's Mewtwo EX Box",
+        name: "Ascended Heroes Premium Poster Collection",
         category: "pokemon",
-        expansion: "destined-rivals",
-        price: 120000,
+        expansion: "ascended-heroes",
+        price: 235000,
         language: ["en"],
         images: [
-            "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/308108/413275/PKU10167-1__55894.1750813140.png",
-            "https://kantocards.com/cdn/shop/files/100-10438-3D_PIGS_Team_Rockets_Mewtwo_ex_Box_Booster_Wraps_EN_INT-2150x1473-a0dce50.png?v=1750168894&width=2150",
-            "https://i5.walmartimages.com/asr/f312a2b2-0b45-41d0-842c-ca1230857d7e.4a22971ace45209e71f57bba7deac9f1.jpeg"
+            "https://avalongaming.com.co/wp-content/uploads/Ascended-Heroes-Premium-Poster-Collection.png.webp",
+            "https://www.blindbox.cz/data/products/detail_pokemon-ascended-heroes-premiu.png",
+            "https://media.gamestop.com/i/gamestop/20030568_ALT05?$pdp$?w=1256&h=664&fmt=auto",
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2026/me2pt5-premium-poster-collection/inline/01-en.png"
         ],
-        stock: "agotado"
+        stock: "soon"
     },
     {
         id: 8,
@@ -125,17 +127,17 @@ let products = [
     },
     {
         id: 10,
-        name: "Combo Mega Battle Deck - Mega Gengar EX (Daño en caja) y Mega Diance EX",
+        name: "ETB Perfect Order",
         category: "pokemon",
-        expansion: "otros",
-        price: 135000,
+        expansion: "perfect-order",
+        price: 238000,
         language: ["en"],
         images: [
-            "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/329427/458104/Copy_of_Website_Image_Template9999-8511__37093.1759523139.png",
-            "https://cdnx.jumpseller.com/play-tcg1/image/68968748/resize/540/600?1766368530",
-            "https://www.stompinggroundstcg.com/cdn/shop/files/Mega_Gengar_ex_Deck_Promos_600x.webp?v=1762472166"
+            "https://media.gamestop.com/i/gamestop/20031957",
+            "https://gengar.s28.cdn-upgates.com/_cache/4/a/4a8f9455c0800a5705cd06f6388fd6a5-navrh-bez-nazvu-5.webp",
+            "https://images.squarespace-cdn.com/content/v1/5e3b1164feb39b444b58f15b/14aef118-d09a-4121-892d-e95b36be11e5/M3_117_R_JP_LG+%281%29.png"
         ],
-        stock: "agotado"
+        stock: "soon"
     },
     {
         id: 11,
@@ -259,16 +261,18 @@ let products = [
     },
     {
         id: 19,
-        name: "Booster Bundle Fabula Sombria",
+        name: "World Championship Deck 2023",
         category: "pokemon",
-        expansion: "shrouded-fable",
-        price: 112000,
-        language: ["es"],
+        expansion: "otros",
+        price: 70000,
+        language: ["en"],
         images: [
-            "https://www.pokemon.com/static-assets/content-assets/cms2-es-es/img/trading-card-game/series/sv_series/sv6pt5/inline/sv6pt5-booster-bundle-es.png",
-            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"
+            "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/820650856037-1200-face3d.jpg",
+            "https://www.pokemoncenter.com/images/DAMRoot/High/10000/P9544_699-85605_04.jpg",
+            "https://m.media-amazon.com/images/I/71gr2B-wVPL._AC_UF350,350_QL80_.jpg",
+            "https://i.ebayimg.com/images/g/ElQAAOSwiU1l4g~5/s-l1200.jpg",
         ],
-        stock: "agotado"
+        stock: "soon",
     },
     {
         id: 20,
@@ -282,21 +286,20 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 3
+        cantidad: 1
     },
     {
         id: 21,
-        name: "Booster Megaevolución",
+        name: "Annihilape EX Box",
         category: "pokemon",
-        expansion: "mega-evolution",
-        price: 18000,
+        expansion: "otros",
+        price: 95000,
         language: ["es"],
         images: [
-            "https://montevideogaminghouse.com/wp-content/uploads/2025/09/Pokemon-Mega-Evolutions-sobre-cartas.png",
-            "https://kotaku.com/app/uploads/2025/10/main-2.jpg",
-            "https://kotaku.com/app/uploads/2025/09/mega-evolution-1.jpg"
+            "https://web.big-bang.cl/wp-content/uploads/2023/07/6w7j5prnc59bx49xcmbk6w3v-wpp1690235691437.png",
+            "https://card-binder.com/cdn/shop/files/Pokemon-scarlet-violet-annihilape-ex-collection-box-pack-content.webp?v=1734120857&width=1500",
         ],
-        stock: "available",
+        stock: "soon",
         promo: false,
         cantidad: 2
     },
@@ -313,21 +316,21 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 12
+        cantidad: 11
     },
     {
         id: 23,
         name: "Unova Victini Illustration Collection",
         category: "pokemon",
         expansion: "black-white",
-        price: 80000,
+        price: 110000,
         language: ["es"],
         images: [
             "https://avalongaming.com.co/wp-content/uploads/Victini-Illustration-Collection-2.png.webp",
             "https://static.wixstatic.com/media/40e109_4d3d0551e5354ef89d9f3ca910f4b279~mv2.png/v1/fit/w_500,h_500,q_90/file.png",
             "https://static.wixstatic.com/media/40e109_d8b038187d814737a50d9373e9019f74~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
         ],
-        stock: "agotado"
+        stock: "soon",
     },
     {
         id: 24,
@@ -394,19 +397,16 @@ let products = [
     },
     {
         id: 28,
-        name: "Elite Trainer Box Megaevolución (Lucario)",
+        name: "Mini Tin Ascended Heroes",
         category: "pokemon",
-        expansion: "mega-evolution",
-        price: 225000,
-        language: ["es"],
+        expansion: "ascended-heroes",
+        price: 52000,
+        language: ["en"],
         images: [
-            "https://cardcrack.com/wp-content/uploads/2025/10/etblucario.webp",
-            "https://www.pokemillon.com/cdn/shop/files/ETB_Gardevoir_Mega_Evolucion_Sin_Fondo_Pokemillon.png?v=1759413816",
-            "https://tcglevel.com/cdn/shop/files/caja-contenido-etb-pokemon-mega-lucario-es.png?v=1759241080&width=1946",
-            "https://magicomens.com/cdn/shop/files/ptcg-meg-etb-gardevoir-contents_600x.webp?v=1759327017",
-            "https://preview.redd.it/mega-evolutions-etb-which-promo-card-are-you-choosing-v0-tleqlehbv5tf1.jpeg?width=640&crop=smart&auto=webp&s=413702ba5e39efff9691a4b99d5dfd6bc941f0f7"
+            "https://avalongaming.com.co/wp-content/uploads/Ascended-Heroes-Mini-Tin.png.webp",
+            "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
         ],
-        stock: "agotado"
+        stock: "soon"
     },
     {
         id: 29,
@@ -527,17 +527,16 @@ let products = [
     },
     {
         id: 37,
-        name: "Slashing Legends Tin",
+        name: "Sleeves Pikachu - 65 unidades",
         category: "pokemon",
         expansion: "otros",
-        price: 115000,
-        language: ["en"],
+        price: 45000,
+        language: [""],
         images: [
-            "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/304106/401087/PKU10374-2PK-1__97689.1747075284.png",
-            "https://i5.walmartimages.com/asr/928cd24c-e9dc-4ad5-a9a2-f1a1587d3149.d598abc9d7e891095bf094c3d7b2312a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
-            "https://holograil.nl/cdn/shop/files/SlashingLegends_Tin_Contents.webp?v=1753385118&width=1000"
+            "https://knoldex.nl/cdn/shop/files/Pikachu65ctDeckProtectorSleeves1.png?v=1773343552",
+            "https://www.shopultrapro.eu/cdn/shop/files/pikachu-standard-deck-protector-sleeves-65ct-for-pokemon-776185_grande.png?v=1737074589"
         ],
-        stock: "agotado",
+        stock: "soon",
         promo: true,
         cantidad: 1
     },
@@ -553,7 +552,7 @@ let products = [
             "https://unboxunbored.com/cdn/shop/files/pokemon-tcg-shrouded-fable-kingambit-illustration-collection-210660.png?v=1748179440&width=1214",
             "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     },
@@ -575,7 +574,7 @@ let products = [
     },
     {
         id: 40,
-        name: "Poke Ball Tin Q4 2025",
+        name: "Pokeball Tin Q4 2025",
         category: "pokemon",
         expansion: "otros",
         price: 73000,
@@ -585,7 +584,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 3
+        cantidad: 4
     },
     {
         id: 41,
@@ -598,7 +597,7 @@ let products = [
             "https://realpopmania.com/cdn/shop/files/25_365c3c5f-e3a1-421f-af63-ec155e1c47d5.png?v=1734691504",
             "https://cdnx.jumpseller.com/ruma-store/image/61926375/resize/1200/630?1743376233"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: true,
         cantidad: 1
     },
@@ -643,7 +642,7 @@ let products = [
             "https://cdn11.bigcommerce.com/s-vz3etek0gv/images/stencil/1200w/products/78559/108684/ULP16663_web_Box_3D_R__20845.1769636487.jpg",
             "https://primary.jwwb.nl/public/h/t/i/temp-zjpebgcobmaxydcmrfwb/pkm_pikachu_toploader_b2b_landscapedistributorcatalog_11x17-high.jpg?enable-io=true&enable=upscale&fit=bounds&width=1200"
         ],
-        stock: "soon"
+        stock: "agotado"
     },
     {
         id: 45,
@@ -657,7 +656,7 @@ let products = [
             "https://grancards.com/cdn/shop/files/ETB_LLAMAS_FANTASMALES_2.png?v=1763060420&width=1445",
             "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 5
     },
@@ -699,21 +698,21 @@ let products = [
         name: "Tech Sticker Collection Ascended Heroes",
         category: "pokemon",
         expansion: "ascended-heroes",
-        price: 75000,
-        language: ["en"],
+        price: 70000,
+        language: ["es"],
         images: [
             "https://avalongaming.com.co/wp-content/uploads/Ascended-Heroes-Tech-Sticker-Collection.png.webp",
             "https://media.gamestop.com/i/gamestop/20030567_ALT03?$pdp$?w=1256&h=664&fmt=auto",
             "https://cdn.chaoscards.co.uk/uploads/prod_img/2_319146_e.png?v=-62169983925",
             "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
         ],
-        stock: "agotado",
+        stock: "soon",
         promo: false,
         cantidad: 4
     },
     {
         id: 49,
-        name: "Pokémon Day 2026 Collection",
+        name: "Pokemon Day 2026 Collection",
         category: "pokemon",
         expansion: "otros",
         price: 80000,
@@ -723,10 +722,10 @@ let products = [
             "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2026/pokemon-day-2026-collection/inline/full/SV05_LA_51.png",
             "https://metamorphcenter.com/cdn/shop/files/Caja_Pokemon_Day_2026_-_30_Aniversario_-_Espanol-1.png?v=1769706495&width=1232"
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
         promoEvento: "pokemon-day",
-        cantidad: 2
+        cantidad: 9
     },
     {
         id: 50,
@@ -740,7 +739,7 @@ let products = [
             "https://cdnx.jumpseller.com/tcg-chile/image/68810996/resize/540/540?1760738085",
             "https://kantocards.com/cdn/shop/files/rn-image_picker_lib_temp_9ebd7f72-90ca-4708-910c-75e679730c4a.png?v=1771097615&width=1354"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     },
@@ -758,7 +757,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 8
+        cantidad: 4
     },
     {
         id: 52,
@@ -812,7 +811,7 @@ let products = [
         id: 55,
         name: "Tin Mega Charizard",
         category: "pokemon",
-        expansion: "ascended-heroes",
+        expansion: "phantasmal-flames",
         price: 115000,
         language: ["en"],
         images: [
@@ -858,32 +857,32 @@ let products = [
     },
     {
         id: 58,
-        name: "Blister Mascarada Crepuscular",
+        name: "Booster Box Ninja Spinner",
         category: "pokemon",
-        expansion: "twilight-masquerade",
-        price: 56000,
-        language: ["es"],
+        expansion: "ninja-spinner",
+        price: 500000,
+        language: ["jp"],
         images: [
-            "https://cardzone.es/cdn/shop/files/blister-de-3-sobres-de-cartas-pokemon-tcg-mascarada-crepuscular-cardzone.png?v=1771949001&width=3840",
-            "https://frikidenacimiento.es/wp-content/uploads/CS_Producto-28-2.png",
-            "https://card-binder.com/cdn/shop/files/PokemonScarlet_VioletTwilightMasquedesetadditionchasecards.webp?v=1739563434&width=1500"
+            "https://cdn.snkrdunk.com/upload_bg_removed/244b2a87-ebe1-41bb-a812-6daa8aaddc80.webp?size=l",
+            "https://www.supercollectors.es/wp-content/uploads/2026/03/877373.webp",
+            "https://www.card-corner.de/media/image/product/4141/md/pokemon-ninja-spinner-m4-display~2.webp"
         ],
-        stock: "encargo",
+        stock: "soon",
         promo: false,
         cantidad: 3
     },
     {
         id: 59,
-        name: "Stacking Tin 2024",
+        name: "Booster Ninja Spinner",
         category: "pokemon",
-        expansion: "otros",
-        price: 65000,
-        language: ["es"],
+        expansion: "ninja-spinner",
+        price: 20000,
+        language: ["jp"],
         images: [
-            "https://pokemonplug.com/cdn/shop/files/jcc475sz36b9f65xc4prw-2.png?v=1705560342",
-            "https://http2.mlstatic.com/D_NQ_NP_717931-MPE81988524574_022025-O.webp"
+            "https://pokejpn.com/cdn/shop/files/spinner-5-pack.png?v=1772676862&width=700",
+            "https://www.card-corner.de/media/image/product/4141/md/pokemon-ninja-spinner-m4-display~2.webp"
         ],
-        stock: "encargo",
+        stock: "soon",
         promo: false,
         cantidad: 2
     }
@@ -930,19 +929,21 @@ const expansionNames = {
 
 // Banners de preventa configurables
 const preorderBanners = [
-/*    {
+    {
         id: "ascended-heroes",
         title: "ASCENDED HEROES 🔥 ",
         subtitle: "¡Disponible!",
         description: "Nueva colección con Erika, Larry y los héroes ascendentes",
         image: "https://avalongaming.com.co/wp-content/uploads/Logo-Ascended-Heroes.png.webp",
         bgColor: "linear-gradient(135deg, #ff6b6b, #ee5a24, #f9ca24)",
+        backgroundImage: "https://tcg.pokemon.com/assets/img/share/en-us/ascended-heroes/share_tw.jpg",
+        overlayGradient: "linear-gradient(135deg, rgba(255, 107, 107, 0.8), rgba(238, 90, 36, 0.8), rgba(249, 202, 36, 0.7))",
         textColor: "#ffffff",
         action: "filter",
         expansionFilter: "ascended-heroes",
         active: true,
         priority: 1
-    },*/
+    },
     {
         id: "instagram-promo",
         title: "📸 SÍGUENOS EN INSTAGRAM",
@@ -956,7 +957,7 @@ const preorderBanners = [
         showQR: true,
         qrImage: "qr-instagram.png", // ← Aquí pondrás tu imagen del QR
         active: true,
-        priority: 1
+        priority: 2
     },
 {
     id: "perfect-order",
@@ -964,12 +965,13 @@ const preorderBanners = [
     subtitle: "MEGA EVOLUTION",
     description: "Prepárate para la evolución definitiva. Muy pronto podrás armar tu pedido perfecto.",
     image: "https://archives.bulbagarden.net/media/upload/thumb/a/ae/ME3_Logo_EN.png/1200px-ME3_Logo_EN.png", 
-    backgroundImage: "Mega-Zygarde.png", // ejemplo
+    backgroundImage: "Mega-Zygarde.png", 
     overlayGradient: "linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,170,0,0.6))",
     textColor: "#ffffff",
-    action: "coming-soon",
+    action: "filter",
+    expansionFilter: "perfect-order",
     active: true,
-    priority: 2
+    priority: 3
 }
 
 ];

@@ -861,4 +861,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Renderizar carrito al cargar la página
     renderCart();
     updateCartCount();
+
+
 });

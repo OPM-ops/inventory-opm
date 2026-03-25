@@ -706,7 +706,7 @@ let products = [
             "https://cdn.chaoscards.co.uk/uploads/prod_img/2_319146_e.png?v=-62169983925",
             "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
         ],
-        stock: "soon",
+        stock: "available",
         promo: false,
         cantidad: 4
     },
@@ -828,14 +828,14 @@ let products = [
         name: "ETB Ascended Heroes",
         category: "pokemon",
         expansion: "ascended-heroes",
-        price: 235000,
+        price: 230000,
         language: ["es"],
         images: [
             "https://kantocards.com/cdn/shop/files/P11425-ME02pt5_3D_ETB_OuterSleeve_Left_EN-2711x2584-70f70a8.png?v=1764087611",
             "https://cardzone.es/cdn/shop/files/contenido-caja-de-entrenador-elite-trainer-box-etb-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone_fe31d546-5f40-4eed-ad26-7da31d3fa915.png?v=1771327450&width=3840",
             "https://cdn.shopify.com/s/files/1/0865/2816/4189/files/Pokemon-TCG-Mega-Evolutions-Ascended-Heroes-New-Mega-Evolution-illustration-Cards.webp?v=1763715714"
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
         cantidad: 1
     },

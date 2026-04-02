@@ -1,17 +1,18 @@
 let products = [
     {
         id: 1,
-        name: "Collector Chest Q4 2025",
+        name: "Collector Chest BTS 2024",
         category: "pokemon",
         expansion: "otros",
         price: 100000,
-        language: ["en"],
+        language: ["es"],
         images: [
-            "https://www.goodgamesbern.ch/images/detailed/18/2111895_XL_1.webp",
-            "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2025/collector-chest/inline/01-en.png",
+            "https://http2.mlstatic.com/D_NQ_NP_932642-MCO75935165562_042024-O.webp",
+            "https://www.pokemoncenter.com/images/DAMRoot/High/10000/P9557_210-85838_02.jpg",
             
         ],
-        stock: "soon"
+        stock: "encargo",
+        promo: true
     },
     {
         id: 2,
@@ -54,7 +55,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 15
+        cantidad: 10
     },
     {
         id: 5,
@@ -82,7 +83,7 @@ let products = [
             "https://cardzone.es/cdn/shop/files/sobres-caja-first-partner-primer-companero-coleccion-illustration-collection-cartas-pokemon-tcg-cardzone_2e777ee9-4982-4e43-a356-1fc6946157c9.png?v=1773828172&width=4320",
             "https://www.breakthecase.de/cdn/shop/files/Inhalt_100perfektpassendeKartenschutzhuellen63x88mm_0bbbdead-d718-469c-93fb-517751473581.png?v=1773855540&width=1000"
         ],
-        stock: "soon"
+        stock: "agotado"
     },
     {
         id: 7,
@@ -97,7 +98,10 @@ let products = [
             "https://media.gamestop.com/i/gamestop/20030568_ALT05?$pdp$?w=1256&h=664&fmt=auto",
             "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2026/me2pt5-premium-poster-collection/inline/01-en.png"
         ],
-        stock: "soon"
+        stock: "available",
+        promo: false,
+        cantidad: 2
+
     },
     {
         id: 8,
@@ -163,9 +167,9 @@ let products = [
         price: 10000,
         language: ["en"],
         images: [
-            "https://sc04.alicdn.com/kf/H2dbb84b4f9fc4237ab5c0e99d4ea3ad7b.jpg"
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_kVZ4w6W5b9H3D7tpqQjKz5x3_rVUjIAmSA&s"
         ],
-        stock: "agotado",
+        stock: "soon",
         promo: false,
         cantidad: 0
     },
@@ -196,7 +200,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 137
+        cantidad: 100
     },
     {
         id: 15,
@@ -225,7 +229,7 @@ let products = [
             "https://cdn.chaoscards.co.uk/uploads/prod_img/2_308966_e.png?v=-62169983925",
             "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "available",
+        stock: "encargo",
         promo: false,
         cantidad: 1
     },
@@ -299,7 +303,7 @@ let products = [
             "https://web.big-bang.cl/wp-content/uploads/2023/07/6w7j5prnc59bx49xcmbk6w3v-wpp1690235691437.png",
             "https://card-binder.com/cdn/shop/files/Pokemon-scarlet-violet-annihilape-ex-collection-box-pack-content.webp?v=1734120857&width=1500",
         ],
-        stock: "soon",
+        stock: "agotado",
         promo: false,
         cantidad: 2
     },
@@ -330,23 +334,23 @@ let products = [
             "https://static.wixstatic.com/media/40e109_4d3d0551e5354ef89d9f3ca910f4b279~mv2.png/v1/fit/w_500,h_500,q_90/file.png",
             "https://static.wixstatic.com/media/40e109_d8b038187d814737a50d9373e9019f74~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
         ],
-        stock: "soon",
+        stock: "agotado",
     },
     {
         id: 24,
-        name: "Unova Poster Collection",
+        name: "Ascended Heroes Pin Collection",
         category: "pokemon",
-        expansion: "black-white",
-        price: 90000,
+        expansion: "ascended-heroes",
+        price: 130000,
         language: ["en"],
         images: [
-            "https://tcglevel.com/cdn/shop/files/caja-coleccion-pokemon-llama-blanca-fulgor-negro-es.png?v=1753095343",
-            "https://cardsrfun.de/cdn/shop/files/Black_Bolt_White_Flare_Unova_Poster_Collection.webp?v=1752854514&width=1214",
-            "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2025/unova-poster-collection/inline/01-en.png"
+            "https://avalongaming.com.co/wp-content/uploads/Ascended-Heroes-First-Partners-Deluxe-Pin-Collection.png.webp",
+            "https://thetcgcollect.com/cdn/shop/files/ascended-heroes-deluxe-pin-collection-box.png?v=1772132898&width=480",
+            "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
-        cantidad: 0
+        cantidad: 5
     },
     {
         id: 25,
@@ -401,7 +405,7 @@ let products = [
         category: "pokemon",
         expansion: "ascended-heroes",
         price: 52000,
-        language: ["en"],
+        language: ["es"],
         images: [
             "https://avalongaming.com.co/wp-content/uploads/Ascended-Heroes-Mini-Tin.png.webp",
             "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
@@ -420,21 +424,24 @@ let products = [
             "https://www.igabiba.si/cdn/shop/files/pokemon-tcg-mega-lucario-ex-figure-collection-196214116986-1206248071_1024x.png?v=1763484541",
             "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Lucario-ex-figure-collection-box-contents.webp?v=1757577594&width=1500"
         ],
-        stock: "agotado"
+        stock: "available",
+        promo: false,
+        cantidad: 1
     },
     {
         id: 30,
         name: "Mega Lucario EX Figure Collection",
         category: "pokemon",
         expansion: "mega-evolution",
-        price: 115000,
+        price: 100000,
         language: ["es"],
         images: [
             "https://versusgamecenter.pt/cdn/shop/files/Pokemon-TCG-Mega-Lucario-Figure-Box_900x.png?v=1763557347",
             "https://www.igabiba.si/cdn/shop/files/pokemon-tcg-mega-lucario-ex-figure-collection-196214116986-1206248071_1024x.png?v=1763484541",
             "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Lucario-ex-figure-collection-box-contents.webp?v=1757577594&width=1500"
         ],
-        stock: "encargo"
+        stock: "encargo",
+        promo: true
     },
     {
         id: 31,
@@ -513,17 +520,17 @@ let products = [
     },
     {
         id: 36,
-        name: "Booster Bundle Rivales Predestinados",
+        name: "Tech Sticker Black & White",
         category: "pokemon",
-        expansion: "destined-rivals",
-        price: 120000,
+        expansion: "black-white",
+        price: 75000,
         language: ["es"],
         images: [
-            "https://dojiw2m9tvv09.cloudfront.net/68889/product/booster-bundle-pok-mon-tcg-rivales-predestinados-espaniol0912.png",
-            "https://pokemonalpha.es/wp-content/uploads/2025/03/Escarlata_y_Purpura-Rivales_Predestinados_Booster_Wraps_Cynthia_Garchomp_ES.webp",
-            "https://cdn.shopify.com/s/files/1/0572/9671/5939/files/Blog_Products_1.png?v=1749269280"
+            "https://topdeck.com.co/cdn/shop/files/s-l1600.webp?v=1761082864&width=1445",
+            "https://mktg-assets.tcgplayer.com/fit-in/1000x1000/filters:quality(75)/content/pokemon/_2025/JUL/23/Most-Expensive-Pokemon-Cards-Black-Bolt-Opengraph.jpg"
         ],
-        stock: "agotado"
+        stock: "encargo",
+        promo: false,
     },
     {
         id: 37,
@@ -558,18 +565,17 @@ let products = [
     },
     {
         id: 39,
-        name: "Sleeved Booster Destined Rivals",
+        name: "Mabosstiff Ex Showcase",
         category: "pokemon",
-        expansion: "destined-rivals",
-        price: 23000,
-        language: ["en"],
+        expansion: "otros",
+        price: 74000,
+        language: ["es"],
         images: [
-            "https://card-binder.com/cdn/shop/files/Pokemon-scarlet-violet-destined-rivals-english-team-rocket-sleeved-booster-pack.webp?v=1743581350",
-            "https://static0.srcdn.com/wordpress/wp-content/uploads/2025/05/three-cards-from-pokemon-tcg-destined-rivals-set-over-a-red-background.jpg?q=70&fit=crop&w=1200&h=628&dpr=1",
-            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/06/pokemon-tcg-destined-rivals-cards-to-grade.jpg"
+            "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/820650855900-1200-face3d.jpg",
+            "https://slimages.macysassets.com/is/image/MCY/products/6/optimized/27639316_fpx.tif"
         ],
-        stock: "agotado",
-        promo: false,
+        stock: "encargo",
+        promo: true,
         cantidad: 3
     },
     {
@@ -588,16 +594,16 @@ let products = [
     },
     {
         id: 41,
-        name: "Funko Pop! Hantengu #1854",
-        category: "funko",
-        expansion: "",
-        price: 45000,
+        name: "Sleeved Booster Fuerzas Temporales",
+        category: "pokemon",
+        expansion: "Temporal Forces",
+        price: 16000,
         language: [""],
         images: [
-            "https://realpopmania.com/cdn/shop/files/25_365c3c5f-e3a1-421f-af63-ec155e1c47d5.png?v=1734691504",
-            "https://cdnx.jumpseller.com/ruma-store/image/61926375/resize/1200/630?1743376233"
+            "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/820650856426-1200-face3d.jpg",
+            "https://mktg-assets.tcgplayer.com/content/pokemon/_2024/MAR/25/PKMN-The-Most-Expensive-Cards-Temporal-Forces-OG.jpg"
         ],
-        stock: "agotado",
+        stock: "encargo",
         promo: true,
         cantidad: 1
     },
@@ -627,7 +633,7 @@ let products = [
             "https://garajedelmedio.com/wp-content/uploads/2025/08/nobara-funko-exclusivo-amazon.png",
             "https://www.thepopplug.com/cdn/shop/files/Nobara_Kugisaki_Art_Toys_70776f55-0b68-46a7-989f-dd81943e5caa_2.png?v=1757798261&width=480"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: true,
         cantidad: 1
     },
@@ -708,7 +714,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 4
+        cantidad: 3
     },
     {
         id: 49,
@@ -725,7 +731,7 @@ let products = [
         stock: "available",
         promo: false,
         promoEvento: "pokemon-day",
-        cantidad: 9
+        cantidad: 4
     },
     {
         id: 50,
@@ -821,7 +827,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 6
+        cantidad: 4
     },
     {
         id: 56,
@@ -835,7 +841,7 @@ let products = [
             "https://cardzone.es/cdn/shop/files/contenido-caja-de-entrenador-elite-trainer-box-etb-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone_fe31d546-5f40-4eed-ad26-7da31d3fa915.png?v=1771327450&width=3840",
             "https://cdn.shopify.com/s/files/1/0865/2816/4189/files/Pokemon-TCG-Mega-Evolutions-Ascended-Heroes-New-Mega-Evolution-illustration-Cards.webp?v=1763715714"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     },
@@ -844,16 +850,16 @@ let products = [
         name: "Sleeved Booster Mascarada Crepuscular",
         category: "pokemon",
         expansion: "twilight-masquerade",
-        price: 18000,
+        price: 16000,
         language: ["es"],
         images: [
             "https://acdn-us.mitiendanube.com/stores/005/946/657/products/pokemon-scarlet-violet-twilight-masquerade-sleeved-booster-pack-2-9824791f6a706bfde617706468339196-640-0.webp",
             "https://frikidenacimiento.es/wp-content/uploads/CS_Producto-28-2.png",
             "https://card-binder.com/cdn/shop/files/PokemonScarlet_VioletTwilightMasquedesetadditionchasecards.webp?v=1739563434&width=1500"
         ],
-        stock: "encargo",
+        stock: "available",
         promo: true,
-        cantidad: 5  // Ajusta la cantidad real
+        cantidad: 1
     },
     {
         id: 58,
@@ -867,7 +873,7 @@ let products = [
             "https://www.supercollectors.es/wp-content/uploads/2026/03/877373.webp",
             "https://www.card-corner.de/media/image/product/4141/md/pokemon-ninja-spinner-m4-display~2.webp"
         ],
-        stock: "soon",
+        stock: "agotado",
         promo: false,
         cantidad: 3
     },
@@ -882,7 +888,7 @@ let products = [
             "https://pokejpn.com/cdn/shop/files/spinner-5-pack.png?v=1772676862&width=700",
             "https://www.card-corner.de/media/image/product/4141/md/pokemon-ninja-spinner-m4-display~2.webp"
         ],
-        stock: "soon",
+        stock: "agotado",
         promo: false,
         cantidad: 2
     }

@@ -98,7 +98,7 @@ let products = [
             "https://media.gamestop.com/i/gamestop/20030568_ALT05?$pdp$?w=1256&h=664&fmt=auto",
             "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2026/me2pt5-premium-poster-collection/inline/01-en.png"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 2
 

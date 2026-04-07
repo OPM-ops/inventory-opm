@@ -90,15 +90,15 @@ let products = [
         name: "Ascended Heroes Premium Poster Collection",
         category: "pokemon",
         expansion: "ascended-heroes",
-        price: 235000,
-        language: ["en"],
+        price: 225000,
+        language: ["es"],
         images: [
             "https://avalongaming.com.co/wp-content/uploads/Ascended-Heroes-Premium-Poster-Collection.png.webp",
             "https://www.blindbox.cz/data/products/detail_pokemon-ascended-heroes-premiu.png",
             "https://media.gamestop.com/i/gamestop/20030568_ALT05?$pdp$?w=1256&h=664&fmt=auto",
             "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2026/me2pt5-premium-poster-collection/inline/01-en.png"
         ],
-        stock: "agotado",
+        stock: "soon",
         promo: false,
         cantidad: 2
 

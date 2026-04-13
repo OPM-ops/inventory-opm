@@ -59,17 +59,17 @@ let products = [
     },
     {
         id: 5,
-        name: "Booster Box Surging Sparks",
+        name: "Ultra Pro Sleeves Verde - 100 Unidades",
         category: "pokemon",
-        expansion: "surging-sparks",
-        price: 770000,
-        language: ["en"],
+        expansion: "otros",
+        price: 37000,
+        language: [""],
         images: [
-            "https://dracostore.co/wp-content/uploads/2024/11/Photoroom-20240902-102404.webp",
-            "https://evolvecardshop.com/cdn/shop/files/SurgingBoosterBoxSide.png?v=1750954333&width=1946",
-            "https://card-binder.com/cdn/shop/files/PokemonScarlet_VioletSurgingSparkssetchasecards.webp?v=1739564357&width=1500"
+            "https://cdnx.jumpseller.com/la-fortaleza-punta-arenas1/image/58334441/82693.jpg?1734111081",
+            "https://ultimateguard.com/media/0b/66/7a/1772485922/3D_UGD011159_0000_solo.webp"
         ],
-        stock: "agotado"
+        stock: "available",
+        cantidad: 1
     },
     {
         id: 6,
@@ -90,7 +90,7 @@ let products = [
         name: "Ascended Heroes Premium Poster Collection",
         category: "pokemon",
         expansion: "ascended-heroes",
-        price: 225000,
+        price: 220000,
         language: ["es"],
         images: [
             "https://avalongaming.com.co/wp-content/uploads/Ascended-Heroes-Premium-Poster-Collection.png.webp",
@@ -98,36 +98,41 @@ let products = [
             "https://media.gamestop.com/i/gamestop/20030568_ALT05?$pdp$?w=1256&h=664&fmt=auto",
             "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2026/me2pt5-premium-poster-collection/inline/01-en.png"
         ],
-        stock: "soon",
+        stock: "available",
         promo: false,
-        cantidad: 2
+        cantidad: 12
 
     },
     {
         id: 8,
-        name: "Mega Battle Deck -  Mega Diance EX",
+        name: "Ultra Pro Sleeves azul matte - 50 Unidades",
         category: "pokemon",
         expansion: "otros",
-        price: 65000,
-        language: ["es"],
+        price: 23000,
+        language: [""],
         images: [
-            "https://montevideogaminghouse.com/wp-content/uploads/2025/10/Pokemon-Mega-Battle-Deck-Mega-Diancie-ex-420x420.png",
-            "https://cdnx.jumpseller.com/play-tcg1/image/68968748/resize/540/600?1766368530"
+            "https://http2.mlstatic.com/D_NQ_NP_760957-MLA71956531041_092023-O.webp",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROoxJDzsiMeH8fSVYXgQnAxtYh-rKmvAvJUQ&s"
         ],
-        stock: "encargo"
+        stock: "available",
+        cantidad: 1
+
     },
     {
         id: 9,
-        name: "Mega Battle Deck -  Mega Gengar EX (Daño en caja)",
+        name: "ETB Chaos Rising",
         category: "pokemon",
-        expansion: "otros",
-        price: 70000,
+        expansion: "chaos-rising",
+        price: 235000,
         language: ["en"],
         images: [
-            "https://cdnx.jumpseller.com/rtgamer-store/image/69132027/resize/306/407?1761666898",
-            "https://www.stompinggroundstcg.com/cdn/shop/files/Mega_Gengar_ex_Deck_Promos_600x.webp?v=1762472166"
+            "https://media.gamestop.com/i/gamestop/20033749",
+            "https://www.mypops.ca/cdn/shop/files/ChaosRising_ETB_002.webp?v=1775573713&width=416"
         ],
-        stock: "agotado"
+    stock: "soon",          
+    preorder: true,         
+    arrivalDate: "5 de Junio, 2026",  
+    cantidad: 10            
     },
     {
         id: 10,
@@ -141,7 +146,7 @@ let products = [
             "https://gengar.s28.cdn-upgates.com/_cache/4/a/4a8f9455c0800a5705cd06f6388fd6a5-navrh-bez-nazvu-5.webp",
             "https://images.squarespace-cdn.com/content/v1/5e3b1164feb39b444b58f15b/14aef118-d09a-4121-892d-e95b36be11e5/M3_117_R_JP_LG+%281%29.png"
         ],
-        stock: "soon"
+        stock: "agotado"
     },
     {
         id: 11,
@@ -169,9 +174,9 @@ let products = [
         images: [
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_kVZ4w6W5b9H3D7tpqQjKz5x3_rVUjIAmSA&s"
         ],
-        stock: "soon",
+        stock: "available",
         promo: false,
-        cantidad: 0
+        cantidad: 28
     },
     {
         id: 13,
@@ -246,7 +251,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 12
+        cantidad: 9
     },
     {
         id: 18,
@@ -265,18 +270,17 @@ let products = [
     },
     {
         id: 19,
-        name: "World Championship Deck 2023",
+        name: "Ultra Pro Sleeves Verde Lima - 50 Unidades",
         category: "pokemon",
         expansion: "otros",
-        price: 70000,
-        language: ["en"],
+        price: 17000,
+        language: [""],
         images: [
-            "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/820650856037-1200-face3d.jpg",
-            "https://www.pokemoncenter.com/images/DAMRoot/High/10000/P9544_699-85605_04.jpg",
-            "https://m.media-amazon.com/images/I/71gr2B-wVPL._AC_UF350,350_QL80_.jpg",
-            "https://i.ebayimg.com/images/g/ElQAAOSwiU1l4g~5/s-l1200.jpg",
+            "https://m.media-amazon.com/images/I/61AyuZKs1PL._AC_UF894,1000_QL80_.jpg"
         ],
-        stock: "soon",
+        stock: "available",
+        cantidad: 2
+
     },
     {
         id: 20,
@@ -348,7 +352,7 @@ let products = [
             "https://thetcgcollect.com/cdn/shop/files/ascended-heroes-deluxe-pin-collection-box.png?v=1772132898&width=480",
             "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 5
     },
@@ -379,7 +383,7 @@ let products = [
             "https://www.stompinggroundstcg.com/cdn/shop/files/Mega_Evolution_Phantasmal_Flames_Booster_Packs_6_600x.webp?v=1760135927",
             "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     },
@@ -410,23 +414,23 @@ let products = [
             "https://avalongaming.com.co/wp-content/uploads/Ascended-Heroes-Mini-Tin.png.webp",
             "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
         ],
-        stock: "soon"
+        stock: "agotado"
     },
     {
         id: 29,
-        name: "Mega Lucario EX Figure Collection",
+        name: "Booster Bundle Perfect  Order",
         category: "pokemon",
-        expansion: "mega-evolution",
-        price: 129000,
+        expansion: "perfect-order",
+        price: 140000,
         language: ["en"],
         images: [
-            "https://versusgamecenter.pt/cdn/shop/files/Pokemon-TCG-Mega-Lucario-Figure-Box_900x.png?v=1763557347",
-            "https://www.igabiba.si/cdn/shop/files/pokemon-tcg-mega-lucario-ex-figure-collection-196214116986-1206248071_1024x.png?v=1763484541",
-            "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Lucario-ex-figure-collection-box-contents.webp?v=1757577594&width=1500"
+            "https://avalongaming.com.co/wp-content/uploads/Bundle-Perfect-Order-500x500.png.webp",
+            "https://card-binder.com/cdn/shop/files/Pokemon-Perfect-Order-Booster-Bundle-6-Booster-Packs.webp?v=1767987506&width=1500",
+            "https://retrododo.com/content/images/size/w1600/2026/04/perfect-order-chase-cards.webp"
         ],
         stock: "available",
         promo: false,
-        cantidad: 1
+        cantidad: 3
     },
     {
         id: 30,
@@ -445,16 +449,18 @@ let products = [
     },
     {
         id: 31,
-        name: "Battle Deck Gengar o Battle Deck Diance",
+        name: "Mabosstiff Ex Collection",
         category: "pokemon",
         expansion: "otros",
-        price: 65000,
+        price: 89000,
         language: ["es"],
         images: [
-            "https://cdnx.jumpseller.com/rtgamer-store/image/69132027/resize/306/407?1761666898",
-            "https://www.stompinggroundstcg.com/cdn/shop/files/Mega_Gengar_ex_Deck_Promos_600x.webp?v=1762472166"
+            "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/820650504631-1200-face3d.jpg",
+            "https://www.pokemoncenter.com/images/DAMRoot/High/10000/P9541_290-85589_02.jpg"
         ],
-        stock: "encargo"
+        stock: "available",
+        cantidad: 1
+
     },
     {
         id: 32,
@@ -590,7 +596,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 4
+        cantidad: 2
     },
     {
         id: 41,
@@ -731,7 +737,7 @@ let products = [
         stock: "available",
         promo: false,
         promoEvento: "pokemon-day",
-        cantidad: 4
+        cantidad: 2
     },
     {
         id: 50,
@@ -779,7 +785,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 15
+        cantidad: 10
     },
     {
         id: 53,
@@ -827,7 +833,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 4
+        cantidad: 2
     },
     {
         id: 56,
@@ -978,6 +984,24 @@ const preorderBanners = [
     expansionFilter: "perfect-order",
     active: true,
     priority: 3
-}
+},
 
+{
+    id: "chaos-rising-preorder",
+    title: "🐸🥷 PREVENTA CHAOS RISING",
+    subtitle: "",
+    description: "Ya seas jugador competitivo o coleccionista, Chaos Rising ofrece una experiencia intensa, visualmente impactante y llena de poder… donde solo los entrenadores más preparados podrán dominar el caos.",
+    image: "https://piedrabruja.cl/cdn/shop/files/Pokemon_TCG_Mega_Evolution_Chaos_Rising_Logo-PiedraBruja.png?v=1774382506&width=2648",  
+    bgColor: "linear-gradient(135deg, #1a237e, #3949ab, #7c4dff, #ff4081)",
+    backgroundImage: "https://legends.pokemon.com/_next/image?url=%2Fstatic-assets%2Fcontent%2Fpokemon-images%2Fmega_greninja_square.png&w=1080&q=75",
+    overlayGradient: "linear-gradient(135deg, rgba(26, 35, 126, 0.95), rgba(124, 77, 255, 0.85), rgba(255, 64, 129, 0.75))",
+    textColor: "#ffffff",
+    action: "filter",
+    expansionFilter: "chaos-rising",
+    active: true,
+    priority: 1,
+    isPreorder: true,
+    arrivalDate: "5 de Junio, 2026",
+    preorderBadge: "PREVENTA"
+}
 ];

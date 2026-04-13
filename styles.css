@@ -1563,3 +1563,163 @@ body.dark-theme .empty-cart {
     object-fit: contain;
     padding: 1px;
 }
+
+
+/* =====================================================
+   ESTILOS ESPECIALES PARA BANNERS DE PREVENTA
+   ===================================================== */
+
+/* Badge de preventa llamativo */
+.preorder-badge-special {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #ff4757, #ff6348, #ff9f43);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 20px rgba(255, 71, 87, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    animation: pulse-preorder 2s infinite, glow-preorder 2s infinite alternate;
+    z-index: 10;
+}
+
+@keyframes pulse-preorder {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes glow-preorder {
+    from { box-shadow: 0 4px 20px rgba(255, 71, 87, 0.4); }
+    to { box-shadow: 0 4px 30px rgba(255, 71, 87, 0.8), 0 0 40px rgba(255, 159, 67, 0.6); }
+}
+
+/* Fecha de llegada */
+.arrival-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    animation: slide-in-date 0.5s ease;
+}
+
+@keyframes slide-in-date {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.arrival-date i {
+    color: #f9ca24;
+    font-size: 1.2rem;
+}
+
+/* Efecto de contador o urgencia para preventa */
+.preorder-urgency {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #f9ca24, #f0932b);
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 10px;
+    animation: bounce-urgency 2s infinite;
+}
+
+@keyframes bounce-urgency {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Banner de preventa con borde animado */
+.banner-slide[data-preorder="true"] {
+    position: relative;
+}
+
+.banner-slide[data-preorder="true"]::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, #ff4757, #ff6348, #f9ca24, #ff4757);
+    border-radius: 23px;
+    z-index: -1;
+    animation: border-rotate 3s linear infinite;
+}
+
+@keyframes border-rotate {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* Estilos para productos individuales en preventa */
+.product-card.preorder-item {
+    border: 3px solid #ff4757;
+    position: relative;
+    overflow: visible;
+}
+
+.product-card.preorder-item::before {
+    content: 'PREVENTA';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #ff4757, #ff6348);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+    z-index: 10;
+    animation: pulse-badge 2s infinite;
+}
+
+.preorder-date-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    color: #856404;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 10px;
+    border: 1px solid #ffeaa7;
+}
+
+.preorder-date-tag i {
+    color: #f39c12;
+}
+
+/* Badge de stock para preventa */
+.product-stock.preorder-stock {
+    background: linear-gradient(135deg, #e1bee7, #ce93d8) !important;
+    color: #4a148c !important;
+    border-color: #ba68c8 !important;
+    animation: pulse-stock 2s infinite;
+}
+
+@keyframes pulse-stock {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}

@@ -142,6 +142,21 @@ function createBannerHTML(banner, index, total) {
         `;
     }
 
+    // NUEVO: Contenido especial para preventas
+    let preorderContent = '';
+    if (banner.isPreorder) {
+        preorderContent = `
+            <div class="arrival-date">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Llegada estimada: ${banner.arrivalDate || 'Próximamente'}</span>
+            </div>
+            <div class="preorder-urgency">
+                <i class="fas fa-clock"></i>
+                <span>¡Reserva ya! Stock limitado</span>
+            </div>
+        `;
+    }
+
     let bannerStyle = '';
     let overlayStyle = '';
 
@@ -155,19 +170,32 @@ function createBannerHTML(banner, index, total) {
         bannerStyle = `background: ${banner.bgColor};`;
     }
 
+    // NUEVO: Determinar el badge a mostrar
+    const badgeClass = banner.isPreorder ? 'preorder-badge-special' : 'preorder-badge';
+    const badgeIcon = banner.isPreorder ? 'fa-fire' : getBadgeIcon(banner.id);
+    const badgeText = banner.isPreorder ? (banner.preorderBadge || 'PREVENTA') : getBadgeText(banner.id);
+
+    // NUEVO: Atributo data-preorder para estilos CSS
+    const preorderAttr = banner.isPreorder ? 'data-preorder="true"' : '';
+
     return `
-        <div class="preorder-banner banner-slide" data-banner-id="${banner.id}"
+        <div class="preorder-banner banner-slide" data-banner-id="${banner.id}" ${preorderAttr}
              style="${bannerStyle} color: ${banner.textColor}; min-width: 100%;"
              ${onclickAttr}>
             ${overlayStyle}
+            <div class="${badgeClass}">
+                <i class="fas ${badgeIcon}"></i> 
+                ${badgeText}
+            </div>
             <div class="preorder-content" style="position: relative; z-index: 2;">
                 <div class="preorder-text">
                     <h2>${banner.title}</h2>
                     <p class="preorder-subtitle">${banner.subtitle}</p>
                     <p class="preorder-description">${banner.description}</p>
+                    ${preorderContent}
                     <span class="preorder-cta">
                         <i class="fas ${banner.action === 'link' ? 'fa-external-link-alt' : 'fa-eye'}"></i> 
-                        ${banner.action === 'link' ? 'Visitar ahora' : 'Ver productos disponibles'}
+                        ${banner.action === 'link' ? 'Visitar ahora' : (banner.isPreorder ? 'Ver productos en preventa' : 'Ver productos disponibles')}
                     </span>
                 </div>
                 <div class="preorder-image">
@@ -175,13 +203,10 @@ function createBannerHTML(banner, index, total) {
                     ${extraContent}
                 </div>
             </div>
-            <div class="preorder-badge">
-                <i class="fas ${getBadgeIcon(banner.id)}"></i> 
-                ${getBadgeText(banner.id)}
-            </div>
         </div>
     `;
 }
+
 
 // Icono del badge
 function getBadgeIcon(bannerId) {
@@ -358,8 +383,16 @@ function renderProducts(productsToRender) {
     }
 
     productsToRender.forEach(product => {
+        // ✅ MOVER isPreorder AQUÍ AL INICIO
+        const isPreorder = product.stock === 'soon' || product.preorder === true;
+        
         const card = document.createElement('div');
-        card.className = product.promo ? 'product-card surface promo-card' : 'product-card surface';
+        // NUEVO: Agregar clase especial si es preventa
+        let cardClassName = product.promo ? 'product-card surface promo-card' : 'product-card surface';
+        if (isPreorder) {
+            cardClassName += ' preorder-item';
+        }
+        card.className = cardClassName;
         
         const languageHtml = renderLanguages(product.language);
         const expansionBadge = getExpansionBadge(product.expansion);
@@ -367,7 +400,16 @@ function renderProducts(productsToRender) {
 
         let stockClass = '', stockText = '', stockInfo = '', stockDescription = '';
         
-        if (product.stock === 'available') {
+        // isPreorder ya está definida arriba, solo la usamos aquí
+        if (isPreorder) {
+            // Producto en preventa
+            stockClass = 'preorder-stock';
+            stockText = '🔥 PREVENTA';
+            stockDescription = `<span class="preorder-date-tag">
+                <i class="fas fa-calendar-check"></i>
+                ${product.arrivalDate ? `Llega: ${product.arrivalDate}` : 'Fecha por confirmar'}
+            </span>`;
+        } else if (product.stock === 'available') {
             stockClass = 'in-stock';
             stockText = 'En stock';
             if (product.cantidad !== undefined) {
@@ -385,9 +427,12 @@ function renderProducts(productsToRender) {
             stockText = 'Próximamente';
         }
         
-        // Deshabilitar botón si está agotado
-        const isDisabled = product.stock === 'agotado' || product.stock === 'soon';
+        // NUEVO: Habilitar botón para preventa (permitir agregar al carrito)
+        const isDisabled = product.stock === 'agotado';
         const disabledAttr = isDisabled ? 'disabled' : '';
+        // NUEVO: Texto especial para botón de preventa
+        const buttonText = isPreorder ? 'Reservar ahora' : (isDisabled ? 'No disponible' : 'Añadir al carrito');
+
         
         card.innerHTML = `
             <div style="position: relative;">
@@ -404,7 +449,7 @@ function renderProducts(productsToRender) {
                 ${stockInfo}
                 ${stockDescription}
                 <button class="btn-add-cart" onclick="addToCart(${product.id})" ${disabledAttr}>
-                    <i class="fas fa-cart-plus"></i> ${isDisabled ? 'No disponible' : 'Añadir al carrito'}
+                    <i class="fas fa-cart-plus"></i> ${buttonText}
                 </button>
             </div>
         `;
@@ -494,13 +539,20 @@ function addToCart(productId, quantity = 1) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
 
-    // Validar si está agotado
-    if (product.stock === 'agotado' || product.stock === 'soon') {
-        showNotification('error', 'Este producto no está disponible para la venta');
+    // ✅ CORREGIDO: Solo bloquear si está agotado
+    if (product.stock === 'agotado') {
+        showNotification('error', 'Este producto está agotado');
         return;
     }
 
-    // Validar stock disponible
+    // ✅ NUEVO: Mensaje especial para preventas
+    const isPreorder = product.stock === 'soon' || product.preorder === true;
+    
+    if (isPreorder) {
+        showNotification('info', `📅 Producto en preventa. Llegada estimada: ${product.arrivalDate || 'Por confirmar'}`, 'Preventa');
+    }
+
+    // Validar stock disponible (solo para productos disponibles, no preventas)
     if (product.stock === 'available' && product.cantidad !== undefined && quantity > product.cantidad) {
         showNotification('warning', `Solo hay ${product.cantidad} unidades disponibles`);
         return;
@@ -509,7 +561,7 @@ function addToCart(productId, quantity = 1) {
     // Verificar si ya está en el carrito
     const existing = cart.find(item => item.id === productId);
     if (existing) {
-        // Validar que no exceda el stock
+        // Validar que no exceda el stock (solo para disponibles)
         if (product.stock === 'available' && product.cantidad !== undefined && 
             existing.quantity + quantity > product.cantidad) {
             showNotification('warning', `Solo puedes agregar ${product.cantidad - existing.quantity} unidades más`);
@@ -523,7 +575,9 @@ function addToCart(productId, quantity = 1) {
             price: product.price,
             image: product.images[0],
             quantity: quantity,
-            stock: product.stock
+            stock: product.stock,
+            isPreorder: isPreorder,  // Guardar flag de preventa
+            arrivalDate: product.arrivalDate  // Guardar fecha
         });
     }
     saveCart();
@@ -531,7 +585,7 @@ function addToCart(productId, quantity = 1) {
     // Mensaje personalizado según tipo de producto
     if (product.stock === 'encargo') {
         showNotification('info', '🕒 Este producto es por encargo y llegará en 3-5 días hábiles', 'Producto agregado');
-    } else {
+    } else if (!isPreorder) {
         showNotification('success', `${product.name} ha sido agregado al carrito`);
     }
 }
@@ -581,14 +635,25 @@ function renderCart() {
         const itemTotal = item.price * item.quantity;
         total += itemTotal;
         
-        // Determinar clase de item (encargo tiene estilo especial)
-        const itemClass = item.stock === 'encargo' ? 'cart-item encargo-item' : 'cart-item';
+        // ✅ NUEVO: Detectar si es preventa o encargo
+        const isPreorderItem = item.isPreorder || item.stock === 'soon';
+        const itemClass = item.stock === 'encargo' ? 'cart-item encargo-item' : 
+                         (isPreorderItem ? 'cart-item preorder-cart-item' : 'cart-item');
+        
+        // ✅ NUEVO: Badge de preventa en el carrito
+        let preorderBadge = '';
+        if (isPreorderItem) {
+            preorderBadge = `<div style="background: linear-gradient(135deg, #ff4757, #ff6348); color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: bold; display: inline-block; margin-top: 4px;">
+                🔥 PREVENTA${item.arrivalDate ? ` - Llega: ${item.arrivalDate}` : ''}
+            </div>`;
+        }
         
         html += `
             <div class="${itemClass}" data-id="${item.id}">
                 <img src="${item.image}" alt="${item.name}" class="cart-item-image" onerror="this.src='https://via.placeholder.com/80'">
                 <div class="cart-item-info">
                     <div class="cart-item-name">${item.name}</div>
+                    ${preorderBadge}
                     <div class="cart-item-price">${formatCOP(item.price)}</div>
                     <div class="cart-item-quantity">
                         <div class="quantity-controls">
@@ -623,8 +688,16 @@ function checkoutWhatsApp() {
     let message = '🛒 *NUEVO PEDIDO - ONE PLAY MORE*%0A%0A';
     cart.forEach(item => {
         const itemTotal = item.price * item.quantity;
-        const encargoTag = item.stock === 'encargo' ? ' (📦 Encargo)' : '';
-        message += `• *${item.name}*${encargoTag}%0A`;
+        
+        // ✅ NUEVO: Tags especiales
+        let tag = '';
+        if (item.stock === 'encargo') {
+            tag = ' (📦 Encargo)';
+        } else if (item.isPreorder || item.stock === 'soon') {
+            tag = ` (🔥 PREVENTA${item.arrivalDate ? ` - Llega: ${item.arrivalDate}` : ''})`;
+        }
+        
+        message += `• *${item.name}*${tag}%0A`;
         message += `  ${item.quantity} x ${formatCOP(item.price)} = ${formatCOP(itemTotal)}%0A%0A`;
     });
     const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);

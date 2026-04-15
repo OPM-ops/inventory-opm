@@ -180,17 +180,21 @@ let products = [
     },
     {
         id: 13,
-        name: "Booster Bundle Phantasmal Flames",
+        name: "First Partner Illustration Collection - Series 2",
         category: "pokemon",
-        expansion: "phantasmal-flames",
-        price: 125000,
+        expansion: "chaos-rising",
+        price: 85000,
         language: ["en"],
         images: [
-            "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/329077/457207/Copy_of_Website_Image_Template9999-7860__44031.1759343927.png",
-            "https://zingaentertainment.com/cdn/shop/files/Pokemon_TCG_Mega_Evolution_Phantasmal_Flames_Booster_Wrap_Mega_Charizard_4_pack_800x.png?v=1764337750",
-            "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
+            "https://kantocards.com/cdn/shop/files/P11445-3D_First_Partner_Illustration_Collection_Series_2_Front_DOM_INTL_EN-3468x3399-09276f8-1.png?v=1775174788&width=3468",
+            "https://card-binder.com/cdn/shop/files/Pokemon-First-Partner-Illustration-Collection-Series-2-Pack-Content.webp?v=1775560548&width=1500",
+            "https://kantocards.com/cdn/shop/files/P11445-3D_First_Partner_Illustration_Collection_Series_2_Sticker_Sheet_GEN-2114x1967-d6ba60c.png?v=1775174784&width=2114"
         ],
-        stock: "agotado"
+        stock: "soon",
+        preorder: true,         
+        arrivalDate: "19 de Junio, 2026",  
+        cantidad: 25            
+
     },
     {
         id: 14,
@@ -209,17 +213,19 @@ let products = [
     },
     {
         id: 15,
-        name: "Mini Tin Evoluciones Prismaticas",
+        name: "Mega Zygarde ex Premium Collection",
         category: "pokemon",
-        expansion: "prismatic-evolution",
-        price: 52000,
-        language: ["es"],
+        expansion: "perfect-order",
+        price: 175000,
+        language: ["en"],
         images: [
-            "https://cardzone.es/cdn/shop/files/mini-lata-pokemon-evoluciones-prismaticas-sobres-y-cartas-pokemon-tcg.png?v=1750152740&width=1920",
-            "https://vyruztoystore.com.mx/cdn/shop/files/PokemonTCGScarlet_VioletPrismaticEvolutionsMiniTinSylveonBooster.webp?v=1747298170&width=1946"
+            "https://media.pocketmonsters.net/imageboard/30/17709903120059.png",
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2026/mega-zygarde-ex-premium-collection/inline/01-en.png",
+            "https://cdnx.jumpseller.com/pokemaniacos/image/73402924/resize/1000/1000?1771263602"
         ],
-        stock: "agotado",
-        promo: false,
+        stock: "soon",
+        preorder: true,         
+        arrivalDate: "21 de Marzo, 2026",  
         cantidad: 0
     },
     {
@@ -453,7 +459,7 @@ let products = [
         category: "pokemon",
         expansion: "otros",
         price: 89000,
-        language: ["es"],
+        language: ["en"],
         images: [
             "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/820650504631-1200-face3d.jpg",
             "https://www.pokemoncenter.com/images/DAMRoot/High/10000/P9541_290-85589_02.jpg"
@@ -549,25 +555,24 @@ let products = [
             "https://knoldex.nl/cdn/shop/files/Pikachu65ctDeckProtectorSleeves1.png?v=1773343552",
             "https://www.shopultrapro.eu/cdn/shop/files/pikachu-standard-deck-protector-sleeves-65ct-for-pokemon-776185_grande.png?v=1737074589"
         ],
-        stock: "soon",
+        stock: "available",
         promo: true,
-        cantidad: 1
+        cantidad: 2
     },
     {
         id: 38,
-        name: "Mini Tin Fábula Sombria",
+        name: "Booster Box Chaos Rising",
         category: "pokemon",
-        expansion: "shrouded-fable",
-        price: 45000,
-        language: ["es"],
+        expansion: "chaos-rising",
+        price: 700000,
+        language: ["en"],
         images: [
-            "https://luffytoys.cl/cdn/shop/files/2-257461-e9839_1200x.png?v=1717104973",
-            "https://unboxunbored.com/cdn/shop/files/pokemon-tcg-shrouded-fable-kingambit-illustration-collection-210660.png?v=1748179440&width=1214",
-            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2024/08/pokemon-tcg-most-valuable-cards-from-shrouded-fable-cassiopeia-pecharunt-ex-and-dusknoir.jpg"
-        ],
-        stock: "agotado",
-        promo: false,
-        cantidad: 1
+            "https://avalongaming.com.co/wp-content/uploads/Booster-Box-Chaos-Rising.png",
+            "https://cdn.chaoscards.co.uk/uploads/prod_img/2_328480_e.png?v=-62169983925"        ],
+        stock: "soon",
+        preorder: true,         
+        arrivalDate: "5 de Junio, 2026",  
+        cantidad: 50            
     },
     {
         id: 39,
@@ -741,19 +746,20 @@ let products = [
     },
     {
         id: 50,
-        name: "Ultra Premium Collection Mega Charizard X",
+        name: "Blister Chaos Rising",
         category: "pokemon",
-        expansion: "phantasmal-flames",
-        price: 530000,
+        expansion: "chaos-rising",
+        price: 75000,
         language: ["en"],
         images: [
-            "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Charizard-Ultra-Premium-Collection-Box-Contents.webp?v=1757582351&width=1500",
-            "https://cdnx.jumpseller.com/tcg-chile/image/68810996/resize/540/540?1760738085",
-            "https://kantocards.com/cdn/shop/files/rn-image_picker_lib_temp_9ebd7f72-90ca-4708-910c-75e679730c4a.png?v=1771097615&width=1354"
+            "https://avalongaming.com.co/wp-content/uploads/Blister-Chaos-Rising.png",
+            "https://card-binder.com/cdn/shop/files/Pokemon-Chaos-Rising-3-Booster-Packs.webp?v=1773346562&width=1500"
         ],
-        stock: "agotado",
+        stock: "soon",
+        preorder: true,         
+        arrivalDate: "5 de Junio, 2026",        
         promo: false,
-        cantidad: 1
+        cantidad: 5
     },
     {
         id: 51,
@@ -847,7 +853,8 @@ let products = [
             "https://cardzone.es/cdn/shop/files/contenido-caja-de-entrenador-elite-trainer-box-etb-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone_fe31d546-5f40-4eed-ad26-7da31d3fa915.png?v=1771327450&width=3840",
             "https://cdn.shopify.com/s/files/1/0865/2816/4189/files/Pokemon-TCG-Mega-Evolutions-Ascended-Heroes-New-Mega-Evolution-illustration-Cards.webp?v=1763715714"
         ],
-        stock: "agotado",
+        stock: "soon",
+        preorder: false,         
         promo: false,
         cantidad: 1
     },
@@ -885,19 +892,96 @@ let products = [
     },
     {
         id: 59,
-        name: "Booster Ninja Spinner",
+        name: "First Partner Illustration Collection - Series 2",
         category: "pokemon",
-        expansion: "ninja-spinner",
-        price: 20000,
-        language: ["jp"],
+        expansion: "chaos-rising",
+        price: 80000,
+        language: ["es"],
         images: [
-            "https://pokejpn.com/cdn/shop/files/spinner-5-pack.png?v=1772676862&width=700",
-            "https://www.card-corner.de/media/image/product/4141/md/pokemon-ninja-spinner-m4-display~2.webp"
+            "https://kantocards.com/cdn/shop/files/P11445-3D_First_Partner_Illustration_Collection_Series_2_Front_DOM_INTL_EN-3468x3399-09276f8-1.png?v=1775174788&width=3468",
+            "https://card-binder.com/cdn/shop/files/Pokemon-First-Partner-Illustration-Collection-Series-2-Pack-Content.webp?v=1775560548&width=1500",
+            "https://kantocards.com/cdn/shop/files/P11445-3D_First_Partner_Illustration_Collection_Series_2_Sticker_Sheet_GEN-2114x1967-d6ba60c.png?v=1775174784&width=2114"
         ],
-        stock: "agotado",
+        stock: "soon",
+        preorder: true,         
+        arrivalDate: "19 de Junio, 2026",  
+        cantidad: 25            
+
+    },
+
+    {
+        id: 60,
+        name: "Booster Bundle Chaos Rising",
+        category: "pokemon",
+        expansion: "chaos-rising",
+        price: 135000,
+        language: ["en"],
+        images: [
+            "https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10030/P11219_10-10403-109_01.jpg",
+            "https://www.pokemoncenter.com/images/DAMRoot/High/10030/P11219_10-10403-101_02.jpg"
+        ],
+        stock: "soon",
+        preorder: true,         
+        arrivalDate: "5 de Junio, 2026",        
         promo: false,
-        cantidad: 2
-    }
+        cantidad: 5
+    },
+    {
+        id: 61,
+        name: "Build and Battle Chaos Rising",
+        category: "pokemon",
+        expansion: "chaos-rising",
+        price: 115000,
+        language: ["en"],
+        images: [
+            "https://avalongaming.com.co/wp-content/uploads/Build-And-Battle-Chaos-Rising.png",
+            "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2026/me04-build-battle-box/me04-build-battle-box-a-169-en.png"
+        ],
+        stock: "soon",
+        preorder: true,         
+        arrivalDate: "5 de Junio, 2026",        
+        promo: false,
+        cantidad: 5
+    },
+
+    {
+        id: 62,
+        name: "Mega Moonlit Tin - Mega Gengar & Mega Clafable",
+        category: "pokemon",
+        expansion: "otros",
+        price: 75000,
+        language: ["en"],
+        images: [
+            "https://kantocards.com/cdn/shop/files/1773947670654.png?v=1774299253&width=1422",
+            "https://media.gamestop.com/i/gamestop/20033969_ALT01?$pdp$?w=1256&h=664&fmt=auto",
+            "https://media.gamestop.com/i/gamestop/20033969_ALT05?$pdp$?w=1256&h=664&fmt=auto"
+        ],
+        stock: "soon",
+        preorder: true,         
+        arrivalDate: "5 de Junio, 2026",        
+        promo: false,
+        cantidad: 5
+    },
+
+    {
+        id: 63,
+        name: "League Battle Mega Lucario ex",
+        category: "pokemon",
+        expansion: "otros",
+        price: 135000,
+        language: ["en", "es"],
+        images: [
+            "https://cdnx.jumpseller.com/geekers1/image/74211131/thumb/1079/1079?1772745247",
+            "https://cdnx.jumpseller.com/geekers1/image/74211132/thumb/1079/1079?1772745247"
+        ],
+        stock: "soon",
+        preorder: true,         
+        arrivalDate: "22 de Mayo, 2026",        
+        promo: false,
+        cantidad: 5
+    },
+
+
 ];
 
 

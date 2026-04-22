@@ -55,7 +55,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 10
+        cantidad: 1
     },
     {
         id: 5,
@@ -100,7 +100,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 12
+        cantidad: 8
 
     },
     {
@@ -207,7 +207,7 @@ let products = [
             "https://www.despelvogel.com/wp-content/uploads/2024/06/trick-or-trade-2024.png",
             "https://cardzone.es/cdn/shop/files/siguemeeninstagram_1920x1920px_-2024-10-25T105103.875.png?v=1729846282&width=4800"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 100
     },
@@ -739,7 +739,7 @@ let products = [
             "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2026/pokemon-day-2026-collection/inline/full/SV05_LA_51.png",
             "https://metamorphcenter.com/cdn/shop/files/Caja_Pokemon_Day_2026_-_30_Aniversario_-_Espanol-1.png?v=1769706495&width=1232"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         promoEvento: "pokemon-day",
         cantidad: 2

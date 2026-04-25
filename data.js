@@ -100,7 +100,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 8
+        cantidad: 2
 
     },
     {
@@ -379,19 +379,20 @@ let products = [
     },
     {
         id: 26,
-        name: "Booster Bundle Llamaradas Fantasmales",
+        name: "Lumiose City Mini Tin - Chaos Rising",
         category: "pokemon",
-        expansion: "phantasmal-flames",
-        price: 115000,
-        language: ["es"],
+        expansion: "chaos-rising",
+        price: 52000,
+        language: ["en"],
         images: [
-            "https://d1i787aglh9bmb.cloudfront.net/assets/img/me-expansions/me02/collections/es-mx/me02-booster-bundle-la.png",
-            "https://www.stompinggroundstcg.com/cdn/shop/files/Mega_Evolution_Phantasmal_Flames_Booster_Packs_6_600x.webp?v=1760135927",
-            "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
+            "https://pokemonplug.com/cdn/shop/files/LumiosCityMiniTin1.png?v=1774899927",
+            "https://cdn11.bigcommerce.com/s-vz3etek0gv/images/stencil/1200w/products/79923/110518/PKU10392_web_Content__29234.1773947996.jpg",
+            "https://i.redd.it/new-set-chaos-rising-v0-n9fv7cn5a5hg1.png?width=516&format=png&auto=webp&s=59494d94557603fb66da026f8cc326f348be387b"
         ],
-        stock: "agotado",
-        promo: false,
-        cantidad: 1
+        stock: "soon",
+        preorder: true,         
+        arrivalDate: "5 de Junio, 2026",  
+        cantidad: 30            
     },
     {
         id: 27,
@@ -532,17 +533,17 @@ let products = [
     },
     {
         id: 36,
-        name: "Tech Sticker Black & White",
-        category: "pokemon",
-        expansion: "black-white",
-        price: 75000,
-        language: ["es"],
+        name: "Goku Súper Saiyan GxMateria",
+        category: "otros",
+        expansion: "Banpresto",
+        price: 105000,
+        language: [""],
         images: [
-            "https://topdeck.com.co/cdn/shop/files/s-l1600.webp?v=1761082864&width=1445",
-            "https://mktg-assets.tcgplayer.com/fit-in/1000x1000/filters:quality(75)/content/pokemon/_2025/JUL/23/Most-Expensive-Pokemon-Cards-Black-Bolt-Opengraph.jpg"
+            "https://xtremeplay.co/wp-content/uploads/2024/11/TOYCOLBAN3941_1.jpg",
+            "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VBkAAOSw-c9oFeMF/$_3.JPG?set_id=880000500F"
         ],
         stock: "encargo",
-        promo: false,
+        promo: true,
     },
     {
         id: 37,
@@ -732,17 +733,17 @@ let products = [
         name: "Pokemon Day 2026 Collection",
         category: "pokemon",
         expansion: "otros",
-        price: 80000,
+        price: 85000,
         language: ["en"],
         images: [
             "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/341956/493637/PKU101039-1__96448.1769739454.png",
             "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2026/pokemon-day-2026-collection/inline/full/SV05_LA_51.png",
             "https://metamorphcenter.com/cdn/shop/files/Caja_Pokemon_Day_2026_-_30_Aniversario_-_Espanol-1.png?v=1769706495&width=1232"
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
         promoEvento: "pokemon-day",
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 50,
@@ -775,7 +776,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 4
+        cantidad: 3
     },
     {
         id: 52,
@@ -791,7 +792,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 10
+        cantidad: 8
     },
     {
         id: 53,

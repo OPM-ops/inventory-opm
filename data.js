@@ -98,7 +98,7 @@ let products = [
             "https://media.gamestop.com/i/gamestop/20030568_ALT05?$pdp$?w=1256&h=664&fmt=auto",
             "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2026/me2pt5-premium-poster-collection/inline/01-en.png"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 2
 
@@ -176,7 +176,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 28
+        cantidad: 27
     },
     {
         id: 13,
@@ -190,7 +190,7 @@ let products = [
             "https://card-binder.com/cdn/shop/files/Pokemon-First-Partner-Illustration-Collection-Series-2-Pack-Content.webp?v=1775560548&width=1500",
             "https://kantocards.com/cdn/shop/files/P11445-3D_First_Partner_Illustration_Collection_Series_2_Sticker_Sheet_GEN-2114x1967-d6ba60c.png?v=1775174784&width=2114"
         ],
-        stock: "soon",
+        stock: "agotado",
         preorder: true,         
         arrivalDate: "19 de Junio, 2026",  
         cantidad: 25            
@@ -257,7 +257,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 9
+        cantidad: 6
     },
     {
         id: 18,
@@ -465,7 +465,7 @@ let products = [
             "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/820650504631-1200-face3d.jpg",
             "https://www.pokemoncenter.com/images/DAMRoot/High/10000/P9541_290-85589_02.jpg"
         ],
-        stock: "available",
+        stock: "soon",
         cantidad: 1
 
     },
@@ -733,15 +733,15 @@ let products = [
         name: "Pokemon Day 2026 Collection",
         category: "pokemon",
         expansion: "otros",
-        price: 85000,
-        language: ["en"],
+        price: 76000,
+        language: ["es"],
         images: [
             "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/341956/493637/PKU101039-1__96448.1769739454.png",
             "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2026/pokemon-day-2026-collection/inline/full/SV05_LA_51.png",
             "https://metamorphcenter.com/cdn/shop/files/Caja_Pokemon_Day_2026_-_30_Aniversario_-_Espanol-1.png?v=1769706495&width=1232"
         ],
-        stock: "available",
-        promo: false,
+        stock: "soon",
+        promo: true,
         promoEvento: "pokemon-day",
         cantidad: 1
     },
@@ -776,7 +776,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 3
+        cantidad: 2
     },
     {
         id: 52,
@@ -792,7 +792,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 8
+        cantidad: 5
     },
     {
         id: 53,
@@ -840,7 +840,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 56,
@@ -854,7 +854,7 @@ let products = [
             "https://cardzone.es/cdn/shop/files/contenido-caja-de-entrenador-elite-trainer-box-etb-heroes-ascendentes-ascended-heroes-cartas-pokemon-tcg-cardzone_fe31d546-5f40-4eed-ad26-7da31d3fa915.png?v=1771327450&width=3840",
             "https://cdn.shopify.com/s/files/1/0865/2816/4189/files/Pokemon-TCG-Mega-Evolutions-Ascended-Heroes-New-Mega-Evolution-illustration-Cards.webp?v=1763715714"
         ],
-        stock: "soon",
+        stock: "agotado",
         preorder: false,         
         promo: false,
         cantidad: 1

@@ -1723,3 +1723,14 @@ body.dark-theme .empty-cart {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.8; }
 }
+
+
+
+
+.soon-description {
+    color: #856404;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    font-weight: 500;
+    display: block;
+}

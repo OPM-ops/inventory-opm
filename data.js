@@ -230,19 +230,19 @@ let products = [
     },
     {
         id: 16,
-        name: "3 Pack Blister Llamaradas Fantasmales",
+        name: "Mega Venusaur ex Premium Collection",
         category: "pokemon",
-        expansion: "phantasmal-flames",
-        price: 63000,
+        expansion: "otros",
+        price: 160000,
         language: ["es"],
         images: [
-            "https://lacasadekartus.com/wp-content/uploads/2025/11/blister-3-fuegos-fantasmales.webp",
-            "https://cdn.chaoscards.co.uk/uploads/prod_img/2_308966_e.png?v=-62169983925",
-            "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
+            "https://www.mirajtrading.com/cdn/shop/files/Pokemon_Mega_Venusaur_EX_Premium_Collection_Box_French_mirajtrading.png?v=1758733787&width=2048",
+            "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Venusaur-ex-Premium-Collection-Lenticular-promo-card.webp?v=1763119467&width=1500",
+            "https://gengar.s28.cdn-upgates.com/_cache/8/5/85039e443cebc024b63819c12806eba7-1.webp"
         ],
-        stock: "encargo",
+        stock: "soon",
         promo: false,
-        cantidad: 1
+        cantidad: 3
     },
     {
         id: 17,
@@ -396,19 +396,19 @@ let products = [
     },
     {
         id: 27,
-        name: "ETB Llamaradas Fantasmales",
+        name: "Booster Box Perfect Order (36 Sobres)",
         category: "pokemon",
-        expansion: "phantasmal-flames",
-        price: 225000,
-        language: ["es"],
+        expansion: "perfect-order",
+        price: 730000,
+        language: ["en"],
         images: [
-            "https://d1i787aglh9bmb.cloudfront.net/assets/img/me-expansions/me02/collections/es-mx/me02-etb-la.png",
-            "https://grancards.com/cdn/shop/files/ETB_LLAMAS_FANTASMALES_2.png?v=1763060420&width=1445",
-            "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
+            "https://avalongaming.com.co/wp-content/uploads/Booster-Box-Perfect-Order.png",
+            "https://shop.gsc.com.my/cdn/shop/files/2_322555_e_9fdf589f-564e-4119-adc2-c4524e309272.webp?v=1775625487&width=798",
+            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/wm/2026/04/pokemon-tcg-perfect-order-valuable-cards-fi.jpg?w=1600&h=900&fit=crop"
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
-        cantidad: 0
+        cantidad: 2
     },
     {
         id: 28,
@@ -425,7 +425,7 @@ let products = [
     },
     {
         id: 29,
-        name: "Booster Bundle Perfect  Order",
+        name: "Booster Bundle Perfect Order",
         category: "pokemon",
         expansion: "perfect-order",
         price: 140000,
@@ -444,15 +444,16 @@ let products = [
         name: "Mega Lucario EX Figure Collection",
         category: "pokemon",
         expansion: "mega-evolution",
-        price: 100000,
+        price: 110000,
         language: ["es"],
         images: [
             "https://versusgamecenter.pt/cdn/shop/files/Pokemon-TCG-Mega-Lucario-Figure-Box_900x.png?v=1763557347",
             "https://www.igabiba.si/cdn/shop/files/pokemon-tcg-mega-lucario-ex-figure-collection-196214116986-1206248071_1024x.png?v=1763484541",
             "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Lucario-ex-figure-collection-box-contents.webp?v=1757577594&width=1500"
         ],
-        stock: "encargo",
-        promo: true
+        stock: "soon",
+        promo: true,
+        cantidad: 3
     },
     {
         id: 31,
@@ -606,18 +607,18 @@ let products = [
     },
     {
         id: 41,
-        name: "Sleeved Booster Fuerzas Temporales",
+        name: "Booster Perfect Order",
         category: "pokemon",
-        expansion: "Temporal Forces",
-        price: 16000,
-        language: [""],
+        expansion: "perfect-order",
+        price: 22000,
+        language: ["en"],
         images: [
-            "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/820650856426-1200-face3d.jpg",
-            "https://mktg-assets.tcgplayer.com/content/pokemon/_2024/MAR/25/PKMN-The-Most-Expensive-Cards-Temporal-Forces-OG.jpg"
+            "https://shop.gsc.com.my/cdn/shop/files/2_322555_e_9fdf589f-564e-4119-adc2-c4524e309272.webp?v=1775625487&width=798",
+            "https://retrododo.com/content/images/size/w1600/2026/04/perfect-order-chase-cards.webp"
         ],
-        stock: "encargo",
-        promo: true,
-        cantidad: 1
+        stock: "available",
+        promo: false,
+        cantidad: 36
     },
     {
         id: 42,
@@ -981,6 +982,22 @@ let products = [
         promo: false,
         cantidad: 5
     },
+    {
+        id: 64,
+        name: "Funko Pop! Bertholdt Hoover AOT S3",
+        category: "funko",
+        expansion: "",
+        price: 25000,
+        language: [""],
+        images: [
+            "https://i5.walmartimages.com/asr/b53f55c5-eab6-4828-9690-e7e897eab770.8d0495811ddf55d6095993eb861212c3.png?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+            "https://static.insales-cdn.com/r/lp4I6SC41DY/rs:fit:250:0:1/q:80/plain/images/products/1/5332/743625940/large_funko-pop-russia-Bertholdt-Hoover-Attack-on-Titan-1167-FU57979.png@webp"
+        ],
+        stock: "encargo",
+        promo: true,
+        cantidad: 1
+    },
+
 
 
 ];

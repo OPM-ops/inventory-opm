@@ -384,7 +384,7 @@ function renderProducts(productsToRender) {
 
     productsToRender.forEach(product => {
         // ✅ MOVER isPreorder AQUÍ AL INICIO
-        const isPreorder = product.stock === 'soon' || product.preorder === true;
+        const isPreorder = product.preorder === true;
         
         const card = document.createElement('div');
         // NUEVO: Agregar clase especial si es preventa
@@ -402,7 +402,6 @@ function renderProducts(productsToRender) {
         
         // isPreorder ya está definida arriba, solo la usamos aquí
         if (isPreorder) {
-            // Producto en preventa
             stockClass = 'preorder-stock';
             stockText = '🔥 PREVENTA';
             stockDescription = `<span class="preorder-date-tag">
@@ -422,11 +421,14 @@ function renderProducts(productsToRender) {
         } else if (product.stock === 'agotado') {
             stockClass = 'agotado';
             stockText = 'Agotado';
+        } else if (product.stock === 'soon') {
+            stockClass = 'coming-soon';
+            stockText = 'Próximamente';
+            stockDescription = '<span class="soon-description">📦 Llega en menos de una semana</span>';
         } else {
             stockClass = 'coming-soon';
             stockText = 'Próximamente';
-        }
-        
+        }        
         // NUEVO: Habilitar botón para preventa (permitir agregar al carrito)
         const isDisabled = product.stock === 'agotado';
         const disabledAttr = isDisabled ? 'disabled' : '';
@@ -546,7 +548,7 @@ function addToCart(productId, quantity = 1) {
     }
 
     // ✅ NUEVO: Mensaje especial para preventas
-    const isPreorder = product.stock === 'soon' || product.preorder === true;
+    const isPreorder = product.preorder === true;
     
     if (isPreorder) {
         showNotification('info', `📅 Producto en preventa. Llegada estimada: ${product.arrivalDate || 'Por confirmar'}`, 'Preventa');
@@ -636,7 +638,7 @@ function renderCart() {
         total += itemTotal;
         
         // ✅ NUEVO: Detectar si es preventa o encargo
-        const isPreorderItem = item.isPreorder || item.stock === 'soon';
+        const isPreorderItem = item.isPreorder === true;
         const itemClass = item.stock === 'encargo' ? 'cart-item encargo-item' : 
                          (isPreorderItem ? 'cart-item preorder-cart-item' : 'cart-item');
         

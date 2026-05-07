@@ -198,18 +198,18 @@ let products = [
     },
     {
         id: 14,
-        name: "Booster Trick or Trade (2024)",
+        name: "Booster Ascended Heroes",
         category: "pokemon",
-        expansion: "otros",
-        price: 5000,
-        language: ["en"],
+        expansion: "ascended-heroes",
+        price: 21000,
+        language: ["es"],
         images: [
-            "https://www.despelvogel.com/wp-content/uploads/2024/06/trick-or-trade-2024.png",
-            "https://cardzone.es/cdn/shop/files/siguemeeninstagram_1920x1920px_-2024-10-25T105103.875.png?v=1729846282&width=4800"
+            "https://www.distritomax.com/cdn/shop/files/D_NQ_NP_2X_796773-MLM107115185409_022026-F_383x700.webp?v=1777571032",
+            "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
-        cantidad: 100
+        cantidad: 9
     },
     {
         id: 15,
@@ -240,7 +240,7 @@ let products = [
             "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Venusaur-ex-Premium-Collection-Lenticular-promo-card.webp?v=1763119467&width=1500",
             "https://gengar.s28.cdn-upgates.com/_cache/8/5/85039e443cebc024b63819c12806eba7-1.webp"
         ],
-        stock: "soon",
+        stock: "available",
         promo: false,
         cantidad: 3
     },
@@ -255,7 +255,7 @@ let products = [
             "https://media.gamestop.com/i/gamestop/20027388_ALT04/Pokemon-Trading-Card-Game-Phantasmal-Flames-Sleeved-Booster-Pack?$pdp$?w=1256&h=664&fmt=auto",
             "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 6
     },
@@ -304,18 +304,18 @@ let products = [
     },
     {
         id: 21,
-        name: "Annihilape EX Box",
+        name: "Booster Obsidian Flames",
         category: "pokemon",
-        expansion: "otros",
-        price: 95000,
-        language: ["es"],
+        expansion: "Obsidian-Flames",
+        price: 23000,
+        language: ["en"],
         images: [
-            "https://web.big-bang.cl/wp-content/uploads/2023/07/6w7j5prnc59bx49xcmbk6w3v-wpp1690235691437.png",
-            "https://card-binder.com/cdn/shop/files/Pokemon-scarlet-violet-annihilape-ex-collection-box-pack-content.webp?v=1734120857&width=1500",
+            "https://www.stompinggroundstcg.com/cdn/shop/files/ObsidianFlamesPacks_1c0f3821-2abe-4d4c-8756-bdd39fd446a2_600x.webp?v=1687812143",
+            "https://mktg-assets.tcgplayer.com/content/pokemon/8_23/14/Most-Valuable-Pokemon-Cards-Obsidian-Flames.jpg",
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 22,
@@ -337,14 +337,14 @@ let products = [
         name: "Unova Victini Illustration Collection",
         category: "pokemon",
         expansion: "black-white",
-        price: 110000,
+        price: 115000,
         language: ["es"],
         images: [
             "https://avalongaming.com.co/wp-content/uploads/Victini-Illustration-Collection-2.png.webp",
             "https://static.wixstatic.com/media/40e109_4d3d0551e5354ef89d9f3ca910f4b279~mv2.png/v1/fit/w_500,h_500,q_90/file.png",
             "https://static.wixstatic.com/media/40e109_d8b038187d814737a50d9373e9019f74~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
         ],
-        stock: "agotado",
+        stock: "encargo",
     },
     {
         id: 24,
@@ -412,16 +412,18 @@ let products = [
     },
     {
         id: 28,
-        name: "Mini Tin Ascended Heroes",
+        name: "Booster Paradox Rift",
         category: "pokemon",
-        expansion: "ascended-heroes",
-        price: 52000,
-        language: ["es"],
+        expansion: "Paradox-Rift",
+        price: 22000,
+        language: ["en"],
         images: [
-            "https://avalongaming.com.co/wp-content/uploads/Ascended-Heroes-Mini-Tin.png.webp",
-            "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
+            "https://www.gamesweb.dk/cdn/shop/files/46817_Pokemon_POKEMON_BOOSTER_PARADOX_RIFT_gamesweb_1024x1024.png?v=1713880547",
+            "https://mktg-assets.tcgplayer.com/content/pokemon/11_23/08/Most-Valuable-Pokemon-Cards-Paradox-Rift-OG.jpg"
         ],
-        stock: "agotado"
+        stock: "available",
+        promo: false,
+        cantidad: 1
     },
     {
         id: 29,
@@ -437,7 +439,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 3
+        cantidad: 1
     },
     {
         id: 30,
@@ -451,7 +453,7 @@ let products = [
             "https://www.igabiba.si/cdn/shop/files/pokemon-tcg-mega-lucario-ex-figure-collection-196214116986-1206248071_1024x.png?v=1763484541",
             "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Lucario-ex-figure-collection-box-contents.webp?v=1757577594&width=1500"
         ],
-        stock: "soon",
+        stock: "available",
         promo: true,
         cantidad: 3
     },
@@ -741,7 +743,7 @@ let products = [
             "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2026/pokemon-day-2026-collection/inline/full/SV05_LA_51.png",
             "https://metamorphcenter.com/cdn/shop/files/Caja_Pokemon_Day_2026_-_30_Aniversario_-_Espanol-1.png?v=1769706495&width=1232"
         ],
-        stock: "soon",
+        stock: "available",
         promo: true,
         promoEvento: "pokemon-day",
         cantidad: 1
@@ -800,16 +802,16 @@ let products = [
         name: "Cielos Evolutivos",
         category: "pokemon",
         expansion: "cielos-evolutivos",
-        price: 25000,
+        price: 30000,
         language: ["es"],
         images: [
             "https://www.pokemillon.com/cdn/shop/files/Sobre_Cielos_Evolutivos_Sin_Fondo_Pokemillon_a1384360-b745-41c7-a72c-1644826321b3.png?v=1768861462",
             "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/07/EitJnbZXkAAvp2T-1-copy-90-21.jpg",
             "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/07/EitJnbZXkAAvp2T-1-copy-95-23.jpg"
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
-        cantidad: "",
+        cantidad: "2",
     },
     {
         id: 54,
@@ -839,7 +841,7 @@ let products = [
             "https://www.pokemon.com/static-assets/content-assets/cms2/img/cards/full/MEP/MEP_EN_30.png",
             "https://www.pokemon.com/static-assets/content-assets/cms2/img/cards/full/MEP/MEP_EN_29.png"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     },
@@ -862,18 +864,17 @@ let products = [
     },
     {
         id: 57,
-        name: "Sleeved Booster Mascarada Crepuscular",
+        name: "Booster Scarlet & Violet",
         category: "pokemon",
-        expansion: "twilight-masquerade",
-        price: 16000,
-        language: ["es"],
+        expansion: "Scarlet-&-violet",
+        price: 23000,
+        language: ["en"],
         images: [
-            "https://acdn-us.mitiendanube.com/stores/005/946/657/products/pokemon-scarlet-violet-twilight-masquerade-sleeved-booster-pack-2-9824791f6a706bfde617706468339196-640-0.webp",
-            "https://frikidenacimiento.es/wp-content/uploads/CS_Producto-28-2.png",
-            "https://card-binder.com/cdn/shop/files/PokemonScarlet_VioletTwilightMasquedesetadditionchasecards.webp?v=1739563434&width=1500"
+            "https://card-binder.com/cdn/shop/files/Scarlet-Violet-Booster-Pack-3.webp?v=1723834445&width=1500",
+            "https://mktg-assets.tcgplayer.com/fit-in/1000x1000/filters:quality(75)/content/pokemon/4_23/04/The-Most-Valuable-Pokemon-Cards-in-Scarlet-Violet-OG.jpg"
         ],
         stock: "available",
-        promo: true,
+        promo: false,
         cantidad: 1
     },
     {
@@ -994,6 +995,51 @@ let products = [
             "https://static.insales-cdn.com/r/lp4I6SC41DY/rs:fit:250:0:1/q:80/plain/images/products/1/5332/743625940/large_funko-pop-russia-Bertholdt-Hoover-Attack-on-Titan-1167-FU57979.png@webp"
         ],
         stock: "encargo",
+        promo: true,
+        cantidad: 1
+    },
+    {
+        id: 65,
+        name: "Mega ex Box iniciales",
+        category: "pokemon",
+        expansion: "ascended-heroes",
+        price: 115000,
+        language: ["en"],
+        images: [
+            "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/70eb2903-351c-4438-aa18-e363bf765a92.png;maxHeight=828;maxWidth=400?format=webp",
+            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/wm/2026/02/pokemon-tcg-most-valuable-ascended-heroes.jpg?w=1600&h=900&fit=crop"
+        ],
+        stock: "soon",
+        promo: false,
+        cantidad: 1
+    },
+    {
+        id: 66,
+        name: "Funko Pop! Plus Monkey D. Luffy",
+        category: "funko",
+        expansion: "",
+        price: 60000,
+        language: [""],
+        images: [
+            "https://funko.com/on/demandware.static/-/Sites-funko-master-catalog/default/dw896c8aa1/images/funko/upload/1/88299_OP_S12_LuffyMT_POP_PLUS_GLAM-WEB.png",
+            "https://http2.mlstatic.com/D_NQ_NP_976962-MLA97097684823_112025-O.webp"
+        ],
+        stock: "soon",
+        promo: true,
+        cantidad: 1
+    },
+    {
+        id: 64,
+        name: "Funko Pop! Nico Robin Egghead",
+        category: "funko",
+        expansion: "",
+        price: 45000,
+        language: [""],
+        images: [
+            "https://funko.com/on/demandware.static/-/Sites-funko-master-catalog/default/dw1e81d124/images/funko/upload/1/86520_OP_S12_NicoRobin_POP_GLAM-WEB.png",
+            "https://http2.mlstatic.com/D_NQ_NP_962103-MLA97096420133_112025-O.webp"
+        ],
+        stock: "soon",
         promo: true,
         cantidad: 1
     },

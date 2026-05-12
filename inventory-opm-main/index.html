@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta property="og:title" content="One Play More Games">
+    <meta property="og:description" content="Compra videojuegos y revisa nuestro inventario actualizado.">
+    <meta property="og:image" content="https://oneplaymoregames.store/Logo Negro.jpg">
+    <meta property="og:url" content="https://oneplaymoregames.store">
+    <meta property="og:type" content="website">
+    <meta name="description" content="Inventario de videojuegos actualizado. Compra juegos al mejor precio en One Play More Games.">
+
+    <meta name="google-site-verification" content="fzyiFZIiCj-5XuEZbHm10velOsEG6tMsUCCJxWgPanE" />
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKBLTSXX04"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SKBLTSXX04');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Play More - Tienda TCG & Coleccionables</title>
+    
+    <!-- Favicon (desde carpeta imagenes/) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/imagenes/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/imagenes/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/imagenes/favicon-16x16.png">
+    <link rel="manifest" href="/imagenes/site.webmanifest">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="OPM.png" alt="OPM" class="logo-image">
+                <div class="logo-text">
+                    <h1>One Play More</h1>
+                    <p>Tienda de TCG & Coleccionables</p>
+                </div>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <button class="cart-toggle" id="cartToggle" title="Ver carrito">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- BANNER DE PREVENTA DINÁMICO -->
+    <div class="preorder-banner-container" id="preorderBannerContainer">
+        <!-- Los banners se cargarán dinámicamente desde data.js -->
+    </div>
+
+    <div class="container">
+        <!-- Filtros -->
+        <aside class="filters">
+            <h3><i class="fas fa-filter"></i> Filtrar por:</h3>
+
+            <div class="filter-group">
+    <label>Buscar producto:</label>
+    <input type="text" id="searchFilter" placeholder="Ej: Elite Trainer Box"></div>
+
+
+
+            <div class="filter-group">
+                <label>Categoría:</label>
+                <select id="categoryFilter" onchange="filterProducts()">
+                    <option value="all">Todas</option>
+                    <option value="pokemon">Pokémon TCG</option>
+                    <option value="funko">Funko Pop</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+
+            <!-- NUEVO: Filtro por Expansión -->
+            <div class="filter-group">
+                <label>Expansión:</label>
+                <select id="expansionFilter" onchange="filterProducts()">
+                    <option value="all">Todas las expansiones</option>
+                    <option value="chaos-rising">🐸Chaos Rising</option>
+                    <option value="ascended-heroes">🔥 Ascended Heroes</option>
+                    <option value="mega-evolucion">Mega Evolución</option>
+                    <option value="phantasmal-flames">Phantasmal Flames</option>
+                    <option value="llamaradas-fantasmales">Llamaradas Fantasmales</option>
+                    <option value="journey-together">Journey Together</option>
+                    <option value="shrouded-fable">Shrouded Fable / Fábula Sombría</option>
+                    <option value="surging-sparks">Surging Sparks</option>
+                    <option value="destined-rivals">Destined Rivals / Rivales Predestinados</option>
+                    <option value="evoluciones-prismaticas">Evoluciones Prismáticas</option>
+                    <option value="destinos-paldea">Destinos de Paldea</option>
+                    <option value="151">Colección 151</option>
+                    <option value="prismatic-evolutions">Prismatic Evolutions</option>
+                    <option value="perfect-order">Perfect Order</option>
+                    <option value="heat-wave-arena">Heat Wave Arena</option>
+                </select>
+            </div>
+
+
+<div class="filter-group">
+    <label>Promociones:</label>
+
+<label class="checkbox-label">
+    <input type="checkbox" id="promoFilter" onchange="filterProducts()">
+    <span class="checkbox-text"><span style="margin-right: 4px;">🔥</span> Ver solo promociones</span>
+</label>
+
+</div>
+
+            <div class="filter-group">
+                <label>Idioma:</label>
+                <select id="languageFilter">
+                    <option value="all">Todos</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="en">🇺🇸 Inglés</option>
+                    <option value="jp">🇯🇵 Japonés</option>
+                    //<option value="fr">🇫🇷 Francés</option>
+                    //<option value="de">🇩🇪 Alemán</option>
+                    <option value="none">Sin idioma</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Precio máximo:</label>
+                <input type="number" id="priceFilter" placeholder="Ej: 300000" min="0" step="1000">
+            </div>
+
+            <div class="filter-group">
+    <label>Disponibilidad:</label>
+    <select id="stockFilter">
+        <option value="all">Todas</option>
+        <option value="available">En stock</option>
+        <option value="encargo">Encargo</option>
+        <option value="soon">Próximamente</option>
+        <option value="agotado">Agotado</option>
+    </select>
+</div>
+
+            <button onclick="filterProducts()">
+                <i class="fas fa-search"></i> Aplicar filtros
+            </button>
+            <button onclick="resetFilters()" class="reset-btn">
+                <i class="fas fa-undo"></i> Limpiar
+            </button>
+        </aside>
+
+        <!-- Grid de productos -->
+        <main class="products-grid" id="productsGrid">
+            <!-- Los productos se cargarán aquí dinámicamente -->
+        </main>
+    </div>
+
+
+<!-- Panel lateral del carrito -->
+<div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+        <h3>Tu Carrito</h3>
+        <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <!-- Los productos del carrito se cargarán aquí -->
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">$0</span>
+        </div>
+        <button class="btn btn-whatsapp" id="checkoutWhatsApp">
+            <i class="fab fa-whatsapp"></i> Finalizar compra por WhatsApp
+        </button>
+    </div>
+</div>
+<div class="cart-overlay" id="cartOverlay"></div>
+
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/3115416469?text=Hola!%20Vi%20tu%20catálogo%20y%20quiero%20consultar%20por%20un%20producto" 
+   class="floating-btn whatsapp-btn" 
+   target="_blank" 
+   title="Contáctanos por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+
+</html>

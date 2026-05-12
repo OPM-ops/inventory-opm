@@ -76,14 +76,16 @@ let products = [
         name: "First Partner Illustration Collection",
         category: "pokemon",
         expansion: "otros",
-        price: 80000,
-        language: ["en"],
+        price: 120000,
+        language: ["es"],
         images: [
             "https://www.huntercardtcg.com/wp-content/uploads/2026/03/firstpartnerilluscoll.webp",
             "https://cardzone.es/cdn/shop/files/sobres-caja-first-partner-primer-companero-coleccion-illustration-collection-cartas-pokemon-tcg-cardzone_2e777ee9-4982-4e43-a356-1fc6946157c9.png?v=1773828172&width=4320",
             "https://www.breakthecase.de/cdn/shop/files/Inhalt_100perfektpassendeKartenschutzhuellen63x88mm_0bbbdead-d718-469c-93fb-517751473581.png?v=1773855540&width=1000"
         ],
-        stock: "agotado"
+        stock: "available",
+        promo: false,
+        cantidad: 4
     },
     {
         id: 7,
@@ -225,7 +227,7 @@ let products = [
         ],
         stock: "soon",
         preorder: true,         
-        arrivalDate: "21 de Marzo, 2026",  
+        arrivalDate: "13 de Mayo, 2026",  
         cantidad: 0
     },
     {
@@ -298,7 +300,7 @@ let products = [
         images: [
             "https://cdn11.bigcommerce.com/s-ua4dd/images/stencil/original/products/335177/476105/Gamenerdzimage7463__69770.1764691893.png"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     },
@@ -439,7 +441,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 1
+        cantidad: 3
     },
     {
         id: 30,
@@ -498,7 +500,7 @@ let products = [
             "https://dragonslair.se/image/14470/Pok-mon-TCG---Mega-Latias-ex-Box3.png",
             "https://beamcardshop.com/cdn/shop/files/pokemon-mega-evolution-mega-latias-ex-box-mentastore-7265306.webp?v=1760545507"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 2
     },
@@ -795,7 +797,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 5
+        cantidad: 4
     },
     {
         id: 53,
@@ -1024,7 +1026,7 @@ let products = [
             "https://funko.com/on/demandware.static/-/Sites-funko-master-catalog/default/dw896c8aa1/images/funko/upload/1/88299_OP_S12_LuffyMT_POP_PLUS_GLAM-WEB.png",
             "https://http2.mlstatic.com/D_NQ_NP_976962-MLA97097684823_112025-O.webp"
         ],
-        stock: "soon",
+        stock: "agotado",
         promo: true,
         cantidad: 1
     },
@@ -1039,9 +1041,9 @@ let products = [
             "https://funko.com/on/demandware.static/-/Sites-funko-master-catalog/default/dw1e81d124/images/funko/upload/1/86520_OP_S12_NicoRobin_POP_GLAM-WEB.png",
             "https://http2.mlstatic.com/D_NQ_NP_962103-MLA97096420133_112025-O.webp"
         ],
-        stock: "soon",
+        stock: "available",
         promo: true,
-        cantidad: 1
+        cantidad: 2
     },
 
 

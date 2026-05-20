@@ -83,7 +83,7 @@ let products = [
             "https://cardzone.es/cdn/shop/files/sobres-caja-first-partner-primer-companero-coleccion-illustration-collection-cartas-pokemon-tcg-cardzone_2e777ee9-4982-4e43-a356-1fc6946157c9.png?v=1773828172&width=4320",
             "https://www.breakthecase.de/cdn/shop/files/Inhalt_100perfektpassendeKartenschutzhuellen63x88mm_0bbbdead-d718-469c-93fb-517751473581.png?v=1773855540&width=1000"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 4
     },
@@ -178,7 +178,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 27
+        cantidad: 25
     },
     {
         id: 13,
@@ -211,7 +211,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 9
+        cantidad: 8
     },
     {
         id: 15,
@@ -225,10 +225,8 @@ let products = [
             "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2026/mega-zygarde-ex-premium-collection/inline/01-en.png",
             "https://cdnx.jumpseller.com/pokemaniacos/image/73402924/resize/1000/1000?1771263602"
         ],
-        stock: "soon",
-        preorder: true,         
-        arrivalDate: "13 de Mayo, 2026",  
-        cantidad: 0
+        stock: "available",
+        cantidad: 2
     },
     {
         id: 16,
@@ -248,18 +246,18 @@ let products = [
     },
     {
         id: 17,
-        name: "Sleeved Booster Phantasmal Flames",
-        category: "pokemon",
-        expansion: "phantasmal-flames",
-        price: 23000,
-        language: ["en"],
+        name: "Funko Pop!Super Saiyan Goku #948",
+        category: "funko",
+        expansion: "",
+        price: 55000,
+        language: [""],
         images: [
-            "https://media.gamestop.com/i/gamestop/20027388_ALT04/Pokemon-Trading-Card-Game-Phantasmal-Flames-Sleeved-Booster-Pack?$pdp$?w=1256&h=664&fmt=auto",
-            "https://cardchill.com/wp-content/uploads/2025/10/s-l16001-1024x1024.jpg"
+            "https://i.ebayimg.com/images/g/czkAAeSwAU9p~fm3/s-l1200.png",
+            "https://www.mx.storedevastation.com/cdn/shop/files/1_400x_e4e02997-96b9-486d-af03-3ef6a68a0d21.webp?v=1684183380"
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
-        cantidad: 6
+        cantidad: 1
     },
     {
         id: 18,
@@ -366,18 +364,18 @@ let products = [
     },
     {
         id: 25,
-        name: "Cynthia’s Garchomp EX Premium Collection",
+        name: "Booster Mega Symphonia",
         category: "pokemon",
-        expansion: "otros",
-        price: 185000,
-        language: ["es", "en"],
+        expansion: "mega-symphonia",
+        price: 18000,
+        language: ["jp"],
         images: [
-            "https://avalongaming.com.co/wp-content/uploads/Cynthia-Garchomp-EX-Premiaum-COllection-2.png.webp",
-            "https://www.pokemon.com/static-assets/content-assets/cms2-es-xl/img/trading-card-game/series/incrementals/2025/cynthias-garchomp-ex-premium-collection/inline/01-latam.png",
-            "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2025/cynthias-garchomp-ex-premium-collection/inline/02.png",
-            "https://pokefaust.com/cdn/shop/files/Garchomp_EX03.webp?v=1757090329&width=1946"
+            "https://unsobremas.com/cdn/shop/files/4_66b2da43-17b8-4465-a9b9-0149ee6aba94.webp?crop=center&height=888&v=1760452997&width=985",
+            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/08/pokemon-tcg-most-valuable-mega-symphonia.jpg"
         ],
-        stock: "encargo"
+        stock: "available",
+        cantidad: 30            
+
     },
     {
         id: 26,
@@ -582,18 +580,18 @@ let products = [
     },
     {
         id: 39,
-        name: "Mabosstiff Ex Showcase",
+        name: "Booster Box Mega Symphonia",
         category: "pokemon",
         expansion: "otros",
-        price: 74000,
-        language: ["es"],
+        price: 450000,
+        language: ["jp"],
         images: [
-            "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/820650855900-1200-face3d.jpg",
-            "https://slimages.macysassets.com/is/image/MCY/products/6/optimized/27639316_fpx.tif"
+            "https://www.japan2uk.com/cdn/shop/files/Pokemon_Mega_Symphonia_m1S_Japanese_Booster_Box1_512x512.png?v=1754386956",
+            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/08/pokemon-tcg-most-valuable-mega-symphonia.jpg"
         ],
-        stock: "encargo",
+        stock: "avaiolable",
         promo: true,
-        cantidad: 3
+        cantidad: 1
     },
     {
         id: 40,
@@ -641,18 +639,18 @@ let products = [
     },
     {
         id: 43,
-        name: "Funko Pop! Nobara (Painting) #1647",
-        category: "funko",
-        expansion: "",
-        price: 35000,
+        name: "Booster Ninja Spinner",
+        category: "pokemon",
+        expansion: "ninja-spinner",
+        price: 20000,
         language: [""],
         images: [
-            "https://garajedelmedio.com/wp-content/uploads/2025/08/nobara-funko-exclusivo-amazon.png",
-            "https://www.thepopplug.com/cdn/shop/files/Nobara_Kugisaki_Art_Toys_70776f55-0b68-46a7-989f-dd81943e5caa_2.png?v=1757798261&width=480"
+            "https://www.card-corner.de/media/image/product/4141/md/pokemon-ninja-spinner-m4-display~2.webp",
+            "https://www.supercollectors.es/wp-content/uploads/2026/03/877373.webp"
         ],
-        stock: "agotado",
-        promo: true,
-        cantidad: 1
+        stock: "available",
+        promo: false,
+        cantidad: 30
     },
     {
         id: 44,
@@ -748,7 +746,7 @@ let products = [
         stock: "available",
         promo: true,
         promoEvento: "pokemon-day",
-        cantidad: 1
+        cantidad: 3
     },
     {
         id: 50,
@@ -811,7 +809,7 @@ let products = [
             "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/07/EitJnbZXkAAvp2T-1-copy-90-21.jpg",
             "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/07/EitJnbZXkAAvp2T-1-copy-95-23.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: "2",
     },
@@ -884,16 +882,16 @@ let products = [
         name: "Booster Box Ninja Spinner",
         category: "pokemon",
         expansion: "ninja-spinner",
-        price: 500000,
+        price: 520000,
         language: ["jp"],
         images: [
             "https://cdn.snkrdunk.com/upload_bg_removed/244b2a87-ebe1-41bb-a812-6daa8aaddc80.webp?size=l",
             "https://www.supercollectors.es/wp-content/uploads/2026/03/877373.webp",
             "https://www.card-corner.de/media/image/product/4141/md/pokemon-ninja-spinner-m4-display~2.webp"
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
-        cantidad: 3
+        cantidad: 1
     },
     {
         id: 59,
@@ -1011,7 +1009,7 @@ let products = [
             "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/70eb2903-351c-4438-aa18-e363bf765a92.png;maxHeight=828;maxWidth=400?format=webp",
             "https://static0.thegamerimages.com/wordpress/wp-content/uploads/wm/2026/02/pokemon-tcg-most-valuable-ascended-heroes.jpg?w=1600&h=900&fit=crop"
         ],
-        stock: "soon",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     },

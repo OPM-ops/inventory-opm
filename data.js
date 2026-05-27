@@ -125,16 +125,16 @@ let products = [
         name: "ETB Chaos Rising",
         category: "pokemon",
         expansion: "chaos-rising",
-        price: 235000,
+        price: 240000,
         language: ["en"],
         images: [
             "https://media.gamestop.com/i/gamestop/20033749",
             "https://www.mypops.ca/cdn/shop/files/ChaosRising_ETB_002.webp?v=1775573713&width=416"
         ],
-    stock: "soon",          
-    preorder: true,         
+    stock: "available",          
+    preorder: false,         
     arrivalDate: "5 de Junio, 2026",  
-    cantidad: 10            
+    cantidad: 15            
     },
     {
         id: 10,
@@ -145,10 +145,12 @@ let products = [
         language: ["en"],
         images: [
             "https://media.gamestop.com/i/gamestop/20031957",
-            "https://gengar.s28.cdn-upgates.com/_cache/4/a/4a8f9455c0800a5705cd06f6388fd6a5-navrh-bez-nazvu-5.webp",
+            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/wm/2026/04/pokemon-tcg-perfect-order-valuable-cards-fi.jpg",
             "https://images.squarespace-cdn.com/content/v1/5e3b1164feb39b444b58f15b/14aef118-d09a-4121-892d-e95b36be11e5/M3_117_R_JP_LG+%281%29.png"
         ],
-        stock: "agotado"
+        stock: "available",
+        cantidad: 3            
+
     },
     {
         id: 11,
@@ -162,7 +164,7 @@ let products = [
             "https://www.stompinggroundstcg.com/cdn/shop/files/Deluxe_Battle_Deck_Miraidon_ex_Cards_600x.webp?v=1735079323",
             "https://www.stompinggroundstcg.com/cdn/shop/files/Deluxe_Battle_Deck_Miraidon_ex_Contents_600x.webp?v=1735079323"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     },
@@ -178,7 +180,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 25
+        cantidad: 20
     },
     {
         id: 13,
@@ -330,7 +332,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 11
+        cantidad: 10
     },
     {
         id: 23,
@@ -421,7 +423,7 @@ let products = [
             "https://www.gamesweb.dk/cdn/shop/files/46817_Pokemon_POKEMON_BOOSTER_PARADOX_RIFT_gamesweb_1024x1024.png?v=1713880547",
             "https://mktg-assets.tcgplayer.com/content/pokemon/11_23/08/Most-Valuable-Pokemon-Cards-Paradox-Rift-OG.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     },
@@ -455,7 +457,7 @@ let products = [
         ],
         stock: "available",
         promo: true,
-        cantidad: 3
+        cantidad: 2
     },
     {
         id: 31,
@@ -488,19 +490,19 @@ let products = [
     },
     {
         id: 33,
-        name: "Mega Latias EX Box",
+        name: "Booster Chaos Rising",
         category: "pokemon",
         expansion: "otros",
-        price: 105000,
+        price: 22000,
         language: ["en"],
         images: [
-            "https://topdeck.com.co/cdn/shop/files/Mega-Latias-EX-Box.png?v=1766876190",
-            "https://dragonslair.se/image/14470/Pok-mon-TCG---Mega-Latias-ex-Box3.png",
-            "https://beamcardshop.com/cdn/shop/files/pokemon-mega-evolution-mega-latias-ex-box-mentastore-7265306.webp?v=1760545507"
+            "https://cdn.chaoscards.co.uk/uploads/prod_img/2_328475_e.png?v=-62169983925",
+            "https://cdn.shopify.com/s/files/1/0514/4854/5477/files/2_efdec0b9-de7b-41d6-9cd8-2c76721cf9c3.png?v=1776290628",
+            "https://cdn.shopify.com/s/files/1/0514/4854/5477/files/4_c09eceb5-4b83-49b1-90c5-8d46ff08668a.png?v=1776290628"
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
-        cantidad: 2
+        cantidad: 35
     },
     {
         id: 34,
@@ -532,7 +534,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 36,
@@ -542,7 +544,7 @@ let products = [
         price: 105000,
         language: [""],
         images: [
-            "https://xtremeplay.co/wp-content/uploads/2024/11/TOYCOLBAN3941_1.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRprzeVlWwAd6BVJRAZNdHKVXxAQaSmYbYY7Q&s",
             "https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/VBkAAOSw-c9oFeMF/$_3.JPG?set_id=880000500F"
         ],
         stock: "encargo",
@@ -565,18 +567,18 @@ let products = [
     },
     {
         id: 38,
-        name: "Booster Box Chaos Rising",
+        name: "Booster Box Chaos Rising (36 Sobres)",
         category: "pokemon",
         expansion: "chaos-rising",
-        price: 700000,
+        price: 730000,
         language: ["en"],
         images: [
             "https://avalongaming.com.co/wp-content/uploads/Booster-Box-Chaos-Rising.png",
             "https://cdn.chaoscards.co.uk/uploads/prod_img/2_328480_e.png?v=-62169983925"        ],
-        stock: "soon",
-        preorder: true,         
+        stock: "available",
+        preorder: false,         
         arrivalDate: "5 de Junio, 2026",  
-        cantidad: 50            
+        cantidad: 8            
     },
     {
         id: 39,
@@ -648,7 +650,7 @@ let products = [
             "https://www.card-corner.de/media/image/product/4141/md/pokemon-ninja-spinner-m4-display~2.webp",
             "https://www.supercollectors.es/wp-content/uploads/2026/03/877373.webp"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 30
     },
@@ -759,8 +761,8 @@ let products = [
             "https://avalongaming.com.co/wp-content/uploads/Blister-Chaos-Rising.png",
             "https://card-binder.com/cdn/shop/files/Pokemon-Chaos-Rising-3-Booster-Packs.webp?v=1773346562&width=1500"
         ],
-        stock: "soon",
-        preorder: true,         
+        stock: "agotado",
+        preorder: false,         
         arrivalDate: "5 de Junio, 2026",        
         promo: false,
         cantidad: 5
@@ -779,7 +781,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 52,
@@ -873,7 +875,7 @@ let products = [
             "https://card-binder.com/cdn/shop/files/Scarlet-Violet-Booster-Pack-3.webp?v=1723834445&width=1500",
             "https://mktg-assets.tcgplayer.com/fit-in/1000x1000/filters:quality(75)/content/pokemon/4_23/04/The-Most-Valuable-Pokemon-Cards-in-Scarlet-Violet-OG.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     },
@@ -889,7 +891,7 @@ let products = [
             "https://www.supercollectors.es/wp-content/uploads/2026/03/877373.webp",
             "https://www.card-corner.de/media/image/product/4141/md/pokemon-ninja-spinner-m4-display~2.webp"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     },
@@ -923,8 +925,8 @@ let products = [
             "https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10030/P11219_10-10403-109_01.jpg",
             "https://www.pokemoncenter.com/images/DAMRoot/High/10030/P11219_10-10403-101_02.jpg"
         ],
-        stock: "soon",
-        preorder: true,         
+        stock: "available",
+        preorder: false,         
         arrivalDate: "5 de Junio, 2026",        
         promo: false,
         cantidad: 5
@@ -940,8 +942,8 @@ let products = [
             "https://avalongaming.com.co/wp-content/uploads/Build-And-Battle-Chaos-Rising.png",
             "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2026/me04-build-battle-box/me04-build-battle-box-a-169-en.png"
         ],
-        stock: "soon",
-        preorder: true,         
+        stock: "agotado",
+        preorder: false,         
         arrivalDate: "5 de Junio, 2026",        
         promo: false,
         cantidad: 5
@@ -949,7 +951,7 @@ let products = [
 
     {
         id: 62,
-        name: "Mega Moonlit Tin - Mega Gengar & Mega Clafable",
+        name: "Mega Moonlit Tin - Mega Gengar & Mega Clefable",
         category: "pokemon",
         expansion: "otros",
         price: 75000,
@@ -977,11 +979,11 @@ let products = [
             "https://cdnx.jumpseller.com/geekers1/image/74211131/thumb/1079/1079?1772745247",
             "https://cdnx.jumpseller.com/geekers1/image/74211132/thumb/1079/1079?1772745247"
         ],
-        stock: "soon",
-        preorder: true,         
+        stock: "available",
+        preorder: false,         
         arrivalDate: "22 de Mayo, 2026",        
         promo: false,
-        cantidad: 5
+        cantidad: 4
     },
     {
         id: 64,

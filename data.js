@@ -811,9 +811,9 @@ let products = [
             "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/07/EitJnbZXkAAvp2T-1-copy-90-21.jpg",
             "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/07/EitJnbZXkAAvp2T-1-copy-95-23.jpg"
         ],
-        stock: "agotado",
+        stock: "available",
         promo: false,
-        cantidad: "2",
+        cantidad: "8",
     },
     {
         id: 54,
@@ -919,7 +919,7 @@ let products = [
         name: "Booster Bundle Chaos Rising",
         category: "pokemon",
         expansion: "chaos-rising",
-        price: 135000,
+        price: 140000,
         language: ["en"],
         images: [
             "https://www.pokemoncenter.com/images/DAMRoot/Full-Size/10030/P11219_10-10403-109_01.jpg",

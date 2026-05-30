@@ -134,7 +134,7 @@ let products = [
     stock: "available",          
     preorder: false,         
     arrivalDate: "5 de Junio, 2026",  
-    cantidad: 15            
+    cantidad: 3            
     },
     {
         id: 10,
@@ -502,7 +502,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 35
+        cantidad: 33
     },
     {
         id: 34,
@@ -578,7 +578,7 @@ let products = [
         stock: "available",
         preorder: false,         
         arrivalDate: "5 de Junio, 2026",  
-        cantidad: 8            
+        cantidad: 3            
     },
     {
         id: 39,
@@ -813,7 +813,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: "8",
+        cantidad: "1",
     },
     {
         id: 54,
@@ -1045,6 +1045,43 @@ let products = [
         promo: true,
         cantidad: 2
     },
+    {
+        id: 65,
+        name: "First Partner Illustration Collection - Series 3",
+        category: "pokemon",
+        expansion: "chaos-rising",
+        price: 85000,
+        language: ["en"],
+        images: [
+            "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/a835376f-c03d-4df1-8b4f-cd298a2b5cca.png;maxHeight=828;maxWidth=400?format=webp",
+            "https://www.pokebeach.com/news/2026/05/First-Partner-Illustration-Collection-Series-3-Packs.png",
+            "https://www.pokebeach.com/news/2026/05/First-Partner-Illustration-Collection-Series-3-Stickers.jpg",
+        ],
+        stock: "soon",
+        preorder: true,         
+        arrivalDate: "7 de agosto, 2026",  
+        cantidad: 25            
+
+    },
+    {
+        id: 66,
+        name: "First Partner Illustration Collection - Series 3",
+        category: "pokemon",
+        expansion: "chaos-rising",
+        price: 80000,
+        language: ["es"],
+        images: [
+            "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/a835376f-c03d-4df1-8b4f-cd298a2b5cca.png;maxHeight=828;maxWidth=400?format=webp",
+            "https://www.pokebeach.com/news/2026/05/First-Partner-Illustration-Collection-Series-3-Packs.png",
+            "https://www.pokebeach.com/news/2026/05/First-Partner-Illustration-Collection-Series-3-Stickers.jpg",
+        ],
+        stock: "soon",
+        preorder: true,         
+        arrivalDate: "7 de agosto, 2026",  
+        cantidad: 25            
+
+    },
+
 
 
 

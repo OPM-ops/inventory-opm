@@ -138,10 +138,10 @@ let products = [
     },
     {
         id: 10,
-        name: "ETB Perfect Order",
+        name: "ETB Perfect Order (Daños en el plastico)",
         category: "pokemon",
         expansion: "perfect-order",
-        price: 238000,
+        price: 225000,
         language: ["en"],
         images: [
             "https://media.gamestop.com/i/gamestop/20031957",
@@ -149,7 +149,7 @@ let products = [
             "https://images.squarespace-cdn.com/content/v1/5e3b1164feb39b444b58f15b/14aef118-d09a-4121-892d-e95b36be11e5/M3_117_R_JP_LG+%281%29.png"
         ],
         stock: "available",
-        cantidad: 3            
+        cantidad: 1            
 
     },
     {
@@ -211,7 +211,7 @@ let products = [
             "https://www.distritomax.com/cdn/shop/files/D_NQ_NP_2X_796773-MLM107115185409_022026-F_383x700.webp?v=1777571032",
             "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 8
     },
@@ -228,7 +228,7 @@ let products = [
             "https://cdnx.jumpseller.com/pokemaniacos/image/73402924/resize/1000/1000?1771263602"
         ],
         stock: "available",
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 16,
@@ -315,7 +315,7 @@ let products = [
             "https://www.stompinggroundstcg.com/cdn/shop/files/ObsidianFlamesPacks_1c0f3821-2abe-4d4c-8756-bdd39fd446a2_600x.webp?v=1687812143",
             "https://mktg-assets.tcgplayer.com/content/pokemon/8_23/14/Most-Valuable-Pokemon-Cards-Obsidian-Flames.jpg",
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 1
     },
@@ -346,7 +346,8 @@ let products = [
             "https://static.wixstatic.com/media/40e109_4d3d0551e5354ef89d9f3ca910f4b279~mv2.png/v1/fit/w_500,h_500,q_90/file.png",
             "https://static.wixstatic.com/media/40e109_d8b038187d814737a50d9373e9019f74~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
         ],
-        stock: "encargo",
+        stock: "available",
+        cantidad: 1
     },
     {
         id: 24,
@@ -391,10 +392,9 @@ let products = [
             "https://cdn11.bigcommerce.com/s-vz3etek0gv/images/stencil/1200w/products/79923/110518/PKU10392_web_Content__29234.1773947996.jpg",
             "https://i.redd.it/new-set-chaos-rising-v0-n9fv7cn5a5hg1.png?width=516&format=png&auto=webp&s=59494d94557603fb66da026f8cc326f348be387b"
         ],
-        stock: "soon",
-        preorder: true,         
-        arrivalDate: "5 de Junio, 2026",  
-        cantidad: 30            
+        stock: "true",
+        preorder: false,         
+        cantidad: 2            
     },
     {
         id: 27,
@@ -457,7 +457,7 @@ let products = [
         ],
         stock: "available",
         promo: true,
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 31,
@@ -470,7 +470,7 @@ let products = [
             "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/820650504631-1200-face3d.jpg",
             "https://www.pokemoncenter.com/images/DAMRoot/High/10000/P9541_290-85589_02.jpg"
         ],
-        stock: "soon",
+        stock: "available",
         cantidad: 1
 
     },
@@ -502,7 +502,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 33
+        cantidad: 25
     },
     {
         id: 34,
@@ -607,7 +607,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 2
+        cantidad: 1
     },
     {
         id: 41,
@@ -729,7 +729,7 @@ let products = [
             "https://cdn.chaoscards.co.uk/uploads/prod_img/2_319146_e.png?v=-62169983925",
             "https://preview.redd.it/ascended-heros-complete-sirs-all-22-v0-bt9e098zvb8g1.png?width=1080&crop=smart&auto=webp&s=accb4478b865b94482c042352d6cbc42e1f2de30"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: 3
     },
@@ -801,7 +801,7 @@ let products = [
     },
     {
         id: 53,
-        name: "Cielos Evolutivos",
+        name: "Booster Cielos Evolutivos",
         category: "pokemon",
         expansion: "cielos-evolutivos",
         price: 30000,
@@ -811,7 +811,7 @@ let products = [
             "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/07/EitJnbZXkAAvp2T-1-copy-90-21.jpg",
             "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/07/EitJnbZXkAAvp2T-1-copy-95-23.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         promo: false,
         cantidad: "1",
     },
@@ -929,7 +929,7 @@ let products = [
         preorder: false,         
         arrivalDate: "5 de Junio, 2026",        
         promo: false,
-        cantidad: 5
+        cantidad: 2
     },
     {
         id: 61,

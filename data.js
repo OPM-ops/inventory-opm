@@ -1,18 +1,19 @@
 let products = [
     {
         id: 1,
-        name: "Collector Chest BTS 2024",
+        name: "Booster Box Mega Syphonia",
         category: "pokemon",
-        expansion: "otros",
-        price: 100000,
-        language: ["es"],
+        expansion: "Mega Symphonia",
+        price: 500000,
+        language: ["jp"],
         images: [
-            "https://http2.mlstatic.com/D_NQ_NP_932642-MCO75935165562_042024-O.webp",
-            "https://www.pokemoncenter.com/images/DAMRoot/High/10000/P9557_210-85838_02.jpg",
+            "https://card-binder.com/cdn/shop/files/Pokemon-TCG-Mega-Symphonia-Japan-Booster-Box.webp?v=1751875228",
+            "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2025/08/pokemon-tcg-most-valuable-mega-symphonia.jpg",
             
         ],
-        stock: "encargo",
-        promo: true
+        stock: "available",
+        promo: true,
+        cantidad: 1
     },
     {
         id: 2,
@@ -134,7 +135,7 @@ let products = [
     stock: "available",          
     preorder: false,         
     arrivalDate: "5 de Junio, 2026",  
-    cantidad: 3            
+    cantidad: 1            
     },
     {
         id: 10,
@@ -148,7 +149,7 @@ let products = [
             "https://static0.thegamerimages.com/wordpress/wp-content/uploads/wm/2026/04/pokemon-tcg-perfect-order-valuable-cards-fi.jpg",
             "https://images.squarespace-cdn.com/content/v1/5e3b1164feb39b444b58f15b/14aef118-d09a-4121-892d-e95b36be11e5/M3_117_R_JP_LG+%281%29.png"
         ],
-        stock: "available",
+        stock: "agotado",
         cantidad: 1            
 
     },
@@ -195,7 +196,7 @@ let products = [
             "https://kantocards.com/cdn/shop/files/P11445-3D_First_Partner_Illustration_Collection_Series_2_Sticker_Sheet_GEN-2114x1967-d6ba60c.png?v=1775174784&width=2114"
         ],
         stock: "agotado",
-        preorder: true,         
+        preorder: false,         
         arrivalDate: "19 de Junio, 2026",  
         cantidad: 25            
 
@@ -244,7 +245,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 3
+        cantidad: 1
     },
     {
         id: 17,
@@ -470,7 +471,7 @@ let products = [
             "https://devirinvestments.s3.eu-west-1.amazonaws.com/img/catalog/product/820650504631-1200-face3d.jpg",
             "https://www.pokemoncenter.com/images/DAMRoot/High/10000/P9541_290-85589_02.jpg"
         ],
-        stock: "available",
+        stock: "agotado",
         cantidad: 1
 
     },
@@ -597,16 +598,16 @@ let products = [
     },
     {
         id: 40,
-        name: "Pokeball Tin Q4 2025",
+        name: "Pokeball Tin Q4 2025 (Daños en lata)",
         category: "pokemon",
         expansion: "otros",
-        price: 73000,
+        price: 70000,
         language: ["en"],
         images: [
             "https://www.princedist.com/cdn/shop/files/ball_800x.png?v=1761665276"
         ],
         stock: "available",
-        promo: false,
+        promo: true,
         cantidad: 1
     },
     {
@@ -797,7 +798,7 @@ let products = [
         ],
         stock: "available",
         promo: false,
-        cantidad: 4
+        cantidad: 2
     },
     {
         id: 53,
@@ -907,8 +908,8 @@ let products = [
             "https://card-binder.com/cdn/shop/files/Pokemon-First-Partner-Illustration-Collection-Series-2-Pack-Content.webp?v=1775560548&width=1500",
             "https://kantocards.com/cdn/shop/files/P11445-3D_First_Partner_Illustration_Collection_Series_2_Sticker_Sheet_GEN-2114x1967-d6ba60c.png?v=1775174784&width=2114"
         ],
-        stock: "soon",
-        preorder: true,         
+        stock: "agotado",
+        preorder: false,         
         arrivalDate: "19 de Junio, 2026",  
         cantidad: 25            
 
@@ -951,21 +952,19 @@ let products = [
 
     {
         id: 62,
-        name: "Mega Moonlit Tin - Mega Gengar & Mega Clefable",
+        name: "Mega Moonlit Tin - Mega Clefable",
         category: "pokemon",
         expansion: "otros",
-        price: 75000,
+        price: 80000,
         language: ["en"],
         images: [
-            "https://kantocards.com/cdn/shop/files/1773947670654.png?v=1774299253&width=1422",
             "https://media.gamestop.com/i/gamestop/20033969_ALT01?$pdp$?w=1256&h=664&fmt=auto",
             "https://media.gamestop.com/i/gamestop/20033969_ALT05?$pdp$?w=1256&h=664&fmt=auto"
         ],
-        stock: "soon",
-        preorder: true,         
-        arrivalDate: "5 de Junio, 2026",        
+        stock: "available",
+        preorder: false,         
         promo: false,
-        cantidad: 5
+        cantidad: 1
     },
 
     {
@@ -1057,7 +1056,7 @@ let products = [
             "https://www.pokebeach.com/news/2026/05/First-Partner-Illustration-Collection-Series-3-Packs.png",
             "https://www.pokebeach.com/news/2026/05/First-Partner-Illustration-Collection-Series-3-Stickers.jpg",
         ],
-        stock: "soon",
+        stock: "agotado",
         preorder: true,         
         arrivalDate: "7 de agosto, 2026",  
         cantidad: 25            

@@ -837,7 +837,7 @@ let products = [
             "es"
         ],
         images: [
-            "imagenes/productos/poster-collection-1.png"
+            "https://avalongaming.com.co/wp-content/uploads/Poster-Collection-30th-Celebration.png"
         ],
         stock: "soon",
         promo: false,
@@ -1357,7 +1357,7 @@ let products = [
             "es"
         ],
         images: [
-            "imagenes/productos/binder-1.avif"
+            "https://kantocards.com/cdn/shop/files/P11452-30th_3D_9-Pocket_Portfolio_Black_GEN-1720x2153-1694db5.png?v=1783454474&width=1720"
         ],
         stock: "soon",
         promo: false,
@@ -1394,8 +1394,8 @@ let products = [
             "es"
         ],
         images: [
-            "imagenes/productos/greninja-1.webp",
-            "imagenes/productos/sylveon-1.webp"
+            "https://kantocards.com/cdn/shop/files/P11955-30th_Celebration_3D_Greninja_ex_Box_Left_EN-3389x3020-b6913be.png?v=1783461218&width=3389",
+            "https://kantocards.com/cdn/shop/files/P11955-30th_Celebration_3D_Sylveon_ex_Box_Left_EN-3389x3020-b6913be.png?v=1783461219&width=3389"
         ],
         stock: "soon",
         promo: false,
@@ -1431,11 +1431,46 @@ let products = [
             "es"
         ],
         images: [
-            "imagenes/productos/etb-30-1.webp"
+            "https://kantocards.com/cdn/shop/files/1783117699804.png?v=1783117734&width=887"
         ],
         stock: "available",
         promo: false,
         cantidad: 50,
+        preorder: true,
+        arrivalDate: "16 de septiembre, 2026"
+    },
+    {
+        id: 88,
+        name: "Protectores de cartas - 100 Unidades",
+        category: "pokemon",
+        expansion: "otros",
+        price: 10000,
+        language: [
+            "en"
+        ],
+        images: [
+            "https://spielematerial.de/cdn/shop/files/K0010.png?v=1767958337&width=1100"
+        ],
+        stock: "available",
+        promo: false,
+        cantidad: 20
+    },
+    {
+        id: 89,
+        name: "30th Celebration Sylveon/Greninja ex box",
+        category: "pokemon",
+        expansion: "30th-anniversary",
+        price: 110000,
+        language: [
+            "es"
+        ],
+        images: [
+            "https://kantocards.com/cdn/shop/files/P11955-30th_Celebration_3D_Greninja_ex_Box_Left_EN-3389x3020-b6913be.png?v=1783461218&width=3389",
+            "https://kantocards.com/cdn/shop/files/P11955-30th_Celebration_3D_Sylveon_ex_Box_Left_EN-3389x3020-b6913be.png?v=1783461219&width=3389"
+        ],
+        stock: "soon",
+        promo: false,
+        cantidad: 30,
         preorder: true,
         arrivalDate: "16 de septiembre, 2026"
     }

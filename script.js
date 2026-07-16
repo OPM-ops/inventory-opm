@@ -1,7 +1,89 @@
 // ============================================
+// TEMA OSCURO/CLARO
+// ============================================
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+
+// Helpers seguros de localStorage: si falla (ej. al abrir el archivo con
+// file:// en vez de un servidor), no rompen el resto del script.
+function safeStorageGet(key, fallback) {
+    try {
+        return localStorage.getItem(key) || fallback;
+    } catch (e) {
+        return fallback;
+    }
+}
+
+function safeStorageSet(key, value) {
+    try {
+        localStorage.setItem(key, value);
+    } catch (e) {
+        // localStorage no disponible; seguimos sin guardar la preferencia
+    }
+}
+
+function setTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        safeStorageSet('theme', 'dark');
+    } else {
+        document.body.classList.remove('dark');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        safeStorageSet('theme', 'light');
+    }
+}
+
+// Cargar tema guardado o por defecto oscuro
+const savedTheme = safeStorageGet('theme', 'dark');
+setTheme(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+    const isDark = document.body.classList.contains('dark');
+    setTheme(isDark ? 'light' : 'dark');
+});
+
+// ============================================
+// FILTROS DESPLEGABLES (móvil)
+// ============================================
+const filterToggle = document.getElementById('filterToggle');
+const filtersPanel = document.getElementById('filtersPanel');
+const filtersClose = document.getElementById('filtersClose');
+
+function toggleFilters() {
+    filtersPanel.classList.toggle('active');
+    let overlay = document.querySelector('.filters-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'filters-overlay';
+        document.body.appendChild(overlay);
+        overlay.addEventListener('click', () => {
+            filtersPanel.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    }
+    overlay.classList.toggle('active');
+}
+
+if (filterToggle) filterToggle.addEventListener('click', toggleFilters);
+if (filtersClose) filtersClose.addEventListener('click', toggleFilters);
+
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+        if (!filtersPanel.contains(e.target) && !filterToggle.contains(e.target)) {
+            filtersPanel.classList.remove('active');
+            const overlay = document.querySelector('.filters-overlay');
+            if (overlay) overlay.classList.remove('active');
+        }
+    }
+});
+
+// ============================================
 // VARIABLES GLOBALES
 // ============================================
-let filteredProducts = [...products];
+let filteredProducts = [];
 let currentExpansionFilter = 'all';
 let currentBannerIndex = 0;
 let bannerInterval;
@@ -9,33 +91,12 @@ let bannerInterval;
 // ============================================
 // VARIABLES DEL CARRITO
 // ============================================
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cart = JSON.parse(safeStorageGet('cart', '[]'));
 
 // ============================================
-// FUNCIÓN PARA CAMBIAR TEMA
-// ============================================
-function toggleTheme() {
-    const body = document.body;
-    const themeIcon = document.getElementById('themeIcon');
-    
-    body.classList.toggle('dark-theme');
-    
-    if (body.classList.contains('dark-theme')) {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-        localStorage.setItem('theme', 'light');
-    }
-}
-
-// ============================================
-// FUNCIÓN MEJORADA PARA MOSTRAR NOTIFICACIONES
+// NOTIFICACIONES
 // ============================================
 function showNotification(type, message, title = '') {
-    // Eliminar notificaciones anteriores
     const oldToasts = document.querySelectorAll('.toast-notification');
     oldToasts.forEach(toast => toast.remove());
 
@@ -45,7 +106,6 @@ function showNotification(type, message, title = '') {
         warning: 'fa-exclamation-triangle',
         info: 'fa-info-circle'
     };
-
     const titles = {
         success: '¡Éxito!',
         error: 'Error',
@@ -67,40 +127,43 @@ function showNotification(type, message, title = '') {
             <i class="fas fa-times"></i>
         </button>
     `;
-    
     document.body.appendChild(toast);
-    
-    // Auto-remover después de 3 segundos
     setTimeout(() => {
-        if (toast.parentElement) {
-            toast.remove();
-        }
+        if (toast.parentElement) toast.remove();
     }, 3000);
 }
 
 // ============================================
-// FUNCIONES PARA BANNERS (CARRUSEL)
+// BANNERS (CARRUSEL)
 // ============================================
 
-// Renderizar banners
 function renderPreorderBanners() {
     const container = document.getElementById('preorderBannerContainer');
-    if (!container) return;
-    
+    if (!container) {
+        console.warn('Contenedor de banners no encontrado');
+        return;
+    }
+
+    if (typeof preorderBanners === 'undefined' || !Array.isArray(preorderBanners)) {
+        console.warn('preorderBanners no está definido o no es un array');
+        container.style.display = 'none';
+        return;
+    }
+
     const activeBanners = preorderBanners
         .filter(banner => banner.active)
         .sort((a, b) => a.priority - b.priority);
-    
+
     if (activeBanners.length === 0) {
         container.style.display = 'none';
         return;
     }
-    
+
     if (activeBanners.length === 1) {
         container.innerHTML = createBannerHTML(activeBanners[0], 0, 1);
         return;
     }
-    
+
     let bannersHTML = `
         <div class="banners-carousel">
             <div class="banners-track" id="bannersTrack">
@@ -119,16 +182,14 @@ function renderPreorderBanners() {
                 `).join('')}
             </div>
             <div class="banner-autoplay-status">
-                <i class="fas fa-play-circle" id="autoplayIcon"></i>
+                <i class="fas fa-play-circle"></i>
             </div>
         </div>
     `;
-    
     container.innerHTML = bannersHTML;
     startBannerAutoplay(activeBanners.length);
 }
 
-// Crear HTML de un banner
 function createBannerHTML(banner, index, total) {
     const onclickAttr = `onclick="handleBannerClick('${banner.id}')"`;
 
@@ -136,13 +197,12 @@ function createBannerHTML(banner, index, total) {
     if (banner.showQR && banner.qrImage) {
         extraContent = `
             <div class="banner-qr">
-                <img src="${banner.qrImage}" alt="QR Instagram" onerror="this.style.display='none'">
+                <img src="${banner.qrImage}" alt="QR" onerror="this.style.display='none'">
                 <span>¡Escanea y síguenos!</span>
             </div>
         `;
     }
 
-    // NUEVO: Contenido especial para preventas
     let preorderContent = '';
     if (banner.isPreorder) {
         preorderContent = `
@@ -170,17 +230,14 @@ function createBannerHTML(banner, index, total) {
         bannerStyle = `background: ${banner.bgColor};`;
     }
 
-    // NUEVO: Determinar el badge a mostrar
     const badgeClass = banner.isPreorder ? 'preorder-badge-special' : 'preorder-badge';
     const badgeIcon = banner.isPreorder ? 'fa-fire' : getBadgeIcon(banner.id);
     const badgeText = banner.isPreorder ? (banner.preorderBadge || 'PREVENTA') : getBadgeText(banner.id);
-
-    // NUEVO: Atributo data-preorder para estilos CSS
     const preorderAttr = banner.isPreorder ? 'data-preorder="true"' : '';
 
     return `
-        <div class="preorder-banner banner-slide" data-banner-id="${banner.id}" ${preorderAttr}
-             style="${bannerStyle} color: ${banner.textColor}; min-width: 100%;"
+        <div class="banner-slide" data-banner-id="${banner.id}" ${preorderAttr}
+             style="${bannerStyle} color: ${banner.textColor}; flex: 0 0 100%; min-width: 0;"
              ${onclickAttr}>
             ${overlayStyle}
             <div class="${badgeClass}">
@@ -207,53 +264,41 @@ function createBannerHTML(banner, index, total) {
     `;
 }
 
-
-// Icono del badge
 function getBadgeIcon(bannerId) {
     if (bannerId.includes('instagram')) return 'fa-camera';
     if (bannerId.includes('pokemon-day')) return 'fa-bolt';
     return 'fa-fire';
 }
 
-// Texto del badge
 function getBadgeText(bannerId) {
     if (bannerId.includes('instagram')) return 'SÍGUENOS';
     if (bannerId.includes('pokemon-day')) return 'EVENTO';
     return 'PREVENTA';
 }
 
-// Click en banner
 function handleBannerClick(bannerId) {
     const banner = preorderBanners.find(b => b.id === bannerId);
     if (!banner) return;
-    
     if (banner.action === 'link' && banner.link) {
         window.open(banner.link, '_blank');
     } else if (banner.action === 'filter' && banner.expansionFilter) {
         filterByExpansion(banner.expansionFilter);
-    } else if (banner.action === 'filter-promo' && banner.promoFilter) {
-        filterByPromoEvent(banner.promoFilter);
+    } else if (banner.action === 'filter-preorder') {
+        filterByPreorder();
     }
 }
 
-// Mover carrusel
 function moveBanner(direction) {
     const activeBanners = preorderBanners.filter(b => b.active);
     const total = activeBanners.length;
-    
+    if (total === 0) return;
     currentBannerIndex += direction;
-    
-    if (currentBannerIndex < 0) {
-        currentBannerIndex = total - 1;
-    } else if (currentBannerIndex >= total) {
-        currentBannerIndex = 0;
-    }
-    
+    if (currentBannerIndex < 0) currentBannerIndex = total - 1;
+    if (currentBannerIndex >= total) currentBannerIndex = 0;
     updateBannerDisplay();
     resetBannerAutoplay(total);
 }
 
-// Ir a banner específico
 function goToBanner(index) {
     currentBannerIndex = index;
     updateBannerDisplay();
@@ -261,57 +306,58 @@ function goToBanner(index) {
     resetBannerAutoplay(activeBanners.length);
 }
 
-// Actualizar visualización del carrusel
 function updateBannerDisplay() {
     const track = document.getElementById('bannersTrack');
     const indicators = document.querySelectorAll('.banner-indicator');
-    
     if (track) {
         track.style.transform = `translateX(-${currentBannerIndex * 100}%)`;
     }
-    
     indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentBannerIndex);
     });
 }
 
-// Iniciar autoplay
 function startBannerAutoplay(total) {
     stopBannerAutoplay();
-    bannerInterval = setInterval(() => {
-        moveBanner(1);
-    }, 5000);
-}
-
-// Detener autoplay
-function stopBannerAutoplay() {
-    if (bannerInterval) {
-        clearInterval(bannerInterval);
+    if (total > 1) {
+        bannerInterval = setInterval(() => {
+            moveBanner(1);
+        }, 5000);
     }
 }
 
-// Reiniciar autoplay
+function stopBannerAutoplay() {
+    if (bannerInterval) {
+        clearInterval(bannerInterval);
+        bannerInterval = null;
+    }
+}
+
 function resetBannerAutoplay(total) {
-    stopBannerAutoplay();
-    bannerInterval = setInterval(() => {
-        moveBanner(1);
-    }, 5000);
+    startBannerAutoplay(total);
 }
 
 // ============================================
 // FUNCIONES PARA FILTROS Y PRODUCTOS
 // ============================================
 
-// Filtrar por expansión (usado desde banner)
+function filterByPreorder() {
+    resetFilters();
+    filteredProducts = products.filter(product => product.preorder === true);
+    filteredProducts.sort((a, b) => {
+        const priority = { 'available': 1, 'soon': 2, 'encargo': 3, 'agotado': 4 };
+        return priority[a.stock] - priority[b.stock];
+    });
+    renderProducts(filteredProducts);
+    document.getElementById('productsGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 function filterByExpansion(expansionId) {
     const expansionSelect = document.getElementById('expansionFilter');
     if (expansionSelect) {
         expansionSelect.value = expansionId;
         filterProducts();
-        document.getElementById('productsGrid').scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'start' 
-        });
+        document.getElementById('productsGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
 
@@ -336,7 +382,6 @@ function filterByPromoEvent(promoEventId) {
     document.getElementById('productsGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// Formatear precio
 function formatCOP(price) {
     return new Intl.NumberFormat('es-CO', {
         style: 'currency',
@@ -346,12 +391,10 @@ function formatCOP(price) {
     }).format(price);
 }
 
-// Renderizar idiomas con banderas
 function renderLanguages(languages) {
     if (!Array.isArray(languages) || languages.length === 0) return '';
     const validLanguages = languages.filter(lang => lang && lang.trim() !== '');
     if (validLanguages.length === 0) return '';
-    
     let html = '<div class="product-language">';
     validLanguages.forEach(lang => {
         if (languageFlags[lang]) {
@@ -365,42 +408,29 @@ function renderLanguages(languages) {
     return html;
 }
 
-// Badge de expansión
 function getExpansionBadge(expansion) {
     if (!expansion || expansion === 'otros') return '';
     const name = expansionNames[expansion] || expansion;
     return `<span class="expansion-badge ${expansion}">${name}</span>`;
 }
 
-// Renderizar productos en grid
 function renderProducts(productsToRender) {
     const grid = document.getElementById('productsGrid');
     grid.innerHTML = '';
-
     if (productsToRender.length === 0) {
-        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; font-size: 1.2rem; color: #666;">No hay productos que coincidan con los filtros 😔</p>';
+        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; font-size: 1.2rem; color: var(--text-secondary);">No hay productos que coincidan con los filtros 😔</p>';
         return;
     }
-
     productsToRender.forEach(product => {
-        // ✅ MOVER isPreorder AQUÍ AL INICIO
         const isPreorder = product.preorder === true;
-        
         const card = document.createElement('div');
-        // NUEVO: Agregar clase especial si es preventa
         let cardClassName = product.promo ? 'product-card surface promo-card' : 'product-card surface';
-        if (isPreorder) {
-            cardClassName += ' preorder-item';
-        }
+        if (isPreorder) cardClassName += ' preorder-item';
         card.className = cardClassName;
-        
         const languageHtml = renderLanguages(product.language);
         const expansionBadge = getExpansionBadge(product.expansion);
         let promoBadge = product.promo ? '<span class="promo-badge">🔥 PROMO</span>' : '';
-
         let stockClass = '', stockText = '', stockInfo = '', stockDescription = '';
-        
-        // isPreorder ya está definida arriba, solo la usamos aquí
         if (isPreorder) {
             stockClass = 'preorder-stock';
             stockText = '🔥 PREVENTA';
@@ -428,14 +458,10 @@ function renderProducts(productsToRender) {
         } else {
             stockClass = 'coming-soon';
             stockText = 'Próximamente';
-        }        
-        // NUEVO: Habilitar botón para preventa (permitir agregar al carrito)
+        }
         const isDisabled = product.stock === 'agotado';
         const disabledAttr = isDisabled ? 'disabled' : '';
-        // NUEVO: Texto especial para botón de preventa
         const buttonText = isPreorder ? 'Reservar ahora' : (isDisabled ? 'No disponible' : 'Añadir al carrito');
-
-        
         card.innerHTML = `
             <div style="position: relative;">
                 ${createCarousel(product.images, product.id)}
@@ -455,12 +481,10 @@ function renderProducts(productsToRender) {
                 </button>
             </div>
         `;
-        
         grid.appendChild(card);
     });
 }
 
-// Aplicar filtros
 function filterProducts() {
     const showOnlyPromo = document.getElementById('promoFilter').checked;
     const category = document.getElementById('categoryFilter').value;
@@ -469,9 +493,7 @@ function filterProducts() {
     const stock = document.getElementById('stockFilter').value;
     const language = document.getElementById('languageFilter').value;
     const searchTerm = document.getElementById('searchFilter').value.toLowerCase().trim();
-    
     currentExpansionFilter = expansion;
-
     filteredProducts = products.filter(product => {
         let matches = true;
         if (searchTerm && !product.name.toLowerCase().includes(searchTerm)) matches = false;
@@ -489,16 +511,13 @@ function filterProducts() {
         }
         return matches;
     });
-
     filteredProducts.sort((a, b) => {
         const priority = { 'available': 1, 'soon': 2, 'encargo': 3, 'agotado': 4 };
         return priority[a.stock] - priority[b.stock];
     });
-
     renderProducts(filteredProducts);
 }
 
-// Resetear filtros
 function resetFilters() {
     document.getElementById('promoFilter').checked = false;
     document.getElementById('categoryFilter').value = 'all';
@@ -516,54 +535,40 @@ function resetFilters() {
 }
 
 // ============================================
-// FUNCIONES DEL CARRITO MEJORADAS
+// FUNCIONES DEL CARRITO
 // ============================================
 
-// Guardar carrito en localStorage
 function saveCart() {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    safeStorageSet('cart', JSON.stringify(cart));
     updateCartCount();
     renderCart();
 }
 
-// Actualizar contador del carrito
 function updateCartCount() {
     const count = cart.reduce((acc, item) => acc + item.quantity, 0);
     const cartCount = document.getElementById('cartCount');
     const floatingCartCount = document.getElementById('floatingCartCount');
-    
     if (cartCount) cartCount.textContent = count;
     if (floatingCartCount) floatingCartCount.textContent = count;
 }
 
-// Añadir producto al carrito (mejorado con validaciones)
 function addToCart(productId, quantity = 1) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
-
-    // ✅ CORREGIDO: Solo bloquear si está agotado
     if (product.stock === 'agotado') {
         showNotification('error', 'Este producto está agotado');
         return;
     }
-
-    // ✅ NUEVO: Mensaje especial para preventas
     const isPreorder = product.preorder === true;
-    
     if (isPreorder) {
         showNotification('info', `📅 Producto en preventa. Llegada estimada: ${product.arrivalDate || 'Por confirmar'}`, 'Preventa');
     }
-
-    // Validar stock disponible (solo para productos disponibles, no preventas)
     if (product.stock === 'available' && product.cantidad !== undefined && quantity > product.cantidad) {
         showNotification('warning', `Solo hay ${product.cantidad} unidades disponibles`);
         return;
     }
-
-    // Verificar si ya está en el carrito
     const existing = cart.find(item => item.id === productId);
     if (existing) {
-        // Validar que no exceda el stock (solo para disponibles)
         if (product.stock === 'available' && product.cantidad !== undefined && 
             existing.quantity + quantity > product.cantidad) {
             showNotification('warning', `Solo puedes agregar ${product.cantidad - existing.quantity} unidades más`);
@@ -578,13 +583,11 @@ function addToCart(productId, quantity = 1) {
             image: product.images[0],
             quantity: quantity,
             stock: product.stock,
-            isPreorder: isPreorder,  // Guardar flag de preventa
-            arrivalDate: product.arrivalDate  // Guardar fecha
+            isPreorder: isPreorder,
+            arrivalDate: product.arrivalDate
         });
     }
     saveCart();
-    
-    // Mensaje personalizado según tipo de producto
     if (product.stock === 'encargo') {
         showNotification('info', '🕒 Este producto es por encargo y llegará en 3-5 días hábiles', 'Producto agregado');
     } else if (!isPreorder) {
@@ -592,23 +595,19 @@ function addToCart(productId, quantity = 1) {
     }
 }
 
-// Eliminar producto del carrito
 function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
     saveCart();
     showNotification('info', 'Producto eliminado del carrito');
 }
 
-// Actualizar cantidad
 function updateQuantity(productId, newQuantity) {
     const item = cart.find(item => item.id === productId);
     const product = products.find(p => p.id === productId);
-    
     if (item) {
         if (newQuantity <= 0) {
             removeFromCart(productId);
         } else {
-            // Validar stock disponible
             if (product && product.stock === 'available' && product.cantidad !== undefined && newQuantity > product.cantidad) {
                 showNotification('warning', `Solo hay ${product.cantidad} unidades disponibles`);
                 return;
@@ -619,40 +618,32 @@ function updateQuantity(productId, newQuantity) {
     }
 }
 
-// Renderizar los items del carrito en el panel (mejorado)
 function renderCart() {
     const cartItemsContainer = document.getElementById('cartItems');
     const cartTotalSpan = document.getElementById('cartTotal');
     if (!cartItemsContainer) return;
-
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<div class="empty-cart"><i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i><br>Tu carrito está vacío</div>';
         cartTotalSpan.textContent = '$0';
         return;
     }
-
     let html = '';
     let total = 0;
     cart.forEach(item => {
         const itemTotal = item.price * item.quantity;
         total += itemTotal;
-        
-        // ✅ NUEVO: Detectar si es preventa o encargo
         const isPreorderItem = item.isPreorder === true;
         const itemClass = item.stock === 'encargo' ? 'cart-item encargo-item' : 
                          (isPreorderItem ? 'cart-item preorder-cart-item' : 'cart-item');
-        
-        // ✅ NUEVO: Badge de preventa en el carrito
         let preorderBadge = '';
         if (isPreorderItem) {
             preorderBadge = `<div style="background: linear-gradient(135deg, #ff4757, #ff6348); color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: bold; display: inline-block; margin-top: 4px;">
                 🔥 PREVENTA${item.arrivalDate ? ` - Llega: ${item.arrivalDate}` : ''}
             </div>`;
         }
-        
         html += `
             <div class="${itemClass}" data-id="${item.id}">
-                <img src="${item.image}" alt="${item.name}" class="cart-item-image" onerror="this.src='https://via.placeholder.com/80'">
+                <img src="${item.image}" alt="${item.name}" class="cart-item-image" onerror="this.src='https://placehold.co/80'">
                 <div class="cart-item-info">
                     <div class="cart-item-name">${item.name}</div>
                     ${preorderBadge}
@@ -680,38 +671,31 @@ function renderCart() {
     cartTotalSpan.textContent = formatCOP(total);
 }
 
-// Finalizar compra por WhatsApp (mejorado)
 function checkoutWhatsApp() {
     if (cart.length === 0) {
         showNotification('warning', 'Tu carrito está vacío');
         return;
     }
-
     let message = '🛒 *NUEVO PEDIDO - ONE PLAY MORE*%0A%0A';
     cart.forEach(item => {
         const itemTotal = item.price * item.quantity;
-        
-        // ✅ NUEVO: Tags especiales
         let tag = '';
         if (item.stock === 'encargo') {
             tag = ' (📦 Encargo)';
         } else if (item.isPreorder || item.stock === 'soon') {
             tag = ` (🔥 PREVENTA${item.arrivalDate ? ` - Llega: ${item.arrivalDate}` : ''})`;
         }
-        
         message += `• *${item.name}*${tag}%0A`;
         message += `  ${item.quantity} x ${formatCOP(item.price)} = ${formatCOP(itemTotal)}%0A%0A`;
     });
     const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
     message += `*TOTAL: ${formatCOP(total)}*%0A%0A`;
     message += 'Por favor, indíqueme los pasos a seguir para el pago y envío. ¡Gracias!';
-
     const phone = '3115416469';
     const url = `https://wa.me/57${phone}?text=${message}`;
     window.open(url, '_blank');
 }
 
-// Abrir/cerrar panel del carrito
 function toggleCart() {
     const panel = document.getElementById('cartPanel');
     const overlay = document.getElementById('cartOverlay');
@@ -719,11 +703,9 @@ function toggleCart() {
     overlay.classList.toggle('active');
 }
 
-// Manejar botón flotante del carrito
 function handleScroll() {
     const floatingCart = document.getElementById('floatingCartBtn');
     if (!floatingCart) return;
-    
     if (window.scrollY > 300) {
         floatingCart.classList.add('visible');
     } else {
@@ -732,32 +714,28 @@ function handleScroll() {
 }
 
 // ============================================
-// FUNCIONES PARA CARRUSEL DE IMÁGENES EN PRODUCTOS
+// CARRUSEL DE IMÁGENES DE PRODUCTOS
 // ============================================
 
 function createCarousel(images, productId) {
     if (!images || images.length === 0) return '';
-    
     if (images.length === 1) {
         return `<img src="${images[0]}" alt="Producto" class="product-image" 
-                     onerror="this.src='https://img.freepik.com/free-vector/torn-style-coming-soon-promo-template-social-media-post_1017-55783.jpg?semt=ais_hybrid&w=740&q=80'">`;
+                     onerror="this.src='https://placehold.co/300x200?text=No+Image'">`;
     }
-    
     const carouselId = `carousel-${productId}`;
     let carouselHTML = `
         <div class="carousel-container">
             <div class="carousel-images" id="${carouselId}-images">
     `;
-    
     images.forEach((image, index) => {
         carouselHTML += `
             <div class="carousel-slide">
-                <img src="${image}" alt="Producto ${index + 1}" 
-                     onerror="https://img.freepik.com/free-vector/torn-style-coming-soon-promo-template-social-media-post_1017-55783.jpg?semt=ais_hybrid&w=740&q=80'">
+                <img src="${image}" alt="Producto ${index + 1}" class="product-image"
+                     onerror="this.src='https://placehold.co/300x200?text=No+Image'">
             </div>
         `;
     });
-    
     carouselHTML += `
             </div>
             <button class="carousel-btn prev" onclick="moveCarousel('${carouselId}', -1)">
@@ -768,17 +746,14 @@ function createCarousel(images, productId) {
             </button>
             <div class="carousel-indicators" id="${carouselId}-indicators">
     `;
-    
     images.forEach((_, index) => {
         carouselHTML += `<span class="indicator ${index === 0 ? 'active' : ''}" 
                                 onclick="goToSlide('${carouselId}', ${index})"></span>`;
     });
-    
     carouselHTML += `
             </div>
         </div>
     `;
-    
     setTimeout(() => {
         window.carousels = window.carousels || {};
         window.carousels[carouselId] = {
@@ -786,29 +761,21 @@ function createCarousel(images, productId) {
             totalSlides: images.length
         };
     }, 0);
-    
     return carouselHTML;
 }
 
 function moveCarousel(carouselId, direction) {
     const carousel = window.carousels[carouselId];
     if (!carousel) return;
-    
     carousel.currentSlide += direction;
-    
-    if (carousel.currentSlide < 0) {
-        carousel.currentSlide = carousel.totalSlides - 1;
-    } else if (carousel.currentSlide >= carousel.totalSlides) {
-        carousel.currentSlide = 0;
-    }
-    
+    if (carousel.currentSlide < 0) carousel.currentSlide = carousel.totalSlides - 1;
+    if (carousel.currentSlide >= carousel.totalSlides) carousel.currentSlide = 0;
     updateCarouselDisplay(carouselId);
 }
 
 function goToSlide(carouselId, slideIndex) {
     const carousel = window.carousels[carouselId];
     if (!carousel) return;
-    
     carousel.currentSlide = slideIndex;
     updateCarouselDisplay(carouselId);
 }
@@ -816,14 +783,11 @@ function goToSlide(carouselId, slideIndex) {
 function updateCarouselDisplay(carouselId) {
     const carousel = window.carousels[carouselId];
     if (!carousel) return;
-    
     const imagesContainer = document.getElementById(`${carouselId}-images`);
     const indicators = document.getElementById(`${carouselId}-indicators`);
-    
     if (imagesContainer) {
         imagesContainer.style.transform = `translateX(-${carousel.currentSlide * 100}%)`;
     }
-    
     if (indicators) {
         const indicatorElements = indicators.querySelectorAll('.indicator');
         indicatorElements.forEach((indicator, index) => {
@@ -836,12 +800,10 @@ function updateCarouselDisplay(carouselId) {
 // INICIALIZACIÓN
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Tema guardado
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-        document.getElementById('themeIcon').classList.remove('fa-moon');
-        document.getElementById('themeIcon').classList.add('fa-sun');
+    // Verificar que products y preorderBanners estén definidos
+    if (typeof products === 'undefined' || typeof preorderBanners === 'undefined') {
+        console.error('Faltan datos: products o preorderBanners no definidos');
+        return;
     }
 
     // Crear botón flotante del carrito
@@ -860,46 +822,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Renderizar banners
     renderPreorderBanners();
 
-    // Ordenar productos por prioridad
-    products.sort((a, b) => {
-        const priority = { 'available': 1, 'soon': 2, 'encargo': 3, 'agotado': 4 };
-        return (priority[a.stock] || 99) - (priority[b.stock] || 99);
-    });
-
-    // Mezclar dentro de cada grupo de disponibilidad
-    function shuffleArray(arr) {
-        for (let i = arr.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [arr[i], arr[j]] = [arr[j], arr[i]];
-        }
-        return arr;
-    }
-
+    // Ordenar y mezclar productos
+    const priorityOrder = ['available', 'soon', 'encargo', 'agotado', 'unknown'];
     const grouped = {};
     products.forEach(p => {
         const stock = p.stock || 'unknown';
         if (!grouped[stock]) grouped[stock] = [];
         grouped[stock].push(p);
     });
-
-    const priorityOrder = ['available', 'soon', 'encargo', 'agotado', 'unknown'];
     let shuffledProducts = [];
     priorityOrder.forEach(stock => {
         if (grouped[stock]) {
-            shuffledProducts = shuffledProducts.concat(shuffleArray(grouped[stock]));
+            const shuffled = [...grouped[stock]];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            shuffledProducts = shuffledProducts.concat(shuffled);
         }
     });
-
     products = shuffledProducts;
 
-    // Renderizar productos
     renderProducts(products);
 
     // Evento de búsqueda en tiempo real
     const searchInput = document.getElementById('searchFilter');
-    if (searchInput) {
-        searchInput.addEventListener('input', filterProducts);
-    }
+    if (searchInput) searchInput.addEventListener('input', filterProducts);
 
     // Pausar carrusel al pasar el mouse
     const container = document.getElementById('preorderBannerContainer');
@@ -916,26 +864,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartClose = document.getElementById('cartClose');
     const cartOverlay = document.getElementById('cartOverlay');
     const checkoutBtn = document.getElementById('checkoutWhatsApp');
+    if (cartToggle) cartToggle.addEventListener('click', toggleCart);
+    if (cartClose) cartClose.addEventListener('click', toggleCart);
+    if (cartOverlay) cartOverlay.addEventListener('click', toggleCart);
+    if (checkoutBtn) checkoutBtn.addEventListener('click', checkoutWhatsApp);
 
-    if (cartToggle) {
-        cartToggle.addEventListener('click', toggleCart);
-    }
-    if (cartClose) {
-        cartClose.addEventListener('click', toggleCart);
-    }
-    if (cartOverlay) {
-        cartOverlay.addEventListener('click', toggleCart);
-    }
-    if (checkoutBtn) {
-        checkoutBtn.addEventListener('click', checkoutWhatsApp);
-    }
-
-    // Evento de scroll para botón flotante
     window.addEventListener('scroll', handleScroll);
-
-    // Renderizar carrito al cargar la página
     renderCart();
     updateCartCount();
-
-
 });

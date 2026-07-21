@@ -530,9 +530,9 @@ let products = [
             "imagenes/productos/blister-chaos.webp",
             "imagenes/productos/chase-chaos.webp"
         ],
-        stock: "soon",
+        stock: "available",
         promo: false,
-        cantidad: 15
+        cantidad: 10
     },
     {
         id: 79,

@@ -1199,14 +1199,14 @@ let products = [
         expansion: "perfect-order",
         price: 175000,
         language: [
-            "en"
+            "es"
         ],
         images: [
             "https://media.pocketmonsters.net/imageboard/30/17709903120059.png",
             "https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/incrementals/2026/mega-zygarde-ex-premium-collection/inline/01-en.png",
             "https://cdnx.jumpseller.com/pokemaniacos/image/73402924/resize/1000/1000?1771263602"
         ],
-        stock: "agotado",
+        stock: "soon",
         promo: false,
         cantidad: 1
     },

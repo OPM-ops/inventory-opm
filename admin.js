@@ -19,6 +19,7 @@
     const DRAFT_KEY = 'opm_admin_draft_v1';
     const FOLDER_KEY = 'opm_admin_image_folder';
     let editingProductId = null;
+    let isSavingProduct = false;
     let editingBannerId = null;
     let editingExpansionSlug = null;
     let panelBuilt = false;
@@ -115,6 +116,8 @@
         body.dark .opma-item-info span { color: var(--text-secondary-dark); }
         .opma-item-actions { display: flex; gap: 6px; flex-shrink: 0; }
         .opma-badge { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 11px; margin-right: 4px; background: var(--color-primary); color: #fff; }
+        .opma-item-hidden { opacity: 0.55; }
+        .opma-badge-hidden { background: #6b6b6b; }
 
         .opma-form { border: 1px solid var(--border-color); border-radius: var(--radius); padding: 16px; margin-bottom: 16px; }
         body.dark .opma-form { border-color: var(--border-color-dark); }
@@ -396,12 +399,17 @@ const preorderBanners = ${jsBlock(preorderBanners)};
     }
 
     // Registra un File local y devuelve la ruta relativa que debe usarse en data.js
+    // OJO: revisa colisiones tanto contra imágenes pendientes de ESTA sesión como
+    // contra imágenes que YA están en uso en el catálogo (products/banners), para
+    // que dos fotos distintas con el mismo nombre (ej. "IMG_0001.jpg" del celular)
+    // nunca terminen compartiendo la misma ruta y "robándose" la imagen entre sí.
     function registerPendingImage(file) {
         const folder = getImageFolder();
         let filename = sanitizeFileName(file.name);
         let path = folder + filename;
+        const usedElsewhere = collectReferencedImagePaths();
         let n = 1;
-        while (pendingImages.has(path)) {
+        while (pendingImages.has(path) || usedElsewhere.has(path)) {
             path = folder + withSuffix(filename, n);
             n++;
         }
@@ -726,17 +734,22 @@ const preorderBanners = ${jsBlock(preorderBanners)};
         list.innerHTML = items.map(p => {
             const firstImg = (p.images && p.images[0]) || '';
             const src = pendingImages.has(firstImg) ? URL.createObjectURL(pendingImages.get(firstImg)) : firstImg;
+            const hidden = !!p.hidden;
             return `
-            <div class="opma-item">
+            <div class="opma-item${hidden ? ' opma-item-hidden' : ''}">
                 <img src="${src}" onerror="this.style.opacity=0">
                 <div class="opma-item-info">
                     <strong>${escapeHtml(p.name)}</strong>
                     <span>
                         <span class="opma-badge">${p.category}</span>
+                        ${hidden ? '<span class="opma-badge opma-badge-hidden">👁️‍🗨️ Oculto</span>' : ''}
                         ${fmtPrice(p.price)} · ${p.stock}${p.promo ? ' · 🔥 promo' : ''}
                     </span>
                 </div>
                 <div class="opma-item-actions">
+                    <button class="opma-btn opma-btn-secondary opma-btn-sm" data-toggle="${p.id}" title="${hidden ? 'Mostrar en la tienda' : 'Ocultar de la tienda'}">
+                        <i class="fas ${hidden ? 'fa-eye-slash' : 'fa-eye'}"></i>
+                    </button>
                     <button class="opma-btn opma-btn-secondary opma-btn-sm" data-edit="${p.id}"><i class="fas fa-pen"></i></button>
                     <button class="opma-btn opma-btn-danger opma-btn-sm" data-del="${p.id}"><i class="fas fa-trash"></i></button>
                 </div>
@@ -749,6 +762,20 @@ const preorderBanners = ${jsBlock(preorderBanners)};
         list.querySelectorAll('[data-del]').forEach(btn => {
             btn.addEventListener('click', () => deleteProduct(Number(btn.dataset.del)));
         });
+        list.querySelectorAll('[data-toggle]').forEach(btn => {
+            btn.addEventListener('click', () => toggleProductVisibility(Number(btn.dataset.toggle)));
+        });
+    }
+
+    // Oculta o vuelve a mostrar un producto en la tienda sin borrarlo.
+    // Útil para productos que quitas y vuelves a subir constantemente.
+    function toggleProductVisibility(id) {
+        const p = products.find(p => p.id === id);
+        if (!p) return;
+        p.hidden = !p.hidden;
+        saveDraft();
+        renderProductList();
+        refreshStorefront();
     }
 
     function deleteProduct(id) {
@@ -767,6 +794,7 @@ const preorderBanners = ${jsBlock(preorderBanners)};
        ============================================================ */
     function openProductForm(id) {
         editingProductId = id;
+        isSavingProduct = false;
         const p = id ? products.find(p => p.id === id) : null;
         const isEdit = !!p;
 
@@ -878,13 +906,22 @@ const preorderBanners = ${jsBlock(preorderBanners)};
 
     function closeProductForm() {
         editingProductId = null;
+        isSavingProduct = false;
         document.getElementById('opmaProductForm').innerHTML = '';
     }
 
     function saveProductForm() {
+        // Evita crear duplicados si el botón "Guardar" se activa dos veces
+        // (doble clic, doble tap en móvil, etc.)
+        if (isSavingProduct) return;
+
         const name = document.getElementById('pf_name').value.trim();
         const price = Number(document.getElementById('pf_price').value) || 0;
         if (!name) { alert('El producto necesita un nombre.'); return; }
+
+        isSavingProduct = true;
+        const saveBtn = document.getElementById('pf_save');
+        if (saveBtn) { saveBtn.disabled = true; saveBtn.textContent = 'Guardando...'; }
 
         const languages = [];
         if (document.getElementById('pf_lang_es').checked) languages.push('es');

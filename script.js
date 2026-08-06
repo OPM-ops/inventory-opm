@@ -417,6 +417,9 @@ function getExpansionBadge(expansion) {
 function renderProducts(productsToRender) {
     const grid = document.getElementById('productsGrid');
     grid.innerHTML = '';
+    // Los productos marcados como "hidden" desde el panel admin nunca se
+    // muestran en la tienda, sin importar desde qué vista se llame a esta función.
+    productsToRender = productsToRender.filter(product => !product.hidden);
     if (productsToRender.length === 0) {
         grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; font-size: 1.2rem; color: var(--text-secondary);">No hay productos que coincidan con los filtros 😔</p>';
         return;

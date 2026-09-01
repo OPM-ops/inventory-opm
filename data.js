@@ -1711,7 +1711,8 @@ const expansionNames = {
     "cielos-evolutivos": "Cielos Evolutivos",
     "pitch-black": "Pitch Black",
     otros: "Otros productos",
-    "30th-anniversary": "30 Anniversary"
+    "30th-anniversary": "30 Anniversary",
+    "delta-reign": "Delta Reign"
 };
 
 // Banners de preventa configurables
@@ -1805,6 +1806,23 @@ const preorderBanners = [
         priority: 1,
         isPreorder: true,
         arrivalDate: "31 de Julio, 2026",
+        preorderBadge: "PREVENTA"
+    },
+    {
+        id: "delta-reign-preorder",
+        title: "PREVENTA DELTA REIGN",
+        subtitle: "",
+        description: "El poder de los dragones desata una nueva era. Descubre más de 140 cartas impactantes, poderosas evoluciones y tesoros por encontrar.",
+        image: "https://cardsrfun.de/cdn/shop/collections/Delta_Reign_Logo_transparent.webp?crop=center&height=1200&v=1787235342&width=1200",
+        bgColor: "",
+        textColor: "#ffffff",
+        action: "filter",
+        active: true,
+        priority: 1,
+        backgroundImage: "https://www.wunderbox.com.mx/cdn/shop/articles/Mobile_Banners_05d8584a-fc6f-4517-a014-665c8e594354.png?v=1781805071",
+        expansionFilter: "Delta-reign",
+        isPreorder: true,
+        arrivalDate: "6 de Noviembre, 2026",
         preorderBadge: "PREVENTA"
     }
 ];

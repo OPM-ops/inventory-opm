@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Play More - Tienda Geek</title>
+    <title>Aprende a Jugar Pokémon TCG - One Play More</title>
+    <meta name="description" content="Guía para principiantes de Pokémon TCG: reglas básicas, cómo armar tu mazo y videos paso a paso para empezar a jugar y coleccionar.">
     <!-- Google Fonts & Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Anton&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,25 +15,17 @@
 <!-- BARRA DE ANUNCIOS -->
 <div id="announcementBar" class="announcement-bar"></div>
 
-<!-- HEADER SUPERIOR: Logo, Búsqueda, Carrito -->
+<!-- HEADER (versión simplificada: sin buscador ni categorías dinámicas) -->
 <header class="site-header">
   <div class="header-top">
     <div class="header-container">
-      <!-- Logo -->
       <div class="logo-area">
-        <img src="images/logo.png" alt="One Play More" class="logo-img">
-        <span class="slogan">Coleccionables geek</span>
+        <a href="index.html" style="display:flex; align-items:center; gap:0.6rem; text-decoration:none;">
+          <img src="images/logo.png" alt="One Play More" class="logo-img">
+          <span class="slogan">Coleccionables geek</span>
+        </a>
       </div>
-      
-      <!-- Barra de Búsqueda -->
-      <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Buscar productos...">
-        <button class="search-btn" id="searchBtn">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-      
-      <!-- Acciones: Carrito -->
+
       <div class="header-actions">
         <div class="cart-icon" id="cartIcon">
           <span class="cart-label">CARRITO</span>
@@ -47,81 +39,58 @@
       </div>
     </div>
   </div>
-  
-  <!-- HEADER INFERIOR: Navegación con desplegables -->
+
   <div class="header-bottom">
     <div class="header-container">
       <button class="hamburger-menu" id="hamburgerBtn" aria-label="Menú">
         <span></span><span></span><span></span>
       </button>
-      
+
       <nav class="main-nav" id="mainNav">
-        <button class="category-btn active" data-category="all">TODOS</button>
-        <button class="category-btn" data-category="ofertas">🔥 OFERTAS</button>
-        <button class="category-btn" data-category="novedades">✨ NOVEDADES</button>
-        <!-- Las categorías con dropdown se inyectan desde categories.js -->
+        <a href="index.html" class="category-btn nav-link-static">🛍️ Tienda</a>
+        <a href="index.html#productos" class="category-btn nav-link-static">TODOS</a>
+        <a href="index.html#ofertas" class="category-btn nav-link-static">🔥 OFERTAS</a>
+        <a href="index.html#novedades" class="category-btn nav-link-static">✨ NOVEDADES</a>
+        <a href="aprende.html" class="category-btn nav-link-static active">🎓 CÓMO JUGAR</a>
+        <a href="coleccionar.html" class="category-btn nav-link-static">📦 CÓMO COLECCIONAR</a>
+        <a href="juegos-mesa.html" class="category-btn nav-link-static">🎲 JUEGOS DE MESA</a>
+        <a href="politicas.html" class="category-btn nav-link-static">📋 POLÍTICAS</a>
       </nav>
     </div>
   </div>
 </header>
 
-<!-- BANNER CARRUSEL -->
-<section class="carousel-section">
-    <div class="carousel-container" id="carouselContainer">
-        <!-- Los banners se cargarán dinámicamente desde banners.json -->
+<!-- HERO -->
+<section class="learn-hero">
+  <div class="learn-hero-inner container">
+    <div class="learn-hero-text">
+      <span class="learn-hero-label" id="learnHeroLabel">🎓 CENTRO DE APRENDIZAJE</span>
+      <h1 id="learnHeroTitle">Pokémon TCG: guía para principiantes</h1>
+      <p id="learnHeroSubtitle">Descubre cómo comenzar, entender las cartas, aprender las reglas básicas y dominar la arena Pokémon.</p>
+      <a href="#lecciones" class="btn btn-primary learn-hero-btn" id="learnHeroCta">Empieza a aprender</a>
     </div>
-    <button class="carousel-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-    <button class="carousel-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
-    <div class="carousel-dots" id="carouselDots"></div>
+    <div class="learn-hero-art">
+      <img id="learnHeroImg1" class="learn-hero-card learn-hero-card--1" src="images/products/placeholder.jpg" alt="Carta Pokémon TCG" onerror="this.style.display='none';">
+      <img id="learnHeroImg2" class="learn-hero-card learn-hero-card--2" src="images/products/placeholder.jpg" alt="Carta Pokémon TCG" onerror="this.style.display='none';">
+    </div>
+  </div>
 </section>
 
-<!-- SECCIONES DE INICIO (se ocultan al entrar a "Todos" o cualquier categoría) -->
-<div id="homeSections">
-
-  <!-- COLECCIONES: vitrina curada de marcas/colecciones (editable desde el admin) -->
-  <section class="collections-section container">
-      <h2 class="section-title">Descubre más universos</h2>
-      <div class="collections-grid" id="collectionsGrid"></div>
-  </section>
-
-  <!-- FRANJA DE CONFIANZA: envíos, cambios, pagos -->
-  <section class="trust-strip">
-    <div class="container trust-strip-inner">
-      <a href="politicas.html#envios" class="trust-item">
-        <i class="fas fa-truck trust-icon"></i>
-        <strong>Recogida gratis en Bogotá</strong>
-        <span>Coordina la recogida sin costo o pide envío a toda Colombia desde tu casa.</span>
-      </a>
-      <a href="politicas.html#cambios-devoluciones" class="trust-item">
-        <i class="fas fa-rotate-left trust-icon"></i>
-        <strong>Cambios en 5 días hábiles</strong>
-        <span>Si algo llega mal o con un defecto de fábrica, lo resolvemos sin complicaciones.</span>
-      </a>
-      <a href="politicas.html#pagos" class="trust-item">
-        <i class="fas fa-shield-alt trust-icon"></i>
-        <strong>Pago 100% verificado</strong>
-        <span>Nequi, Bre-B, transferencia bancaria y Mercado Pago, siempre de forma segura.</span>
-      </a>
-    </div>
-  </section>
-
-</div>
-
-<!-- CATÁLOGO DE PRODUCTOS: oculto hasta que se navegue a "Todos" o una categoría -->
-<section class="products-section container" id="productsSection" style="display:none;">
-    <h2 class="section-title">Catálogo</h2>
-    <div class="products-grid" id="productsGrid">
-        <div class="loading">Cargando catálogo...</div>
-    </div>
+<!-- LECCIONES (se inyectan desde data/learn.json) -->
+<section class="learn-lessons container" id="lecciones">
+  <div id="learnLessonsContainer">
+    <div class="loading">Cargando lecciones...</div>
+  </div>
 </section>
 
-<!-- MODAL DE PRODUCTO (detalle) -->
-<div id="productModal" class="modal">
-    <div class="modal-content modal-product">
-        <span class="close">&times;</span>
-        <div id="productModalBody"></div>
-    </div>
-</div>
+<!-- CTA DE CIERRE -->
+<section class="learn-closing-cta">
+  <div class="container">
+    <h2 id="learnClosingTitle">¿Listo para armar tu colección?</h2>
+    <p id="learnClosingSubtitle">Explora nuestro catálogo y encuentra las cartas, expansiones y accesorios que necesitas.</p>
+    <a href="index.html#productos" id="learnClosingBtn" class="btn btn-primary">Ver catálogo</a>
+  </div>
+</section>
 
 <!-- MODAL DEL CARRITO -->
 <div id="cartModal" class="modal">
@@ -136,9 +105,6 @@
             <div id="couponAppliedChip" class="coupon-chip" style="display:none;">
                 <i class="fas fa-tag"></i> <span class="coupon-chip-code"></span>
                 <button id="removeCouponBtn" title="Quitar cupón" type="button">✕</button>
-            </div>
-            <div id="couponPreventaNote" class="coupon-preventa-note">
-                <i class="fas fa-circle-info"></i> Los productos en preventa de tu carrito no participan de este descuento.
             </div>
         </div>
 
@@ -174,10 +140,9 @@
       <div class="footer-col">
         <h4>Explora</h4>
         <ul>
-          <li><a href="#productos" id="footer-productos-link">Productos</a></li>
-          <li><a href="#ofertas" id="footer-ofertas-link">Ofertas</a></li>
-          <li><a href="#novedades" id="footer-novedades-link">Novedades</a></li>
-          <li><a href="#contacto" id="footer-contacto-link">Contacto</a></li>
+          <li><a href="index.html#productos">Productos</a></li>
+          <li><a href="index.html#ofertas">Ofertas</a></li>
+          <li><a href="index.html#novedades">Novedades</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -215,27 +180,22 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p id="footerCopyright" style="cursor:default;">&copy; 2025 One Play More. Todos los derechos reservados.</p>
+      <p>&copy; 2025 One Play More. Todos los derechos reservados.</p>
     </div>
   </div>
 </footer>
 
-<!-- SCRIPTS -->
+<!-- SCRIPTS (solo los necesarios para esta página: carrito + checkout + contenido) -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script src="js/email.js"></script>
-<script src="js/products.js"></script>
-<script src="js/hero.js"></script>
-<script src="js/animations.js"></script>
-<script src="js/categories.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/toast.js"></script>
 <script src="js/modal.js"></script>
 <script src="js/checkout.js"></script>
-<script src="js/main.js"></script>
-<script src="js/announcement.js"></script>
 <script src="js/particles.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
-<script src="js/admin.js"></script>  <!-- ← AÑADIDO AQUÍ, DENTRO DEL BODY -->
+<script>window.LEARN_DATA_SOURCE = 'data/learn.json';</script>
+<script src="js/learn.js"></script>
+<script src="js/announcement.js"></script>
 
 <!-- TOAST NOTIFICATION -->
 <div id="toast" class="toast hidden">

@@ -1,0 +1,18 @@
+[
+  {
+    "code": "NEW10",
+    "type": "percent",
+    "value": 10,
+    "scope": "all",
+    "active": true,
+    "description": "10% en toda la tienda, excepto Cartas y la colección 30th Aniversario",
+    "startDate": "2026-09-29",
+    "endDate": "2026-10-05",
+    "excludeCategoryIds": [
+      "cartas"
+    ],
+    "excludeExpansions": [
+      "30th aniversario"
+    ]
+  }
+]

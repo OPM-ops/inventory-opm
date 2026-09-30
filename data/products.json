@@ -2682,11 +2682,10 @@
     "name": "Binder Colletion 30th Celebration",
     "category": "Pokémon TCG",
     "categoryId": "pokemon",
-    "subcategoryId": "30th-celebration",
-    "price": 170000,
+    "price": 200000,
     "description": "Celebra los 30 años de Pokémon y luce tus cartas favoritas con la 30th Celebration Binder Collection. Este álbum de 9 bolsillos presenta un diseño conmemorativo de la celebración y ofrece una forma práctica de organizar y proteger tu colección.\n\nAdemás, incluye cinco sobres de la expansión especial 30th Celebration, para comenzar a llenar tu binder con nuevas cartas desde el primer momento.",
     "expansion": "30th aniversario",
-    "status": "agotado",
+    "status": "preventa",
     "new": false,
     "bestSeller": false,
     "encargo": false,
@@ -2703,11 +2702,7 @@
         "options": [
           {
             "value": "Inglés",
-            "price": 180000
-          },
-          {
-            "value": "Español",
-            "price": 170000
+            "price": 200000
           }
         ]
       }
@@ -2753,7 +2748,7 @@
     "price": 115000,
     "description": "Celebra los 30 años de Pokémon con la 30th Celebration Tech Sticker Collection, una colección que combina cartas y stickers en una presentación especial. Disponible con Alolan Exeggutor o Lucario, cada versión incluye una carta promocional foil y una hoja de stickers inspirada en el Pokémon protagonista, acompañadas por tres sobres de la expansión 30th Celebration.\n\nUna opción ideal para quienes quieren disfrutar de la celebración, abrir algunos sobres y sumar una pieza diferente a su colección.",
     "expansion": "30th aniversario",
-    "status": "disponible",
+    "status": "agotado",
     "new": true,
     "bestSeller": false,
     "encargo": false,
@@ -2789,7 +2784,7 @@
     "price": 110000,
     "description": "Celebra los 30 años de Pokémon con la 30th Celebration Pokémon ex Box, disponible en versiones de Sylveon ex y Greninja ex. Cada caja combina una carta promocional exclusiva, su versión jumbo para exhibición y cuatro sobres de la expansión especial 30th Celebration.\n\nUna colección pensada para disfrutar la celebración tanto abriendo sobres como sumando una pieza especial a tu colección.",
     "expansion": "30th aniversario",
-    "status": "disponible",
+    "status": "agotado",
     "new": true,
     "bestSeller": false,
     "encargo": false,
